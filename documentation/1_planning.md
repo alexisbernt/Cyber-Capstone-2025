@@ -1,7 +1,7 @@
 # Planning 
 
 ## Minimum Viable Product (MVP)
-#### What is the simpliest version of this product or service?
+#### What is the simplest version of this product or service?
 - What are the most important features
 - What is the most simple version. Here is where the most simple version is:
 - Launch and get feedback
@@ -16,6 +16,6 @@
 - Project Objectives
 - Tasks
 - Timeline
-- Delieverables
+- Deliverables
 - Costs
 - Reporting
