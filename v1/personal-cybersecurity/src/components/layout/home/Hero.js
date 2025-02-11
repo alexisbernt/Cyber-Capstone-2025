@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
+import { Button } from "./components/ui/button";
 import GridPattern from "../ui/patterns/GridPattern";
 
 export default function Hero() {

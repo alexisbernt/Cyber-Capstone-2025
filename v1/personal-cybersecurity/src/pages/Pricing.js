@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
+// import { Card } from "./components/ui/card";
+// import { Button } from "./components/ui/button";
 import { Check } from "lucide-react";
-import WavePattern from "@/components/ui/patterns/WavePattern";
-import Header from "@/components/layout/Header";
+import GridPattern from "./components/ui/patterns";
+import Header from "./components/Header";
 
 const plans = [
   {
@@ -50,7 +52,7 @@ export default function Pricing() {
     <div className="bg-black min-h-screen">
       <Header />
       <div className="relative pt-20">
-        <WavePattern />
+        <GridPattern />
         
         <div className="container mx-auto px-6 py-24">
           <motion.div
