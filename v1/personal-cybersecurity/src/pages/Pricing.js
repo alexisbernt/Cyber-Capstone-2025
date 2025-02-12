@@ -1,11 +1,9 @@
 import { motion } from "framer-motion";
-// import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
-// import { Card } from "./components/ui/card";
-import { Button } from "./components/ui/button";
+import { Card } from "react-bootstrap";
+import Button from "../components/ui/Button";
 import { Check } from "lucide-react";
-import GridPattern from "./components/patterns";
-import Header from "./components/Header";
+import GridPattern from "../components/patterns";
+import Header from "../components/Header";
 
 const plans = [
   {
