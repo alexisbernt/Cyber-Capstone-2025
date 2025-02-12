@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
-import { Button } from "./components/ui/button";
-import GridPattern from "../ui/patterns/GridPattern";
+import Button from "../../ui/Button";
+import GridPattern from "../../patterns"; 
 
-export default function Hero() {
+
+function Hero() {
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-black">
       <GridPattern />
@@ -59,3 +60,4 @@ export default function Hero() {
     </section>
   );
 }
+export default Hero;

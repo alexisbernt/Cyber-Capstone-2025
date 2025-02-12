@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import GridPattern from "../ui/patterns";
+import GridPattern from "../../patterns"; 
 
-export default function ProductShowcase() {
+
+function ProductShowcase() {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1
@@ -10,9 +11,12 @@ export default function ProductShowcase() {
 
   return (
     <section ref={ref} className="relative py-24 bg-black overflow-hidden">
-      <GridPattern />
-      
-      <div className="container mx-auto px-6">
+      {/* Ensure GridPattern is correctly positioned */}
+      <div className="absolute inset-0 pointer-events-none">
+        <GridPattern />
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -45,7 +49,6 @@ export default function ProductShowcase() {
               <rect x="60" y="55" width="120" height="30" rx="4" fill="rgba(255,255,255,0.2)" />
               <rect x="40" y="120" width="300" height="340" rx="8" fill="rgba(255,255,255,0.1)" />
               <rect x="360" y="120" width="400" height="340" rx="8" fill="rgba(255,255,255,0.1)" />
-              {/* Add more UI elements as needed */}
             </svg>
           </div>
 
@@ -55,3 +58,4 @@ export default function ProductShowcase() {
     </section>
   );
 }
+export default ProductShowcase;

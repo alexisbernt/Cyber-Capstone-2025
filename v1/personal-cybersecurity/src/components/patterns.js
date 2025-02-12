@@ -1,23 +1,28 @@
 import { motion } from "framer-motion";
 
-export default function GridPattern() {
+function GridPattern() {
   return (
     <svg
-      className="absolute inset-0 -z-10"
-      width="100%"
-      height="100%"
+      className="absolute inset-0 w-full h-full -z-10"
       xmlns="http://www.w3.org/2000/svg"
     >
       <defs>
         <pattern
           id="grid"
-          width="32"
-          height="32"
+          width="40"  // Increased to maintain spacing
+          height="40"
           patternUnits="userSpaceOnUse"
-          patternTransform="rotate(45)"
         >
+          {/* Vertical lines */}
           <path
-            d="M0 1h32M0 9h32M0 17h32M0 25h32"
+            d="M 40 0 L 40 40"
+            strokeWidth="0.5"
+            stroke="rgba(255,255,255,0.1)"
+            fill="none"
+          />
+          {/* Horizontal lines */}
+          <path
+            d="M 0 40 L 40 40"
             strokeWidth="0.5"
             stroke="rgba(255,255,255,0.1)"
             fill="none"
@@ -35,3 +40,4 @@ export default function GridPattern() {
     </svg>
   );
 }
+export default GridPattern;

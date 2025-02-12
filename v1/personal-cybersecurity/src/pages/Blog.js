@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Card from "react-bootstrap/Card";
 import { CalendarDays, User, ArrowRight } from "lucide-react";
-import GridPattern from "./components/ui/patterns/GridPattern";
+import GridPattern from "./components/patterns";
 import Header from "./components/Header";
 
 const posts = [
