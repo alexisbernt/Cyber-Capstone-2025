@@ -1,7 +1,8 @@
 import Header from "../components/Header";
 import Hero from "../components/layout/home/Hero";
-// import Features from "./components/home/Features";
+import Features from "../components/layout/home/Features";
 import ProductShowcase from "../components/layout/home/ProductShowcase";
+import '../App.css';
 
 export default function Home() {
   return (
@@ -9,7 +10,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        {/* <Features /> */}
+        <Features />
         <ProductShowcase />
       </main>
     </div>
