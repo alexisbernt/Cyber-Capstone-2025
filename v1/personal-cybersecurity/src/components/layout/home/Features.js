@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { useState } from "react";
 import { Card } from "react-bootstrap";
 import { Settings2, LineChart, Users, Shield } from "lucide-react";
+import Button from "../../ui/Button";
 
 const features = [
   {
@@ -27,20 +28,36 @@ const features = [
 ];
 
 export default function Features() {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.1
-  });
+  const [currentScreen, setCurrentScreen] = useState(0);
+  const itemsPerPage = 2; // Number of items per screen
+  const totalScreens = Math.ceil(features.length / itemsPerPage);
+
+  const nextScreen = () => {
+    if (currentScreen < totalScreens - 1) {
+      setCurrentScreen(currentScreen + 1);
+    }
+  };
+
+  const prevScreen = () => {
+    if (currentScreen > 0) {
+      setCurrentScreen(currentScreen - 1);
+    }
+  };
+
+  const visibleFeatures = features.slice(
+    currentScreen * itemsPerPage,
+    (currentScreen + 1) * itemsPerPage
+  );
 
   return (
-    <section ref={ref} className="py-24 bg-black">
+    <section className="py-24 bg-black text-center">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((feature, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {visibleFeatures.map((feature, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <Card className="p-6 bg-gray-900/50 backdrop-blur-lg border-gray-800 hover:bg-gray-900/70 transition-all duration-300">
@@ -48,12 +65,20 @@ export default function Features() {
                 <h3 className="text-xl font-semibold text-white mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-gray-400">
-                  {feature.description}
-                </p>
+                <p className="text-gray-400">{feature.description}</p>
               </Card>
             </motion.div>
           ))}
+        </div>
+
+        {/* Navigation Buttons */}
+        <div className="mt-6 flex justify-center space-x-4">
+          <Button onClick={prevScreen} disabled={currentScreen === 0}>
+            Prior Page
+          </Button>
+          <Button onClick={nextScreen} disabled={currentScreen === totalScreens - 1}>
+            Next Page
+          </Button>
         </div>
       </div>
     </section>
