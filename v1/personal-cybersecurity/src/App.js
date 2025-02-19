@@ -1,13 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import logo from "./logo.png";
+import logo from "./lcc_logo.png";
 import Home from "./pages/Home";
 import Resources from "./pages/Resources";
 import Pricing from "./pages/Pricing";
 import Blog from "./pages/Blog";
 // import { queryClient } from "./lib/queryClient";
-// import { QueryClientProvider } from ".tanstack/react-query";
+// import { QueryClientProvider } from ".tanstack/react-query"; -- 3001 server (which is my back-end) 
 import { Toaster } from "./components/ui/toaster";
 import NotFound from "./pages/NotFound";
 

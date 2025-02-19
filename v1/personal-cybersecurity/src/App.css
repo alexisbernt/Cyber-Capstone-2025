@@ -43,6 +43,30 @@
   color: #007bff;
 }
 
+/* Styles for the navigation buttons */
+.nav-buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem; /* Adds spacing between buttons */
+  margin: 1.5rem 0; /* Adds vertical spacing */
+}
+
+.nav-button {
+  background-color: #1f2937; /* Tailwind's bg-gray-800 */
+  color: white;
+  padding: 12px 24px; /* Equivalent to px-6 py-3 */
+  border-radius: 9999px; /* Fully rounded buttons */
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.nav-button:hover {
+  background-color: #374151; /* Tailwind's hover:bg-gray-700 */
+}
+
+
 /* Main Content */
 .main-content {
   display: flex;
