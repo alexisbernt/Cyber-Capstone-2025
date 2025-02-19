@@ -40,6 +40,20 @@ export default function Home() {
           <button className="nav-button">Blog</button>
         </Link>
       </div>
+      {/* Left-side Image + Empty Right Side */}
+      <div className="left-image-container">
+        {/* Left-side Image */}
+        <div className="left-image">
+          <img 
+            src="/banner_lcc.png" 
+            alt="Left-side Image"  
+            className="w-full h-full"
+          />
+        </div>
+
+        {/* Empty Right Side */}
+        <div className="right-empty-space"></div>
+      </div>
       <main>
         <Hero />
         <Features />

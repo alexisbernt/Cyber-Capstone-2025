@@ -36,17 +36,17 @@ function Header() {
         </Link>
 
         <nav role="navigation" className="hidden md:flex items-center space-x-8">
-          {["/resources", "/pricing", "/blog"].map((path) => (
-            <Link key={path} href={path}>
-              <a
-                className={`cursor-pointer transition-colors ${
-                  isActive(path) ? "text-white" : "text-gray-300 hover:text-white"
-                }`}
-              >
-                {path.replace("/", "").charAt(0).toUpperCase() + path.slice(2)}
-              </a>
-            </Link>
-          ))}
+        {["/resources", "/pricing", "/blog"].map((path) => (
+          <Link
+            key={path}
+            href={path}
+            className={`cursor-pointer transition-colors ${
+              isActive(path) ? "text-white" : "text-gray-300 hover:text-white"
+            }`}
+          >
+            {path.replace("/", "").charAt(0).toUpperCase() + path.slice(2)}
+          </Link>
+        ))}
         </nav>
 
         <Button variant="secondary">Get Started</Button>
