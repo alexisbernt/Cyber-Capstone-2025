@@ -1,5 +1,5 @@
 // import Header from "../components/Header";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"; 
 import Hero from "../components/layout/home/Hero";
 import Features from "../components/layout/home/Features";
 import ProductShowcase from "../components/layout/home/ProductShowcase";
@@ -9,11 +9,12 @@ import { useState } from "react";
 export default function Home() {
   const [name, setName] = useState('');
 
-  fetch("http://localhost:3001/").then((results) => {
-    results.json().then((j) => {
-      setName(j.name);
+  fetch("http://localhost:3001/")
+    .then((results) => {
+      results.json().then((j) => {
+        setName(j.name);
+      });
     });
-  });
 
   return (
     <div className="bg-black min-h-screen">
@@ -40,22 +41,25 @@ export default function Home() {
           <button className="nav-button">Blog</button>
         </Link>
       </div>
-      {/* Left-side Image + Empty Right Side */}
-      <div className="left-image-container">
+
+      {/* Flex Container for Left Image & Right Hero Section */}
+      <div className="split-container">
         {/* Left-side Image */}
-        <div className="left-image">
+        <div className="split-left">
           <img 
-            src="/banner_lcc.png" 
+            src="/demo.png"  
             alt="Left-side Image"  
-            className="w-full h-full"
+            className="split-image"
           />
         </div>
 
-        {/* Empty Right Side */}
-        <div className="right-empty-space"></div>
+        {/* Right-side Hero Section */}
+        <div className="split-right">
+          <Hero />
+        </div>
       </div>
+      
       <main>
-        <Hero />
         <Features />
         <ProductShowcase />
       </main>
