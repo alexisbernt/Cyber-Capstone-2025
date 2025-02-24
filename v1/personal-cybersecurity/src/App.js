@@ -10,6 +10,7 @@ import Blog from "./pages/Blog";
 // import { QueryClientProvider } from ".tanstack/react-query"; -- 3001 server (which is my back-end) 
 import { Toaster } from "./components/ui/toaster";
 import NotFound from "./pages/NotFound";
+import BlogPage1 from "./pages/parts/BlogPage1";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog" element={<Toaster />} />
+          <Route path="/blog/why-cybersecurity" element={<BlogPage1 />} />
           <Route path="*" element={<NotFound />} /> 
         </Routes>
       </div>
