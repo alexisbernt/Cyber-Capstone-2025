@@ -1,8 +1,12 @@
+// import Link from "next/link"; // Uncomment if using Next.js
+import { Link } from "react-router-dom"; // if using React Router
+
 import { motion } from "framer-motion";
 import { Card } from "react-bootstrap";
 import { CalendarDays, User, ArrowRight } from "lucide-react";
 import GridPattern from "../components/patterns";
 import Header from "../components/Header";
+// import BlogPage1 from "./parts/BlogPage1";
 
 const posts = [
   {
@@ -11,6 +15,7 @@ const posts = [
     author: "Sarah Johnson",
     date: "Feb 1, 2025",
     category: "Industry Trends",
+    link: "/blog/why-cybersecurity", // Example route
   },
   {
     title: "Maximizing Team Productivity",
@@ -18,6 +23,7 @@ const posts = [
     author: "Michael Chen",
     date: "Jan 28, 2025",
     category: "Best Practices",
+    link: "/blog/team-productivity",
   },
   {
     title: "Enterprise Security Essentials",
@@ -25,6 +31,7 @@ const posts = [
     author: "Alex Rodriguez",
     date: "Jan 25, 2025",
     category: "Security",
+    link: "/blog/security-essentials",
   },
   {
     title: "Scaling Your SaaS Business",
@@ -32,6 +39,7 @@ const posts = [
     author: "Emma Williams",
     date: "Jan 22, 2025",
     category: "Growth",
+    link: "/blog/scaling-saas",
   },
 ];
 
@@ -58,7 +66,7 @@ export default function Blog() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
             {posts.map((post, index) => (
               <motion.div
-                key={post.title} // ✅ Use a unique key
+                key={post.title}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -85,7 +93,10 @@ export default function Blog() {
                         {post.date}
                       </div>
                     </div>
-                    <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
+
+                    <Link to={post.link} className="group">
+                    <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform cursor-pointer" />
+                  </Link>
                   </div>
                 </Card>
               </motion.div>
