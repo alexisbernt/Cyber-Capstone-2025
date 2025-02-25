@@ -1,5 +1,9 @@
 # The Sources I have used / Should use:
 
+## Tutorial
+- https://www.youtube.com/watch?v=nu_pCVPKzTk
+"Full Stack Web Development for Beginners (Full Course on HTML, CSS, JavaScript, Node.js, MongoDB)" by freeCodeCamp: I took some notes and content from the tutorial above but I did not go through the entirety of it (as of 2/24). 
+
 ## Front-end
 - Replit: https://replit.com/~
 
