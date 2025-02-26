@@ -1,5 +1,6 @@
 import React from "react";
 import auntTana from "./blog-photos/aunt-tana.png";
+import auntTanaQ from "./blog-photos/aunt-tana-question.png"
 
 const BlogPage1 = () => {
   return (
@@ -15,7 +16,6 @@ const BlogPage1 = () => {
         <br />
         This is Aunt Tana:
 
-      {/* Insert the actual image here */}
       <img 
         src= {auntTana} // Adjust path based on your project structure
         alt="Aunt Tana" 
@@ -24,7 +24,15 @@ const BlogPage1 = () => {
       …
       Let’s start by defining cybersecurity for Aunt Tana: 
       Cybersecurity is what secures our digital components, networks, data, and computer systems from unauthorized access. 
-      Okay, that definition isn’t super helpful for Aunt Tana. She doesn’t know what digital components are. So let’s break-down that definition a little bit. 
+      Okay, that definition isn’t super helpful for Aunt Tana. 
+      
+      <img 
+        src= {auntTanaQ} // Adjust path based on your project structure
+        alt="Aunt Tana Questioning" 
+        className="w-full h-auto rounded-lg shadow-md mb-4"
+      />
+      
+      She doesn’t know what digital components are. So let’s break-down that definition a little bit. 
       Basically, cybersecurity is making sure the bad guys don’t get access to the digital information they should not have access to. These “bad guys” can scrape a ton of our personal data from online, or, through our devices. This information the bad guys tend to try and get include things like our credit card numbers, account passwords, and even social security numbers. The scary thing is that our personal information is not only vulnerable when we’re taking a picture of our social security card to be sent (bad by the way) or entering a credit card number into our computer in a public coffee shop (also a bad move), our personal information is vulnerable when we connect to a WiFi network or even when we save a private picture into a folder in our email inbox. 
 
       I’m learning along the way too so all of the learning sources I use will be linked. Please join the email list to get a once a month (seriously only once a month) email about some “personal cyber security hacks.” If learning some about cybersecurity alone isn’t enough of a benefit, some reasons you should join the cybersecurity club include:

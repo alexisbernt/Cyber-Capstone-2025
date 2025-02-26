@@ -47,7 +47,7 @@ export default function Home() {
         {/* Left-side Image */}
         <div className="split-left">
           <img 
-            src="/demo.png"  
+            src="/demoa.png"  
             alt="Left-side Image"  
             className="split-image"
           />
@@ -57,7 +57,25 @@ export default function Home() {
         <div className="split-right">
           <Hero />
         </div>
+        </div>
+
+      {/* Flex Container for Right Image & Left Hero Section */}
+      <div className="split-container">
+        {/* Left-side Hero Section */}
+        <div className="split-left">
+          <Hero />
+        </div>
+
+        {/* Right-side Image */}
+        <div className="split-right">
+          <img 
+            src="/demo.png"  
+            alt="Right-side Image"  
+            className="split-image"
+          />
+        </div>
       </div>
+
       
       <main>
         <Features />
