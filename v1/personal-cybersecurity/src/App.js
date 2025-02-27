@@ -18,11 +18,13 @@ function App() {
       <div className="App">
         {/* Header Section (Visible on All Pages) */}
         <header className="header">
-          <img src={logo} alt="Logo" className="logo" />
+          <a href="/" className="logo-link">
+            <img src={logo} alt="Logo" className="logo" />
+          </a>
           <nav className="navbar">
-            <a href="/resources">Resources</a>
+            <a href="/resources">Learn</a>
             <a href="/blog">Blog</a>
-            <a href="/pricing">Pricing</a>
+            <a href="/pricing">Sign-up</a>
           </nav>
         </header>
 

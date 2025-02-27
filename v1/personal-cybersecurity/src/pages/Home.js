@@ -1,3 +1,6 @@
+// top clickable button 
+// button colors 
+
 // import Header from "../components/Header";
 import { Link } from "react-router-dom"; 
 import Hero from "../components/layout/home/Hero";
@@ -35,7 +38,8 @@ export default function Home() {
           <button className="nav-button">Resources</button>
         </Link>
         <Link to="/pricing">
-          <button className="nav-button">Pricing</button>
+          {/* // sign-up is known as pricing */}
+          <button className="nav-button">Sign-up</button> 
         </Link>
         <Link to="/blog">
           <button className="nav-button">Blog</button>
