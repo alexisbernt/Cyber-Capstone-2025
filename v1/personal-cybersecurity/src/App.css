@@ -155,3 +155,24 @@
   color: white;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Verdana&display=swap');
+
+.font-verdana {
+  font-family: Verdana, sans-serif;
+}
+
+.leading-snug {
+  line-height: 1.3;
+}
+
+.leading-relaxed {
+  line-height: 1.6;
+}
+
+.tracking-wide {
+  letter-spacing: 0.05em;
+}
+.font-verdana {
+  font-family: Verdana, sans-serif;
+}
+

@@ -35,11 +35,11 @@ function App() {
           <a href="/blog">
             <img src="/image2.png" alt="Blog" className="nav-icon" />
           </a>
-          <a href="/resources">
-          <img src="/image1.png" alt="Learn" className="nav-icon" />
+          <a href="/resouces">
+          <img src="/image5.jpg" alt="Learn" className="nav-icon" />
           </a>
-          <a href="/blog">
-            <img src="/image2.png" alt="Blog" className="nav-icon" />
+          <a href="/*">
+          <img src="/image4.jpg" alt="Blog" className="nav-icon" />
           </a>
           <a href="/resources">
           <img src="/image1.png" alt="Learn" className="nav-icon" />

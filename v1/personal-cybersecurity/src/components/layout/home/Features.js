@@ -70,13 +70,20 @@ export default function Features() {
             </motion.div>
           ))}
         </div>
-
         {/* Navigation Buttons */}
-        <div className="mt-6 flex justify-center space-x-4">
-          <Button onClick={prevScreen} disabled={currentScreen === 0}>
+        <div className="mt-8 flex justify-center space-x-6">
+          <Button 
+            onClick={prevScreen} 
+            disabled={currentScreen === 0}
+            className="px-[160px] py-[80px] text-2xl font-semibold tracking-wide bg-[#9cc0cf] text-white hover:bg-[#374151] border-none rounded-none transition-colors duration-300 font-verdana"
+          >
             Prior Page
           </Button>
-          <Button onClick={nextScreen} disabled={currentScreen === totalScreens - 1}>
+          <Button 
+            onClick={nextScreen} 
+            disabled={currentScreen === totalScreens - 1}
+            className="px-[160px] py-[80px] text-2xl font-semibold tracking-wide bg-[#9cc0cf] text-white hover:bg-[#374151] border-none rounded-none transition-colors duration-300 font-verdana"
+          >
             Next Page
           </Button>
         </div>

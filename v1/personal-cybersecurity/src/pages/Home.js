@@ -65,7 +65,7 @@ export default function Home() {
         <div className="split-right">
           <Hero />
         </div>
-        </div>
+      </div>
 
       {/* Flex Container for Right Image & Left Hero Section */}
       <div className="split-container">

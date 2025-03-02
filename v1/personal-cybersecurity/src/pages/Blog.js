@@ -18,7 +18,7 @@ const posts = [
     link: "/blog/why-cybersecurity", // BlogPage1 link 
   },
   {
-    title: "Maximizing Team Productivity",
+    title: "LONG LIVE PASSWORDS",
     excerpt: "Learn how to optimize your team's workflow with our platform",
     author: "Michael Chen",
     date: "Jan 28, 2025",
@@ -26,12 +26,36 @@ const posts = [
     link: "/blog/team-productivity",
   },
   {
-    title: "Enterprise Security Essentials",
+    title: "CYBERSECURITY ATTACKS: GONE PHISHING",
+    excerpt: "Learn how to optimize your team's workflow with our platform",
+    author: "Michael Chen",
+    date: "Jan 28, 2025",
+    category: "Best Practices",
+    link: "/blog/team-productivity",
+  },
+  {
+    title: "LinkedIn & Venmo Security Essentials",
     excerpt: "Key security features every enterprise solution needs",
     author: "Alex Rodriguez",
     date: "Jan 25, 2025",
     category: "Security",
     link: "/blog/security-essentials",
+  },
+  {
+    title: "LinkedIn & Enterprise Security Essentials",
+    excerpt: "Key security features every enterprise solution needs",
+    author: "Alex Rodriguez",
+    date: "Jan 25, 2025",
+    category: "Security",
+    link: "/blog/security-essentials",
+  },
+  {
+    title: "Scaling Your SaaS Business",
+    excerpt: "Strategic insights for growing your SaaS company",
+    author: "Emma Williams",
+    date: "Jan 22, 2025",
+    category: "Growth",
+    link: "/blog/scaling-saas",
   },
   {
     title: "Scaling Your SaaS Business",

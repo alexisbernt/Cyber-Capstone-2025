@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import GridPattern from "../../patterns"; 
-
+import GridPattern from "../../patterns";
+import Button from "../../ui/Button"; // Ensure this imports the correct Button component
 
 function ProductShowcase() {
   const [ref, inView] = useInView({
@@ -54,8 +54,20 @@ function ProductShowcase() {
 
           <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-[90%] h-[10%] bg-gradient-to-b from-purple-500/20 to-transparent blur-2xl" />
         </motion.div>
+
+        {/* Buttons Section */}
+        <div className="mt-12 flex justify-center space-x-6">
+          <Button className="px-[160px] py-[80px] text-2xl font-semibold tracking-wide bg-[#9cc0cf] text-white hover:bg-[#374151] border-none rounded-none transition-colors duration-300 font-verdana">
+            Learn More
+          </Button>
+
+          <Button className="px-[160px] py-[80px] text-2xl font-semibold tracking-wide bg-[#9cc0cf] text-white hover:bg-[#374151] border-none rounded-none transition-colors duration-300 font-verdana">
+            Get Started
+          </Button>
+        </div>
       </div>
     </section>
   );
 }
+
 export default ProductShowcase;

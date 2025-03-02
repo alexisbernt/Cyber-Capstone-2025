@@ -11,7 +11,7 @@ function Header() {
     ["rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 0.8)"]
   );
   const [isScrolled, setIsScrolled] = useState(false);
-  const [location] = useLocation(); // Corrected destructuring
+  const [location] = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,18 +35,23 @@ function Header() {
           SaaS<span className="text-primary">Hub</span>
         </Link>
 
+        {/* Navigation with Images */}
         <nav role="navigation" className="hidden md:flex items-center space-x-8">
-        {["/resources", "/pricing", "/blog"].map((path) => (
-          <Link
-            key={path}
-            href={path}
-            className={`cursor-pointer transition-colors ${
-              isActive(path) ? "text-white" : "text-gray-300 hover:text-white"
-            }`}
-          >
-            {path.replace("/", "").charAt(0).toUpperCase() + path.slice(2)}
-          </Link>
-        ))}
+          {["/resources", "/pricing", "/blog"].map((path, index) => (
+            <Link
+              key={path}
+              href={path}
+              className={`cursor-pointer transition-colors ${
+                isActive(path) ? "text-white" : "text-gray-300 hover:text-white"
+              }`}
+            >
+              <img
+                src={`/images/image${index + 1}.png`} // Assuming images are in the public/images/ folder
+                alt={`Nav Icon ${index + 1}`}
+                className="nav-icon"
+              />
+            </Link>
+          ))}
         </nav>
 
         <Button variant="secondary">Get Started</Button>
