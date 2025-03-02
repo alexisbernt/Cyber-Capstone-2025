@@ -18,15 +18,46 @@ function App() {
       <div className="App">
         {/* Header Section (Visible on All Pages) */}
         <header className="header">
-          <a href="/" className="logo-link">
-            <img src={logo} alt="Logo" className="logo" />
+        <a href="/" className="logo-link">
+          <img src={logo} alt="Logo" className="logo" />
+        </a>
+        
+        <nav className="navbar">
+          <a href="/resources">
+          <img src="/image1.png" alt="Learn" className="nav-icon" />
           </a>
-          <nav className="navbar">
-            <a href="/resources">Learn</a>
-            <a href="/blog">Blog</a>
-            <a href="/pricing">Sign-up</a>
-          </nav>
-        </header>
+          <a href="/blog">
+            <img src="/image2.png" alt="Blog" className="nav-icon" />
+          </a>
+          <a href="/resources">
+          <img src="/image1.png" alt="Learn" className="nav-icon" />
+          </a>
+          <a href="/blog">
+            <img src="/image2.png" alt="Blog" className="nav-icon" />
+          </a>
+          <a href="/resources">
+          <img src="/image1.png" alt="Learn" className="nav-icon" />
+          </a>
+          <a href="/blog">
+            <img src="/image2.png" alt="Blog" className="nav-icon" />
+          </a>
+          <a href="/resources">
+          <img src="/image1.png" alt="Learn" className="nav-icon" />
+          </a>
+          <a href="/blog">
+            <img src="/image2.png" alt="Blog" className="nav-icon" />
+          </a>
+          <a href="/resources">
+          <img src="/image1.png" alt="Learn" className="nav-icon" />
+          </a>
+          <a href="/blog">
+            <img src="/image2.png" alt="Blog" className="nav-icon" />
+          </a>
+          <a href="/resources">Learn</a>
+          <a href="/blog">Blog</a>
+          <a href="/pricing">Sign-up</a>
+        </nav>
+      </header>
 
         {/* Page Routes */}
         <Routes>
