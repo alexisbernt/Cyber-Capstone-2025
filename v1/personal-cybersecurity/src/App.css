@@ -23,7 +23,7 @@
 
 /* Logo */
 .logo {
-  height: 90px;
+  height: 120px;
 }
 
 /* Navigation Bar */
@@ -55,7 +55,7 @@
   background-color: #9cc0cf; /* Tailwind's bg-gray-800 */
   color: white;
   padding: 62px 124px; /* Equivalent to px-6 py-3 */
-  border-radius: 244px; /* Fully rounded buttons */
+  border-radius: 0px; /* Fully rounded buttons at 244px */
   border: none;
   font-size: 1rem;
   cursor: pointer;

@@ -10,12 +10,12 @@ import Header from "../components/Header";
 
 const posts = [
   {
-    title: "The Future of B2B SaaS in 2025",
-    excerpt: "Explore the emerging trends shaping the B2B SaaS landscape",
-    author: "Sarah Johnson",
-    date: "Feb 1, 2025",
-    category: "Industry Trends",
-    link: "/blog/why-cybersecurity", // Example route
+    title: "WHY YOU SHOULD LEARN CYBERSECURITY",
+    excerpt: "Explore the emerging trends shaping the technology landscape",
+    author: "Alexis Bernthal",
+    date: "Feb 27, 2025",
+    category: "Cybersecurity 101",
+    link: "/blog/why-cybersecurity", // BlogPage1 link 
   },
   {
     title: "Maximizing Team Productivity",
