@@ -46,22 +46,22 @@ function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="flex flex-col sm:flex-row gap-6 justify-center"
+            className="flex flex-col sm:flex-row gap-8 justify-center"
           >
-         <Button 
-          size="lg" 
-          className="bg-[#9cc0cf] text-white hover:bg-[#374151] px-[160px] py-[80px] text-2xl tracking-wide border-none rounded-none transition-colors duration-300"
-        >
-          Start Learning
-        </Button>
+            <Button 
+              size="lg" 
+              className="w-full max-w-[600px] px-[250px] py-[120px] text-4xl tracking-wide border-none rounded-none transition-colors duration-300 bg-[#9cc0cf] text-white hover:bg-[#374151]"
+            >
+              Start Learning
+            </Button>
 
-        <Button 
-          size="lg" 
-          variant="outline" 
-          className="bg-[#9cc0cf] text-white hover:bg-[#374151] px-[160px] py-[80px] text-2xl tracking-wide border-none rounded-none transition-colors duration-300"
-        >
-          Sign up
-        </Button>
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="w-full max-w-[500px] px-[200px] py-[100px] text-3xl tracking-wide border-none rounded-none transition-colors duration-300 bg-[#9cc0cf] text-white hover:bg-[#374151]"
+            >
+              Sign up
+            </Button>
           </motion.div>
         </motion.div>
       </div>

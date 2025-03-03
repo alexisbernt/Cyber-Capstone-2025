@@ -10,7 +10,7 @@ function ProductShowcase() {
   });
 
   return (
-    <section ref={ref} className="relative py-24 bg-black overflow-hidden">
+    <section ref={ref} className="relative py-32 bg-black overflow-hidden font-verdana">
       {/* Ensure GridPattern is correctly positioned */}
       <div className="absolute inset-0 pointer-events-none">
         <GridPattern />
@@ -21,12 +21,12 @@ function ProductShowcase() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="max-w-3xl mx-auto text-center mb-16"
+          className="max-w-4xl mx-auto text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 tracking-wide">
             Built for Modern Enterprises
           </h2>
-          <p className="text-gray-400 text-lg">
+          <p className="text-xl text-gray-400 leading-relaxed tracking-wide">
             Experience a new way of working with our intuitive interface and powerful features.
           </p>
         </motion.div>
@@ -37,7 +37,7 @@ function ProductShowcase() {
           transition={{ duration: 0.8 }}
           className="relative mx-auto max-w-5xl"
         >
-          <div className="aspect-video rounded-lg overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800 p-8 backdrop-blur-xl border border-gray-800">
+          <div className="aspect-video rounded-lg overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800 p-10 backdrop-blur-xl border border-gray-800 shadow-2xl">
             <svg
               viewBox="0 0 800 500"
               fill="none"
@@ -56,12 +56,12 @@ function ProductShowcase() {
         </motion.div>
 
         {/* Buttons Section */}
-        <div className="mt-12 flex justify-center space-x-6">
-          <Button className="px-[160px] py-[80px] text-2xl font-semibold tracking-wide bg-[#9cc0cf] text-white hover:bg-[#374151] border-none rounded-none transition-colors duration-300 font-verdana">
+        <div className="mt-16 flex justify-center space-x-10">
+          <Button className="px-[260px] py-[120px] text-3xl font-semibold tracking-wide bg-[#9cc0cf] text-white hover:bg-[#374151] border-none rounded-none transition-colors duration-300">
             Learn More
           </Button>
 
-          <Button className="px-[160px] py-[80px] text-2xl font-semibold tracking-wide bg-[#9cc0cf] text-white hover:bg-[#374151] border-none rounded-none transition-colors duration-300 font-verdana">
+          <Button className="px-[260px] py-[120px] text-3xl font-semibold tracking-wide bg-[#9cc0cf] text-white hover:bg-[#374151] border-none rounded-none transition-colors duration-300">
             Get Started
           </Button>
         </div>

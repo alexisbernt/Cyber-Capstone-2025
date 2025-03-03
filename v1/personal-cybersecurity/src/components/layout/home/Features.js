@@ -50,9 +50,9 @@ export default function Features() {
   );
 
   return (
-    <section className="py-24 bg-black text-center">
+    <section className="py-24 bg-black text-center font-verdana">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {visibleFeatures.map((feature, index) => (
             <motion.div
               key={index}
@@ -60,29 +60,30 @@ export default function Features() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Card className="p-6 bg-gray-900/50 backdrop-blur-lg border-gray-800 hover:bg-gray-900/70 transition-all duration-300">
-                <feature.icon className="w-12 h-12 text-white mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-2">
+              <Card className="p-8 bg-gray-900/50 backdrop-blur-lg border-gray-800 hover:bg-gray-900/70 transition-all duration-300 shadow-lg">
+                <feature.icon className="w-16 h-16 text-white mb-6" />
+                <h3 className="text-3xl font-semibold text-white mb-4">
                   {feature.title}
                 </h3>
-                <p className="text-gray-400">{feature.description}</p>
+                <p className="text-xl text-gray-400">{feature.description}</p>
               </Card>
             </motion.div>
           ))}
         </div>
+        
         {/* Navigation Buttons */}
-        <div className="mt-8 flex justify-center space-x-6">
+        <div className="mt-12 flex justify-center space-x-8">
           <Button 
             onClick={prevScreen} 
             disabled={currentScreen === 0}
-            className="px-[160px] py-[80px] text-2xl font-semibold tracking-wide bg-[#9cc0cf] text-white hover:bg-[#374151] border-none rounded-none transition-colors duration-300 font-verdana"
+            className="px-[200px] py-[100px] text-3xl font-semibold tracking-wide bg-[#9cc0cf] text-white hover:bg-[#374151] border-none rounded-none transition-colors duration-300"
           >
             Prior Page
           </Button>
           <Button 
             onClick={nextScreen} 
             disabled={currentScreen === totalScreens - 1}
-            className="px-[160px] py-[80px] text-2xl font-semibold tracking-wide bg-[#9cc0cf] text-white hover:bg-[#374151] border-none rounded-none transition-colors duration-300 font-verdana"
+            className="px-[200px] py-[100px] text-3xl font-semibold tracking-wide bg-[#9cc0cf] text-white hover:bg-[#374151] border-none rounded-none transition-colors duration-300"
           >
             Next Page
           </Button>

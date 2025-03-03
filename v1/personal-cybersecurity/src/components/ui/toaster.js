@@ -9,7 +9,7 @@ export function Toaster() {
         style: {
           background: "#333",
           color: "#fff",
-          fontSize: "14px",
+          fontSize: "24px",
         },
         success: {
           style: {

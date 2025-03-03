@@ -9,22 +9,22 @@ function GridPattern() {
       <defs>
         <pattern
           id="grid"
-          width="40"  // Increased to maintain spacing
-          height="40"
+          width="60"  // Increased for better spacing alignment
+          height="60"
           patternUnits="userSpaceOnUse"
         >
           {/* Vertical lines */}
           <path
-            d="M 40 0 L 40 40"
-            strokeWidth="0.5"
-            stroke="rgba(255,255,255,0.1)"
+            d="M 60 0 L 60 60"
+            strokeWidth="0.6"
+            stroke="rgba(255,255,255,0.08)"  // Softer contrast to match UI aesthetics
             fill="none"
           />
           {/* Horizontal lines */}
           <path
-            d="M 0 40 L 40 40"
-            strokeWidth="0.5"
-            stroke="rgba(255,255,255,0.1)"
+            d="M 0 60 L 60 60"
+            strokeWidth="0.6"
+            stroke="rgba(255,255,255,0.08)"
             fill="none"
           />
         </pattern>
@@ -40,4 +40,5 @@ function GridPattern() {
     </svg>
   );
 }
+
 export default GridPattern;

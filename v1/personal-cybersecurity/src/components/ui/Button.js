@@ -25,12 +25,13 @@ import React from "react";
 export default function Button({ children, className, ...props }) {
   return (
     <button
-      className={`px-[160px] py-[80px] text-2xl font-semibold tracking-wide border-none rounded-none transition-colors duration-300 font-verdana bg-[#9cc0cf] text-white hover:bg-[#374151] ${className}`}
+      className={`w-full max-w-[600px] px-[250px] py-[120px] text-4xl font-semibold tracking-wide border-none rounded-none transition-colors duration-300 font-verdana bg-[#9cc0cf] text-white hover:bg-[#374151] ${className}`}
       {...props}
     >
       {children}
     </button>
   );
 }
+
 
 
