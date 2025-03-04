@@ -2,6 +2,7 @@
 Cyber Capstone Project for 2025.
 _________________________________________________________________________________
 ### Personal Cybersecurity Learning Platform 
+This project is a full-stack web dev project. It will be a website that stands as a personal cybersecurity learning platform.
 _________________________________________________________________________________
 ### Project Goals
 1. Get a website up and running.
