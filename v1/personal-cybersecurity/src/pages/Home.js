@@ -34,9 +34,9 @@ export default function Home() {
 
       {/* Navigation Buttons */}
       <div className="nav-buttons-container">
-      <Link to="/pricing">
+      <Link to="/modules">
           {/* // sign-up is known as pricing */}
-          <button className="nav-button">Explore</button> 
+          <button className="nav-button">Learn</button> 
         </Link>
         <Link to="/resources">
           <button className="nav-button">Resources</button>

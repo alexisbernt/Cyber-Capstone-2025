@@ -4,6 +4,7 @@ import "./App.css";
 import logo from "./lcc_logo.png";
 import Home from "./pages/Home";
 import Resources from "./pages/Resources";
+import Modules from "./pages/Modules"
 import Pricing from "./pages/Pricing";
 import Blog from "./pages/Blog";
 // import { queryClient } from "./lib/queryClient";
@@ -63,6 +64,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/resources" element={<Resources />} />
+          <Route path="/modules" element={<Modules />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog" element={<Toaster />} />
