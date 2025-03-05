@@ -13,9 +13,17 @@ export default function Module1() {
           alt="Banner"  
           style={{ width: "100%", height: "345px", objectFit: "cover" }} 
         />
+        </div>
+        {/* Add spacing -- adjust dimensions  */}
+        <div className="w-full">
+        <img 
+          src="/module1-starter.png" 
+          alt="Banner"  
+          style={{ width: "100%", height: "345px", objectFit: "cover" }} 
+        />
+        </div>
         <Hero />
         <Features />
-      </div>
       </main>
       </div>
   );
