@@ -28,7 +28,7 @@ export default function Home() {
         <img 
           src="/banner_lcc.png" 
           alt="Banner"  
-          style={{ width: "100%", height: "300px", objectFit: "cover" }} 
+          style={{ width: "100%", height: "345px", objectFit: "cover" }} 
         />
       </div>
 

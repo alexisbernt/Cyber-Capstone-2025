@@ -25,34 +25,34 @@ function App() {
         
         <nav className="navbar">
           <a href="/resources">
-          <img src="/image1.png" alt="Learn" className="nav-icon" />
+          <img src="/mountains.png" alt="Learn" className="nav-icon" />
           </a>
           <a href="/blog">
-            <img src="/image2.png" alt="Blog" className="nav-icon" />
+            <img src="/oregon.png" alt="Blog" className="nav-icon" />
           </a>
           <a href="/resources">
-          <img src="/image1.png" alt="Learn" className="nav-icon" />
+          <img src="/rocks.png" alt="Learn" className="nav-icon" />
           </a>
           <a href="/blog">
-            <img src="/image2.png" alt="Blog" className="nav-icon" />
+            <img src="/sun.png" alt="Blog" className="nav-icon" />
           </a>
           <a href="/resouces">
-          <img src="/image5.jpg" alt="Learn" className="nav-icon" />
+          <img src="/bonsai.jpg" alt="Learn" className="nav-icon" />
           </a>
           <a href="/*">
-          <img src="/image4.jpg" alt="Blog" className="nav-icon" />
-          </a>
-          <a href="/resources">
-          <img src="/image1.png" alt="Learn" className="nav-icon" />
+          <img src="/oregon-rock.jpg" alt="Blog" className="nav-icon" />
           </a>
           <a href="/blog">
-            <img src="/image2.png" alt="Blog" className="nav-icon" />
+            <img src="/flowers.png" alt="Blog" className="nav-icon" />
           </a>
           <a href="/resources">
-          <img src="/image1.png" alt="Learn" className="nav-icon" />
+          <img src="/angel-city.jpg" alt="Learn" className="nav-icon" />
           </a>
           <a href="/blog">
-            <img src="/image2.png" alt="Blog" className="nav-icon" />
+            <img src="/beach.jpg" alt="Blog" className="nav-icon" />
+          </a>
+          <a href="/resources">
+          <img src="/filmbychloeg.png" alt="Learn" className="nav-icon" />
           </a>
           <a href="/resources">Learn</a>
           <a href="/blog">Blog</a>
