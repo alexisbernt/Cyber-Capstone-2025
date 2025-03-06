@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Button from "../../ui/Button";
 import GridPattern from "../../patterns"; 
+import { Link } from "wouter";
 
 function Hero() {
   return (
@@ -48,12 +49,25 @@ function Hero() {
             transition={{ delay: 0.5 }}
             className="flex flex-col sm:flex-row gap-8 justify-center"
           >
-            <Button 
-              size="lg" 
-              className="w-full max-w-[600px] px-[250px] py-[120px] text-4xl tracking-wide border-none rounded-none transition-colors duration-300 bg-[#9cc0cf] text-white hover:bg-[#374151]"
+            <Link 
+              href="#" 
+              onClick={async (e) => {
+                e.preventDefault(); // Prevent default navigation behavior
+                const Modules = await import("../../../pages/Modules.js");
+                if (Modules.default) {
+                  Modules.default(); // Call the default function if available
+                } else {
+                  console.log("modules.js loaded, but no default export found.");
+                }
+              }}
             >
-              Start Learning
-            </Button>
+              <button 
+                size="lg" 
+                className="w-full max-w-[600px] px-[250px] py-[120px] text-4xl tracking-wide border-none rounded-none transition-colors duration-300 bg-[#9cc0cf] text-white hover:bg-[#374151]"
+              >
+                Start Learning
+              </button>
+            </Link>
 
             <Button 
               size="lg" 

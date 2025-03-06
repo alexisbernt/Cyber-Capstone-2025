@@ -1,5 +1,6 @@
 import Hero from "../../components/layout/home/Hero";
 import Features from "../../components/layout/home/Features";
+import DragDropGame from "../ui/DragDrop";
 
 export default function Module1() {
   return (
@@ -19,9 +20,17 @@ export default function Module1() {
         <img 
           src="/module1-starter.png" 
           alt="Banner"  
-          style={{ width: "100%", height: "345px", objectFit: "cover" }} 
+          style={{ width: "100%", height: "705px", objectFit: "cover" }} 
         />
         </div>
+        <div className="w-full">
+        <img 
+          src="/definitions-mod1.png" 
+          alt="Banner"  
+          style={{ width: "100%", height: "705px", objectFit: "cover" }} 
+        />
+        </div>
+        <DragDropGame/>
         <Hero />
         <Features />
       </main>

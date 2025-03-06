@@ -62,6 +62,24 @@
   transition: background-color 0.3s ease-in-out;
 }
 
+.nav-button-modules {
+  background-color: #9cc0cf; /* Button background color */
+  color: white;
+  padding: 80px 24px; /* Reduced vertical padding, keeping width */
+  border-radius: 244px;
+  border: none;
+  font-size: 1rem; /* Increased font size for better vertical usage */
+  line-height: 1.4; /* Allows text to take up more space vertically */
+  text-align: top;
+  white-space: normal; /* Allows text wrapping */
+  word-wrap: break-word;
+  max-width: 90vw; /* Prevents buttons from exceeding screen width */
+  max-height: 20vh; /* Ensures it doesn’t take up too much vertical space */
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+
 .nav-button:hover {
   background-color: #374151; /* Tailwind's hover:bg-gray-700 */
 }
