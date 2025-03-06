@@ -31,6 +31,13 @@ export default function Module1() {
         />
         </div>
         <DragDropGame/>
+        <div className="w-full">
+        <img 
+          src="/whereUse-mod1.png" 
+          alt="Banner"  
+          style={{ width: "100%", height: "705px", objectFit: "cover" }} 
+        />
+        </div>
         <Hero />
         <Features />
       </main>
