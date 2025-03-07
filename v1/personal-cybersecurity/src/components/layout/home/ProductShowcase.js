@@ -31,7 +31,7 @@ function ProductShowcase() {
           </p>
         </motion.div>
 
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={inView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 0.8 }}
@@ -45,15 +45,16 @@ function ProductShowcase() {
               className="w-full h-full"
             >
               {/* Simplified UI wireframe */}
-              <rect x="40" y="40" width="720" height="60" rx="8" fill="rgba(255,255,255,0.1)" />
+              {/* <rect x="40" y="40" width="720" height="60" rx="8" fill="rgba(255,255,255,0.1)" />
               <rect x="60" y="55" width="120" height="30" rx="4" fill="rgba(255,255,255,0.2)" />
               <rect x="40" y="120" width="300" height="340" rx="8" fill="rgba(255,255,255,0.1)" />
               <rect x="360" y="120" width="400" height="340" rx="8" fill="rgba(255,255,255,0.1)" />
             </svg>
-          </div>
+          </div> */}
 
-          <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-[90%] h-[10%] bg-gradient-to-b from-purple-500/20 to-transparent blur-2xl" />
-        </motion.div>
+          {/* <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-[90%] h-[10%] bg-gradient-to-b from-purple-500/20 to-transparent blur-2xl" /> */}
+        {/* </motion.div> */} 
+        {/*} */} 
 
         {/* Buttons Section */}
         <div className="mt-16 flex justify-center space-x-10">

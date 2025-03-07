@@ -12,7 +12,6 @@ export default function Home() {
         <Hero />
         <Features />
         <ProductShowcase />
-        <SignUpPage />
       </main>
     </div>
   );
