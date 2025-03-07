@@ -1,43 +1,34 @@
-require("dotenv").config();
 const express = require("express");
-const mysql = require("mysql2");
+const bodyParser = require("body-parser");
 const cors = require("cors");
+const db = require("./database");
 
 const app = express();
-app.use(express.json());
 app.use(cors());
+app.use(bodyParser.json());
 
-// Database Connection
-const db = mysql.createConnection({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASS,
-  database: process.env.DB_NAME,
-});
-
-db.connect(err => {
-  if (err) {
-    console.error("Database connection failed:", err);
-    return;
-  }
-  console.log("Connected to MySQL Database!");
-});
-
-// API Route for User Registration
+// Route to insert a user
 app.post("/signup", (req, res) => {
   const { name, email, password } = req.body;
 
-  const query = "INSERT INTO users (name, email, password) VALUES (?, ?, ?)";
-  db.query(query, [name, email, password], (err, result) => {
-    if (err) {
-      console.error(err);
-      return res.status(500).json({ error: "Database error" });
+  db.run(
+    "INSERT INTO users (name, email, password) VALUES (?, ?, ?)",
+    [name, email, password],
+    function (err) {
+      if (err) return res.status(400).json({ message: "Error: " + err.message });
+      res.json({ message: "User registered successfully!", userId: this.lastID });
     }
-    res.status(201).json({ message: "User registered successfully!" });
+  );
+});
+
+// Route to get all users
+app.get("/users", (req, res) => {
+  db.all("SELECT * FROM users", [], (err, rows) => {
+    if (err) return res.status(500).json({ message: err.message });
+    res.json(rows);
   });
 });
 
-// Start the Server
-app.listen(5000, () => {
-  console.log("Server is running on port 5000");
-});
+// Start server
+const PORT = 5000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
