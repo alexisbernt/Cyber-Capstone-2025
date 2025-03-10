@@ -11,3 +11,6 @@
 - Express js installation: https://expressjs.com/en/starter/installing.html
 - Express js starter: https://expressjs.com/en/starter/hello-world.html
 - Cors error: https://www.geeksforgeeks.org/how-to-deal-with-cors-error-in-express-node-js-project/
+- https://www.codecademy.com/learn/connecting-javascript-and-sql/modules/learn-node-sqlite-module/cheatsheet
+- ChatGPT -- specific prompts explained in 'ai-prompts-used.md'
+- Jer's 'node_sqlite_orm'
