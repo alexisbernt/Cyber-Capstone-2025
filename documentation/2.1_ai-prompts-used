@@ -1,0 +1,12 @@
+# AI Prompts I used for this Project:
+____________________________________________________________
+
+Asked ChatGPT: "How do I connect my SQLite ORM to my JavaScript front-end sign-in page?"
+Steps given:
+1. Create the User Entity (TypeORM)
+- Code altered: 'src/entities/User.js'
+2. Add the /signup API Route
+3. Modify startServer() to Include Signup Route
+- In index.js (main server script)... Changed: const userRepository = getRepository(connection, "User"); and const orderRepository = getRepository(connection, "Order"); to Set up API routes: app.use("/typeorm", setupRoutes(userRepository));
+4. Adjust Frontend API Call
+- const response = await axios.post("http://localhost:3093/typeorm/signup", formData);
