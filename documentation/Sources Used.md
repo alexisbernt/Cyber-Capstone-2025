@@ -14,3 +14,4 @@
 - https://www.codecademy.com/learn/connecting-javascript-and-sql/modules/learn-node-sqlite-module/cheatsheet
 - ChatGPT -- specific prompts explained in 'ai-prompts-used.md'
 - Jer's 'node_sqlite_orm'
+- Opening SQLite database in VScode: https://www.youtube.com/watch?v=m2kpl7LuSW0
