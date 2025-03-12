@@ -1,10 +1,10 @@
+
 {
   "type": "better-sqlite3",
   "database": "database.sqlite",
   "synchronize": true,
   "logging": false,
-  "entities": [
-    "src/entity/**/*.js"
+  "entities": [ "src/entity/**/*.js"
   ],
   "migrations": [
     "src/migration/**/*.js"

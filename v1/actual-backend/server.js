@@ -1,29 +1,42 @@
 require("reflect-metadata");
 const { createConnection } = require("typeorm");
-const express = require('express');
-const { getRepository } = require('./src/utils/helpers');
-const setupRoutes = require('./src/routes/api');
+const express = require("express");
+const cors = require("cors");
+const setupRoutes = require("./src/routes/api");
+const { User } = require("./src/entity/User"); // Import User entity
 
 const app = express();
+const port = 3001;
 
-// Constants
-const PORT = 3000;
-const { User } = require("./src/entity/User"); // Import the User entity
+// Enable CORS globally
+const corsOptions = {
+    origin: ["http://localhost:3000"],
+};
+app.use(cors(corsOptions));
 
-// Main application function using async/await
+// Middleware
+app.use(express.json());
+
+// Root route
+app.get("/", (req, res) => {
+    res.json({ message: "Server is running" });
+});
+
+// Start the application with TypeORM connection
 const startServer = async () => {
     try {
+        // Create the database connection
         const connection = await createConnection();
+
+        // Get repository AFTER the connection is established
         const userRepository = connection.getRepository(User);
 
-        app.use(express.json());
-
-        // Set up API routes
+        // Pass the repository to your routes
         app.use("/typeorm", setupRoutes(userRepository));
 
         // Start the server
-        app.listen(PORT, () => {
-            console.log(`Server running on http://localhost:${PORT}`);
+        app.listen(port, () => {
+            console.log(`Server running on http://localhost:${port}`);
         });
     } catch (error) {
         console.error("Error starting server:", error);
@@ -31,6 +44,5 @@ const startServer = async () => {
     }
 };
 
-
-// Start the application
+// Start server
 startServer();
