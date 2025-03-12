@@ -15,3 +15,4 @@
 - ChatGPT -- specific prompts explained in 'ai-prompts-used.md'
 - Jer's 'node_sqlite_orm'
 - Opening SQLite database in VScode: https://www.youtube.com/watch?v=m2kpl7LuSW0
+- Cross-origin-resource-sharing: https://www.geeksforgeeks.org/npm-cors/
