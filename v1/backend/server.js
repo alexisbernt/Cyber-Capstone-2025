@@ -1,34 +1,48 @@
+require("reflect-metadata");
+const { createConnection } = require("typeorm");
 const express = require("express");
-const bodyParser = require("body-parser");
 const cors = require("cors");
-const db = require("./database");
+const setupRoutes = require("./src/routes/api");
+const { User } = require("./src/entity/User"); // Import User entity
 
 const app = express();
-app.use(cors());
-app.use(bodyParser.json());
+const port = 3001;
 
-// Route to insert a user
-app.post("/signup", (req, res) => {
-  const { name, email, password } = req.body;
+// Enable CORS globally
+const corsOptions = {
+    origin: ["http://localhost:3000"],
+};
+app.use(cors(corsOptions));
 
-  db.run(
-    "INSERT INTO users (name, email, password) VALUES (?, ?, ?)",
-    [name, email, password],
-    function (err) {
-      if (err) return res.status(400).json({ message: "Error: " + err.message });
-      res.json({ message: "User registered successfully!", userId: this.lastID });
+// Middleware
+app.use(express.json());
+
+// Root route
+app.get("/", (req, res) => {
+    res.json({ message: "Server is running" });
+});
+
+// Start the application with TypeORM connection
+const startServer = async () => {
+    try {
+        // Create the database connection
+        const connection = await createConnection();
+
+        // Get repository AFTER the connection is established
+        const userRepository = connection.getRepository(User);
+
+        // Pass the repository to your routes
+        app.use("/typeorm", setupRoutes(userRepository));
+
+        // Start the server
+        app.listen(port, () => {
+            console.log(`Server running on http://localhost:${port}`);
+        });
+    } catch (error) {
+        console.error("Error starting server:", error);
+        process.exit(1);
     }
-  );
-});
-
-// Route to get all users
-app.get("/users", (req, res) => {
-  db.all("SELECT * FROM users", [], (err, rows) => {
-    if (err) return res.status(500).json({ message: err.message });
-    res.json(rows);
-  });
-});
+};
 
 // Start server
-const PORT = 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+startServer();

@@ -1,5 +1,8 @@
+// Old index.js (for back-end file)
+
 const express = require('express');
 const cors = require('cors');
+
 const app = express()
 const port = 3001
 // CORS is enabled for the selected origins
@@ -8,7 +11,14 @@ let corsOptions = {
 };
 app.get('/', cors(corsOptions), (req, res) => {
   res.send(JSON.stringify({name: "hello"}))
+app.get('/', (req, res) => {
+    res.send('Server is running');
+});
+
+
 })
+// const cors = require('cors');
+app.use(cors());
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
