@@ -11,7 +11,8 @@ const SignUpPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/signup", formData);
+      // const response = await axios.post("http://localhost:3001/typeorm/signup", formData);
+      const response = await axios.post("http://localhost:3001/typeorm/auth", formData);
       alert(response.data.message);
     } catch (error) {
       console.error("Signup error:", error);
