@@ -1,0 +1,193 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Header content  */
+
+.header__nav {
+  display: flex;
+  overflow: hidden;
+}
+
+.header__logo {
+  flex: 1;
+  display: flex;
+
+  position: relative;
+  padding: 20px;
+}
+
+.header__logo-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+
+  background-color: var(--primary-color);
+  z-index: -1;
+}
+
+.header__logo h4 {
+  padding-left: 30px;
+
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-family: var(--playfair-display);
+  color: #fff;
+  opacity: 0.8;
+}
+
+.header__menu, .header__menu-mobile {
+  padding: 20px;
+  flex: 1.236;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 64px;
+
+  list-style: none;
+}
+
+.header__menu li {
+  font-weight: 500;
+  font-family: var(--plus-jakarta-sans);
+  color: var(--secondary-color);
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.header__menu li img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.header__menu-mobile {
+  display: none;
+  gap: 20px;
+
+  position: relative;
+}
+
+/* About content  */
+
+.about-us {
+  display: flex;
+  min-height: 720px;
+  overflow: hidden;
+}
+
+.about-us__image {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background: var(--color-white);
+
+  position: relative;
+}
+
+.about-us__image div {
+  padding: 32px 64px;
+
+  flex: 1;
+  display: flex;
+  align-items: center;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* .about-us__image-sushi3 {
+  border-bottom: 8px solid var(--color-creamson);
+
+  background-image: url("../../assets/about_bg1.png")
+}
+
+.about-us__image-sushi2 {
+  background-image: url("../../assets/about_bg2.png")
+} */
+
+.about-us__image-sushi3 img {
+  width: 225px;
+  height: 200px;
+}
+
+.about-us__image-sushi2 img {
+  width: 240px;
+  height: 160px;
+}
+
+.about-us__button {
+  position: absolute;
+  right: 0;
+
+  padding: 12px 32px;
+  min-height: 64px;
+
+  background: var(--secondary-color);
+  border-radius: 32px 0 0 32px;
+  border: 0;
+  outline: 0;
+
+  color: #fff;
+  font-family: var(--plus-jakarta-sans);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+
+  cursor: pointer;
+}
+
+.about-us__button img {
+  object-fit: contain;
+  margin-left: 32px;
+}
+
+.about-us__content {
+  padding: 64px;
+
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
