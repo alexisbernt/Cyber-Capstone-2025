@@ -9,6 +9,7 @@ React: https://create-react-app.dev/docs/getting-started/
 
 ## Front-end
 - Replit: https://replit.com/~
+- Moving / generative features as you scroll: https://michalsnik.github.io/aos/ 
 
 ## Back-end 
 - Express js installation: https://expressjs.com/en/starter/installing.html
