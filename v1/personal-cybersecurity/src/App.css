@@ -52,7 +52,7 @@
 }
 
 .nav-button {
-  background-color: #9cc0cf; /* Tailwind's bg-gray-800 */
+  background-color: #5c565693; /* Tailwind's bg-gray-800 */
   color: white;
   padding: 62px 124px; /* Equivalent to px-6 py-3 */
   border-radius: 0px; /* Fully rounded buttons at 244px */
@@ -63,7 +63,7 @@
 }
 
 .nav-button-modules {
-  background-color: #9cc0cf; /* Button background color */
+  background-color: #d3d3d3b6; /* Button background color */
   color: white;
   padding: 80px 24px; /* Reduced vertical padding, keeping width */
   border-radius: 244px;

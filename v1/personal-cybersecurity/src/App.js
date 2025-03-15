@@ -28,38 +28,37 @@ function App() {
         
         <nav className="navbar">
           <a href="/resources">
-          <img src="/mountains.png" alt="Learn" className="nav-icon" />
+          <img src="/duoauth_image.png" alt="Learn" className="nav-icon" />
           </a>
           <a href="/blog">
-            <img src="/oregon.png" alt="Blog" className="nav-icon" />
+            <img src="/biometrics_image.png" alt="Blog" className="nav-icon" />
           </a>
           <a href="/resources">
-          <img src="/rocks.png" alt="Learn" className="nav-icon" />
+          <img src="/image1.png" alt="Learn" className="nav-icon" />
           </a>
           <a href="/blog">
-            <img src="/sun.png" alt="Blog" className="nav-icon" />
-          </a>
-          <a href="/resouces">
-          <img src="/bonsai.jpg" alt="Learn" className="nav-icon" />
-          </a>
-          <a href="/*">
-          <img src="/oregon-rock.jpg" alt="Blog" className="nav-icon" />
-          </a>
-          <a href="/blog">
-            <img src="/flowers.png" alt="Blog" className="nav-icon" />
+            <img src="/lock_image.png" alt="Blog" className="nav-icon" />
           </a>
           <a href="/resources">
-          <img src="/angel-city.jpg" alt="Learn" className="nav-icon" />
-          </a>
-          <a href="/blog">
-            <img src="/beach.jpg" alt="Blog" className="nav-icon" />
+          <img src="/web_image.png" alt="Learn" className="nav-icon" />
           </a>
           <a href="/resources">
-          <img src="/filmbychloeg.png" alt="Learn" className="nav-icon" />
+          <img src="/duoauth_image.png" alt="Learn" className="nav-icon" />
+          </a>
+          <a href="/blog">
+            <img src="/biometrics_image.png" alt="Blog" className="nav-icon" />
+          </a>
+          <a href="/resources">
+          <img src="/image1.png" alt="Learn" className="nav-icon" />
+          </a>
+          <a href="/blog">
+            <img src="/lock_image.png" alt="Blog" className="nav-icon" />
+          </a>
+          <a href="/resources">
+          <img src="/web_image.png" alt="Learn" className="nav-icon" />
           </a>
           <a href="/resources">Learn</a>
           <a href="/blog">Blog</a>
-          <a href="/pricing">Sign-up</a>
           <a href="/login">Login</a>
 
         </nav>
