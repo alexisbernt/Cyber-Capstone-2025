@@ -11,10 +11,6 @@ function ProductShowcase() {
 
   return (
     <section ref={ref} className="relative py-32 bg-black overflow-hidden font-verdana">
-      {/* Ensure GridPattern is correctly positioned */}
-      <div className="absolute inset-0 pointer-events-none">
-        <GridPattern />
-      </div>
 
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
@@ -66,6 +62,12 @@ function ProductShowcase() {
             Get Started
           </Button>
         </div>
+
+        {/* Ensure GridPattern is correctly positioned */}
+        <div className="absolute inset-0 pointer-events-none">
+          <GridPattern />
+        </div>
+        
       </div>
     </section>
   );

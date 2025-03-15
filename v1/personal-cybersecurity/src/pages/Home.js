@@ -50,12 +50,14 @@ export default function Home() {
         </Link>
       </div>
 
+      <ProductShowcase />
+
       {/* Flex Container for Left Image & Right Hero Section */}
       <div className="split-container">
         {/* Left-side Image */}
         <div className="split-left">
           <img 
-            src="/demoa.png"  
+            src="/cyber-bubbles.png"  
             alt="Left-side Image"  
             className="split-image"
           />
@@ -87,7 +89,6 @@ export default function Home() {
       
       <main>
         <Features />
-        <ProductShowcase />
       </main>
     </div>
   );
