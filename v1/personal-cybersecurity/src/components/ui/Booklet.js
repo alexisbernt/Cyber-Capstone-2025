@@ -2,9 +2,9 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const pages = [
-  { content: "Page 1", image: "/image2.png" },
-  { content: "Page 2", image: null },
-  { content: "Page 3", image: null },
+  { content: "Page 1", image: "/rocks.png" },
+  { content: "Page 2", image: "/mountains.png" },
+  { content: "Page 3", image: "/flowers.png" },
 ];
 
 export default function Booklet() {
@@ -20,7 +20,13 @@ export default function Booklet() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-200 p-5">
-      <div className="relative w-96 h-64 bg-white shadow-lg rounded-lg overflow-hidden">
+      <div className="relative w-full max-w-3xl h-[800px] bg-white shadow-lg rounded-lg overflow-hidden flex items-center justify-center">
+        <button
+          onClick={prevPage}
+          className="absolute left-4 bg-gray-800 text-white px-3 py-2 rounded-full text-lg hover:bg-gray-600"
+        >
+          ◀
+        </button>
         <AnimatePresence>
           <motion.div
             key={currentPage}
@@ -28,29 +34,17 @@ export default function Booklet() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -100 }}
             transition={{ duration: 0.5 }}
-            className="absolute inset-0 flex flex-col items-center justify-center bg-cover bg-center text-3xl font-bold text-gray-700"
-            style={{ backgroundImage: "url('/book_background.jpg')" }}
+            className="absolute inset-0 flex flex-col items-center justify-center w-full h-full"
           >
-            {pages[currentPage].image && (
-              <img src={pages[currentPage].image} alt="Page Visual" className="w-32 h-32 mb-2 rounded-lg shadow-md" />
-            )}
-            <span>{pages[currentPage].content}</span>
+            <img src={pages[currentPage].image} alt={pages[currentPage].content} className="w-full h-3/4 object-cover" />
+            <span className="bg-white bg-opacity-70 px-4 py-2 rounded-lg shadow-md mt-4 text-3xl font-bold text-gray-700">{pages[currentPage].content}</span>
           </motion.div>
         </AnimatePresence>
-      </div>
-      
-      <div className="mt-4 flex space-x-4">
-        <button
-          onClick={prevPage}
-          className="px-6 py-3 bg-blue-500 text-white rounded-lg text-lg font-semibold hover:bg-blue-600"
-        >
-          Previous
-        </button>
         <button
           onClick={nextPage}
-          className="px-6 py-3 bg-green-500 text-white rounded-lg text-lg font-semibold hover:bg-green-600"
+          className="absolute right-4 bg-gray-800 text-white px-3 py-2 rounded-full text-lg hover:bg-gray-600"
         >
-          Next
+          ▶
         </button>
       </div>
     </div>
