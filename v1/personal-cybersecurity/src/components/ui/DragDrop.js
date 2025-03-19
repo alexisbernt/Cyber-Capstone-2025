@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const wordPairs = {
     CYBERSECURITY: "The practice of protecting digital systems and data from cyber threats.",
-    CYBERATTACK: "When data, networks, and/or computer systems are accessed (or under the threat to be accessed) in a unauthorized manner.",
-    MALWARE : " A software (program made to operate on a device) made by cybercriminals with an intention to steal or manipulate technical information.",
+    CYBERATTACK: "When data, networks, and/or computer systems are accessed (or under the threat to be accessed) in an unauthorized manner.",
+    MALWARE : "A software (program made to operate on a device) made by cybercriminals with an intention to steal or manipulate technical information.",
     DIGITAL_FOOTPRINT: "The actions you take on a device/online.",
 };
 
@@ -22,7 +23,7 @@ export default function MatchingGame() {
         { word: key, pair: value },
         { word: value, pair: key },
       ])
-      .sort(() => Math.random() - 0.5); // Shuffle words randomly
+      .sort(() => Math.random() - 0.5);
 
     setWords(shuffledWords);
     setMatchedWords([]);
@@ -34,8 +35,8 @@ export default function MatchingGame() {
     const draggedWord = e.dataTransfer.getData("word");
 
     if (wordPairs[draggedWord] === targetWord || wordPairs[targetWord] === draggedWord) {
-      setMatchedWords([...matchedWords, draggedWord, targetWord]);
-      setScore(score + 1);
+      setMatchedWords((prev) => [...prev, draggedWord, targetWord]);
+      setScore((prev) => prev + 1);
     }
   };
 
@@ -46,20 +47,27 @@ export default function MatchingGame() {
       <p className="text-lg font-semibold mb-4">Score: {score}</p>
 
       <div className="grid grid-cols-2 gap-6 bg-white p-6 rounded-lg shadow-lg">
-        {words.map(({ word, pair }) =>
-          !matchedWords.includes(word) ? (
-            <div
-              key={word}
-              className="p-4 bg-blue-500 text-white text-lg font-bold rounded-lg cursor-pointer text-center"
-              draggable
-              onDragStart={(e) => e.dataTransfer.setData("word", word)}
-              onDragOver={(e) => e.preventDefault()}
-              onDrop={(e) => handleDrop(e, word)}
-            >
-              {word}
-            </div>
-          ) : null
-        )}
+        <AnimatePresence>
+          {words.map(({ word }) =>
+            !matchedWords.includes(word) ? (
+              <motion.div
+                key={word}
+                className="p-4 bg-blue-500 text-white text-lg font-bold rounded-full cursor-pointer text-center flex items-center justify-center w-32 h-32"
+                draggable
+                onDragStart={(e) => e.dataTransfer.setData("word", word)}
+                onDragOver={(e) => e.preventDefault()}
+                onDrop={(e) => handleDrop(e, word)}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                initial={{ opacity: 1, scale: 1 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0, rotate: 360 }}
+              >
+                {word}
+              </motion.div>
+            ) : null
+          )}
+        </AnimatePresence>
       </div>
 
       <button
