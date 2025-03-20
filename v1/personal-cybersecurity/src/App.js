@@ -28,34 +28,34 @@ function App() {
         
         <nav className="navbar">
           <a href="/resources">
-          <img src="/duoauth_image.png" alt="Learn" className="nav-icon" />
+          <img src="/flowers.png" alt="Learn" className="nav-icon" />
           </a>
           <a href="/blog">
-            <img src="/biometrics_image.png" alt="Blog" className="nav-icon" />
+            <img src="/oregon.png" alt="Blog" className="nav-icon" />
           </a>
           <a href="/resources">
-          <img src="/image1.png" alt="Learn" className="nav-icon" />
+          <img src="/oregon-rock.jpg" alt="Learn" className="nav-icon" />
           </a>
           <a href="/blog">
-            <img src="/lock_image.png" alt="Blog" className="nav-icon" />
+            <img src="/mountains.png" alt="Blog" className="nav-icon" />
           </a>
           <a href="/resources">
-          <img src="/web_image.png" alt="Learn" className="nav-icon" />
+          <img src="/rocks.png" alt="Learn" className="nav-icon" />
           </a>
           <a href="/resources">
-          <img src="/duoauth_image.png" alt="Learn" className="nav-icon" />
+          <img src="/flowers.png" alt="Learn" className="nav-icon" />
           </a>
           <a href="/blog">
-            <img src="/biometrics_image.png" alt="Blog" className="nav-icon" />
+            <img src="/oregon.png" alt="Blog" className="nav-icon" />
           </a>
           <a href="/resources">
-          <img src="/image1.png" alt="Learn" className="nav-icon" />
+          <img src="/oregon-rock.jpg" alt="Learn" className="nav-icon" />
           </a>
           <a href="/blog">
-            <img src="/lock_image.png" alt="Blog" className="nav-icon" />
+            <img src="/mountains.png" alt="Blog" className="nav-icon" />
           </a>
           <a href="/resources">
-          <img src="/web_image.png" alt="Learn" className="nav-icon" />
+          <img src="/rocks.png" alt="Learn" className="nav-icon" />
           </a>
           <a href="/resources">Learn</a>
           <a href="/blog">Blog</a>

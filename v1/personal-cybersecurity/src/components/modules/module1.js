@@ -18,7 +18,8 @@ export default function Module1() {
         />
         </div>
 
-        {/* <GridPattern /> */}
+        <Features />
+        <GridPattern />
         
         {/* Flex Container for Left Image & Right Hero Section */}
       <div className="split-container">

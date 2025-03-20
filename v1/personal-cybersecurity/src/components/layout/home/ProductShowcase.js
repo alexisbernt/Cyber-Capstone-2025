@@ -39,10 +39,10 @@ function ProductShowcase() {
           className="max-w-4xl mx-auto text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 tracking-wide">
-            Built for Modern Enterprises
+            How to Implement Cybersecurity:
           </h2>
           <p className="text-xl text-gray-400 leading-relaxed tracking-wide">
-            Experience a new way of working with our intuitive interface and powerful features.
+            Discover, Conceal, Enforce, and Lengthen
           </p>
         </motion.div>
 

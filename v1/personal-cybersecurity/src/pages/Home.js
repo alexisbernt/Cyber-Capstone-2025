@@ -8,6 +8,7 @@ import Features from "../components/layout/home/Features";
 import ProductShowcase from "../components/layout/home/ProductShowcase";
 import '../App.css';
 import { useState } from "react";
+import GridPattern from "../components/patterns";
 
 export default function Home() {
   const [name, setName] = useState('');
@@ -51,6 +52,7 @@ export default function Home() {
       </div>
 
       <ProductShowcase />
+      <GridPattern/>
 
       {/* Flex Container for Left Image & Right Hero Section */}
       <div className="split-container">
