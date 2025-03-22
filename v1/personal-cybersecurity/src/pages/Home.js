@@ -33,6 +33,7 @@ export default function Home() {
         />
       </div>
 
+      <main>
       {/* Navigation Buttons */}
       <div className="nav-buttons-container">
       <Link to="/modules">
@@ -52,7 +53,8 @@ export default function Home() {
       </div>
 
       <ProductShowcase />
-      <GridPattern/>
+      <Features />
+      <GridPattern />
 
       {/* Flex Container for Left Image & Right Hero Section */}
       <div className="split-container">
@@ -87,10 +89,6 @@ export default function Home() {
           />
         </div>
       </div>
-
-      
-      <main>
-        <Features />
       </main>
     </div>
   );

@@ -27,11 +27,11 @@ const posts = [
   },
   {
     title: "CYBERSECURITY ATTACKS: GONE PHISHING",
-    excerpt: "Learn how to optimize your team's workflow with our platform",
-    author: "Michael Chen",
-    date: "Jan 28, 2025",
+    excerpt: "Learn how to protect yourself from threats",
+    author: "Alexis Bernthal",
+    date: "Mar 21, 2025",
     category: "Best Practices",
-    link: "/blog/team-productivity",
+    link: "/blog/phishing", // BlogPage2 link
   },
   {
     title: "LinkedIn & Venmo Security Essentials",

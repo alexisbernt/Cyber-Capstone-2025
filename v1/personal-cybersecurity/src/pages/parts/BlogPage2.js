@@ -1,12 +1,13 @@
 import React from "react";
-import headerImage from "./blog-photos/header-image.png";
-import auntTana from "./blog-photos/aunt-tana.png";
-import auntTanaQ from "./blog-photos/aunt-tana-question.png";
+import headerImage from "./blog-photos/image5.png";
+import LinkedInImage from "./blog-photos/linkedin-phishing.png";
+import PhishingImage from "./blog-photos/phishing-img.png";
+import PhishingComic from "./blog-photos/phishing-comic.png";
 
-const BlogPage1 = () => {
+const BlogPage2 = () => {
   return (
     <div className="max-w-2xl mx-auto p-6 bg-white shadow-lg rounded-lg">
-      <h1 className="text-4xl font-bold text-center mb-6">Why Learn Cybersecurity?</h1>
+      <h1 className="text-4xl font-bold text-center mb-6">Phishing In The Dark (Web)</h1>
       
       {/* Header Image */}
       <div className="w-full flex justify-center mb-6">
@@ -18,22 +19,25 @@ const BlogPage1 = () => {
       </div>
       
       <p className="text-lg text-gray-700 mb-6">
-        <strong>Cybersecurity is important for businesses and electronic devices, but how does cyber security play a role in our personal lives? </strong>
+        <strong>The other day I posted on my LinkedIn profile that I had accepted a new job. Super exciting!  </strong>
         <br />
         <br />
-        <strong>That's what the website is all about: This site is helping us improve our personal cybersecurity skills and protecting us from potential threats online.</strong>
+        <strong>Exactly 17 hours 27 minutes and 14 seconds later I got an email:
+LinkedIn Security: “Alexis your password was successfully reset.” 
+</strong>
         <br />
         <strong> ... </strong>
         <br />
         <br />
-        <strong> This is Aunt Tana: </strong>
+        <strong> Here is the image: </strong>
+        <br />
       </p>
       
       {/* Blog Content Images */}
       <div className="w-full flex justify-center mb-6">
         <img 
-          src={auntTana} 
-          alt="Aunt Tana" 
+          src={LinkedInImage} 
+          alt="LinkedIn Email" 
           className="w-3/4 h-60 object-cover rounded-lg shadow-md"
         />
       </div>
@@ -41,47 +45,57 @@ const BlogPage1 = () => {
       <p className="text-lg text-gray-700 mb-6">
         <strong>...</strong>
         <br />
-        <strong>Let's start by defining cybersecurity for Aunt Tana: </strong>
+        <strong>Thing is - I wasn’t the one to change my password. The only thing I had done on my LinkedIn profile was create a post. I worried that, after creating the post, someone had hacked into my account.</strong>
         <br />
         <br />
-        <strong>Cybersecurity is what secures our digital components, networks, data, and computer systems from unauthorized access. </strong>
+        <strong>I automatically clicked “change your password” in an attempt to prevent any further damage. </strong>
         <br />
         <br/> 
         <strong> ... </strong>
-        <strong>Okay, that definition isn’t super helpful for Aunt Tana. She doesn’t know what digital components are. So let’s break-down that definition a little bit. </strong>
+        <strong>That’s when I came to the bright screen of doom: </strong>
       </p>
       
       <div className="w-full flex justify-center mb-6">
         <img 
-          src={auntTanaQ} 
-          alt="Aunt Tana Questioning" 
+          src={PhishingImage} 
+          alt="Phishing Online Image" 
           className="w-3/4 h-60 object-cover rounded-lg shadow-md"
         />
       </div>
       
       <p className="text-lg text-gray-700">
-        <strong>Basically, cybersecurity is put in place to make sure the "bad guys" don’t get access to the digital information they should NOT have access to. </strong>
+        <strong>I’d fallen victim to not just a phishing scam, but a TESTING phishing scam. Although embarrassing, I thanked the cyber gods for my luck in not becoming a victim to an ACTUAL phishing scam. </strong>
         <br /> 
-        <strong> These “digital bad guys” can scrape a ton of our personal data from online, or, through our devices. </strong>
+        <strong> According to StationX, 3.4 billion emails are sent by cybercriminals every day. My fake phishing scam incident led me to investigate cyber attacks.  </strong>
         <br />
-        <strong> This information the "digital bad guys" tend to try and get include things like our credit card numbers, account passwords, and even social security numbers. </strong>
+        <strong> There are different cyber attacks. To understand cybersecurity, one must understand cyberattacks.  </strong>
         <br />
-        <strong> The scary thing is that our personal information is not only vulnerable when we’re taking a picture of our social security card to be sent (*bad idea by the way*), or entering our credit card number into our computer while in a public coffee shop (*also a bad move*), our personal information is vulnerable when we connect to a WiFi network or even when we save a private picture to a folder linked to our email. </strong>
+        <strong> You might be thinking: ‘Learning about cyberattacks sounds time consuming and boring.’ 
+Well, don’t worry, I take care of the research and provide the things you need to know (just the essentials) about cyberattacks. 
+ </strong>
         <br />
-        <strong>I’m learning along the way too so all of the learning sources I use will be linked. </strong>
+        <strong>Some examples of cyberattacks include malware attacks, phishing attacks, man-in-the-middle attacks, and password attacks. Today we focus on phishing attacks.  </strong>
         <br />
-        <strong> Please join the email list to get a once a month (seriously *only* once a month) email about some “personal cyber security hacks.” </strong>
+        <strong> A phishing attack is very different from fishing. Phishing with a “ph” happens online. Fishing with a big “F” happens outside. In this case, we like fishing with a big “F” more. When attackers go phishing with a “ph” they send emails or text messages. So it all starts with an online outreach. </strong>
         <br />
-        <strong> If learning about personal cybersecurity doesn't automatically jump out to you, some reasons you should join the cybersecurity club include:</strong>
+        <strong> Def Phishing = Where attackers (who tend to be cyber criminals) send emails, text messages, or an alternative form of digital correspondence that contain links to dangerous websites which seek to exploit people. </strong>
         <br />
-        <strong>(1) Having personal cybersecurity skills saves you. When you protect yourself from cyber threats, you save yourself from the risk of a massive headache and/or stolen money. </strong>
+        <strong>These “dangerous websites” have malware which can hurt people or organizations. This malware can put a person’s identity at risk. </strong>
         <br />
-        <strong> (2) You get a cyber comic once a month. These lessons are meant to be fun and short. Yes, they are informational and will equip you with the skills you need to personally succeed when it comes to your cybersecurity, but they also include pictures and the possibility for cybersecurity club conversations. </strong>
+        <strong> Def Malware = A program or file that's intentionally harmful or exploiting a computer, network, or server. </strong>
         <br />
-        <strong> (3) It’s free. All you need is an email address and a username. That is how you get notified that a new cybersecurity club hack has been posted. </strong>
+        <strong> Phishing comes in various forms. Sometimes a phishing attack comes through a mass email chain that gets sent to millions of inboxes. Sometimes phishing emails are customized to a certain individual because the attacker hopes to gain specific information. When an attacker hopes to gain specific information it is called Spear Phishing.  </strong>
       </p>
+      {/* Blog Content Images */}
+      <div className="w-full flex justify-center mb-6">
+        <img 
+          src={PhishingComic} 
+          alt="Phishing Comic" 
+          className="w-3/4 h-60 object-cover rounded-lg shadow-md"
+        />
+      </div>
     </div>
   );
 };
 
-export default BlogPage1;
+export default BlogPage2;

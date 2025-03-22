@@ -14,6 +14,7 @@ import Blog from "./pages/Blog";
 import { Toaster } from "./components/ui/toaster";
 import NotFound from "./pages/NotFound";
 import BlogPage1 from "./pages/parts/BlogPage1";
+import BlogPage2 from "./pages/parts/BlogPage2";
 import Roadmap from "./pages/Roadmap";
 
 function App() {
@@ -75,6 +76,7 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog" element={<Toaster />} />
           <Route path="/blog/why-cybersecurity" element={<BlogPage1 />} />
+          <Route path="/blog/phishing" element={<BlogPage2 />} />
           <Route path="*" element={<NotFound />} /> 
         </Routes>
       </div>
