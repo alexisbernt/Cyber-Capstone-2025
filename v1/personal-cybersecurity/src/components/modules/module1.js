@@ -3,6 +3,22 @@ import Features from "../../components/layout/home/Features";
 import Booklet from "../ui/Booklet";
 import DragDropGame from "../ui/DragDrop";
 import GridPattern from "../patterns";
+import { useNavigate } from "react-router-dom";
+
+const Banner = () => {
+  const navigate = useNavigate();
+
+  return (
+    <div className="w-full">
+      <img 
+        src="/module1-starter.png" 
+        alt="Banner"  
+        style={{ width: "100%", height: "705px", objectFit: "cover", cursor: "pointer" }} 
+        onClick={() => navigate("/blog/why-cybersecurity")}
+      />
+    </div>
+  );
+};
 
 export default function Module1() {
   return (
@@ -52,13 +68,7 @@ export default function Module1() {
         <Booklet/>
         <GridPattern />
         <DragDropGame/>
-        <div className="w-full">
-        <img 
-          src="/whereUse-mod1.png" 
-          alt="Banner"  
-          style={{ width: "100%", height: "705px", objectFit: "cover" }} 
-        />
-        </div>
+        <Banner/>
         <Hero />
         <Features />
       </main>
