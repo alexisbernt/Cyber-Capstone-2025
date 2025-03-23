@@ -2,9 +2,10 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const pages = [
-  { content: "Page 1", image: "/rocks.png" },
-  { content: "Page 2", image: "/mountains.png" },
-  { content: "Page 3", image: "/flowers.png" },
+  { content: "Page 1", image: "/cyber-lock1.png" },
+  { content: "Page 2", image: "/cyber-lock2.png" },
+  { content: "Page 3", image: "/cyber-lock3.png" },
+  { content: "Page 4", image: "/cyber-lock4.png" }
 ];
 
 export default function Booklet() {
