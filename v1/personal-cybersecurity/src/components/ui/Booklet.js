@@ -2,22 +2,18 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const pages = [
-  { content: "Page 1", image: "/cyber-lock1.png" },
-  { content: "Page 2", image: "/cyber-lock2.png" },
-  { content: "Page 3", image: "/cyber-lock3.png" },
-  { content: "Page 4", image: "/cyber-lock4.png" }
+  { content: "Discover", image: "/discover.png" },
+  { content: "Conceal", image: "/conceal.png" },
+  { content: "Enforce", image: "/enforce.png" },
+  { content: "Lengthen", image: "/lengthen.png" },
+  { content: "Watch this cybersecurity video", video: "https://www.youtube.com/embed/RurCWoGP3YE?si=3nopGtzkTHWAK9Pv" } // Embed video using the '/embed' then the YouTube ID 
 ];
 
 export default function Booklet() {
   const [currentPage, setCurrentPage] = useState(0);
 
-  const nextPage = () => {
-    setCurrentPage((prev) => (prev < pages.length - 1 ? prev + 1 : 0));
-  };
-
-  const prevPage = () => {
-    setCurrentPage((prev) => (prev > 0 ? prev - 1 : pages.length - 1));
-  };
+  const nextPage = () => setCurrentPage((prev) => (prev < pages.length - 1 ? prev + 1 : 0));
+  const prevPage = () => setCurrentPage((prev) => (prev > 0 ? prev - 1 : pages.length - 1));
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-200 p-5">
@@ -28,6 +24,7 @@ export default function Booklet() {
         >
           ◀
         </button>
+
         <AnimatePresence>
           <motion.div
             key={currentPage}
@@ -37,10 +34,23 @@ export default function Booklet() {
             transition={{ duration: 0.5 }}
             className="absolute inset-0 flex flex-col items-center justify-center w-full h-full"
           >
-            <img src={pages[currentPage].image} alt={pages[currentPage].content} className="w-full h-3/4 object-cover" />
-            <span className="bg-white bg-opacity-70 px-4 py-2 rounded-lg shadow-md mt-4 text-3xl font-bold text-gray-700">{pages[currentPage].content}</span>
+            {pages[currentPage].video ? (
+              <iframe // iframe to embed video 
+                className="w-full h-3/4"
+                src={pages[currentPage].video}
+                title="Embedded Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            ) : (
+              <img src={pages[currentPage].image} alt={pages[currentPage].content} className="w-full h-3/4 object-cover" />
+            )}
+            <span className="bg-white bg-opacity-70 px-4 py-2 rounded-lg shadow-md mt-4 text-3xl font-bold text-gray-700">
+              {pages[currentPage].content}
+            </span>
           </motion.div>
         </AnimatePresence>
+
         <button
           onClick={nextPage}
           className="absolute right-4 bg-gray-800 text-white px-3 py-2 rounded-full text-lg hover:bg-gray-600"
