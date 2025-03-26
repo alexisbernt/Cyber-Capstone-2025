@@ -9,6 +9,7 @@ import ProductShowcase from "../components/layout/home/ProductShowcase";
 import '../App.css';
 import { useState } from "react";
 import GridPattern from "../components/patterns";
+import ColorPattern from "../components/color-pattern";
 
 export default function Home() {
   const [name, setName] = useState('');
@@ -52,7 +53,14 @@ export default function Home() {
         </Link>
       </div>
 
-      <GridPattern />
+        {/* Divider Image */}
+      <div className="w-full">
+        <img 
+          src="/banner2.png" 
+          alt="Cybersecurity"  
+          style={{ width: "100%", height: "285px", objectFit: "cover" }} 
+        />
+      </div>
 
       {/* // Was previously Tailwind css */}
       <div className="tail-container">
@@ -99,6 +107,11 @@ export default function Home() {
           />
         </div>
       </div>
+
+      <div>
+       <ColorPattern />
+      </div>
+      
       </main>
     </div>
   );
