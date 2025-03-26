@@ -11,7 +11,6 @@
   text-align: center;
 }
 
-/* Header Styling */
 .header {
   display: flex;
   align-items: center;
@@ -58,6 +57,7 @@
   border-radius: 0px; /* Fully rounded buttons at 244px */
   border: none;
   font-size: 1rem;
+  font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
@@ -69,6 +69,7 @@
   border-radius: 244px;
   border: none;
   font-size: 1rem; /* Increased font size for better vertical usage */
+  font-weight: bold;
   line-height: 1.4; /* Allows text to take up more space vertically */
   text-align: top;
   white-space: normal; /* Allows text wrapping */
@@ -78,7 +79,6 @@
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
-
 
 .nav-button:hover {
   background-color: #374151; /* Tailwind's hover:bg-gray-700 */
@@ -142,15 +142,6 @@
   flex-direction: column;
 }
 
-/* Main Content
-.main-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 40px;
-} */
-
 /* Clickable Modules */
 .module {
   width: 250px;
@@ -172,6 +163,16 @@
   background-color: #007bff;
   color: white;
 }
+
+.tail-container {
+  display: flex;
+  flex-direction: row;
+}
+.left, .right {
+  width: 50%;
+}
+
+/* Fonts */
 
 @import url('https://fonts.googleapis.com/css2?family=Verdana&display=swap');
 

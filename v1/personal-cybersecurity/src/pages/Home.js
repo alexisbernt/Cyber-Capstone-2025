@@ -52,8 +52,18 @@ export default function Home() {
         </Link>
       </div>
 
-      <ProductShowcase />
-      <Features />
+      <GridPattern />
+
+      {/* // Was previously Tailwind css */}
+      <div className="tail-container">
+        <div className="left">
+          <Features />
+        </div>
+        <div className="right">
+          <ProductShowcase />
+        </div>
+      </div>
+
       <GridPattern />
 
       {/* Flex Container for Left Image & Right Hero Section */}
