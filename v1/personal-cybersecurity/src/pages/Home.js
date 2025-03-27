@@ -65,6 +65,8 @@ export default function Home() {
       {/* // Was previously Tailwind css */}
       <div className="tail-container">
         <div className="left">
+          <GridPattern/>
+          <GridPattern/>
           <Features />
         </div>
         <div className="right">
@@ -111,7 +113,7 @@ export default function Home() {
       <div>
        <ColorPattern />
       </div>
-      
+
       </main>
     </div>
   );

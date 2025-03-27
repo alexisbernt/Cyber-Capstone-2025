@@ -52,25 +52,37 @@ export default function Features() {
   return (
     <section className="py-24 bg-black text-center font-verdana">
       <div className="container mx-auto px-6">
+        {/* Section Title */}
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 tracking-wide">
+          How to Implement Cybersecurity:
+        </h2>
+        <p className="text-xl text-gray-400 leading-relaxed tracking-wide mb-12">
+          Discover, Conceal, Enforce, and Lengthen
+        </p>
+
+        {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {visibleFeatures.map((feature, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <Card className="p-8 bg-gray-900/50 backdrop-blur-lg border-gray-800 hover:bg-gray-900/70 transition-all duration-300 shadow-lg">
-                <feature.icon className="w-16 h-16 text-white mb-6" />
-                <h3 className="text-3xl font-semibold text-white mb-4">
-                  {feature.title}
-                </h3>
-                <p className="text-xl text-gray-400">{feature.description}</p>
-              </Card>
-            </motion.div>
-          ))}
+          {visibleFeatures.map((feature, index) => {
+            const Icon = feature.icon;
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="p-8 bg-gray-900/50 backdrop-blur-lg border-gray-800 hover:bg-gray-900/70 transition-all duration-300 shadow-lg">
+                  <Icon className="w-16 h-16 text-white mb-6" />
+                  <h3 className="text-3xl font-semibold text-white mb-4">
+                    {feature.title}
+                  </h3>
+                  <p className="text-xl text-gray-400">{feature.description}</p>
+                </Card>
+              </motion.div>
+            );
+          })}
         </div>
-        
+
         {/* Navigation Buttons */}
         <div className="mt-12 flex justify-center space-x-8">
           <Button 
