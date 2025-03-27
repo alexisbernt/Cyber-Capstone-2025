@@ -66,7 +66,6 @@ export default function Home() {
       <div className="tail-container">
         <div className="left">
           <GridPattern/>
-          <GridPattern/>
           <Features />
         </div>
         <div className="right">

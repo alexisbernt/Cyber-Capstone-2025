@@ -3,27 +3,28 @@ import { useState } from "react";
 import { Card } from "react-bootstrap";
 import { Settings2, LineChart, Users, Shield } from "lucide-react";
 import Button from "../../ui/Button";
+// import "/lock-bckgrnd.png";
 
 const features = [
   {
     icon: Settings2,
-    title: "Powerful Automation",
-    description: "Streamline your workflow with intelligent automation tools"
+    title: "Discover",
+    description: "Understand what cybersecurity is and how to use it in your personal life"
   },
   {
     icon: LineChart,
-    title: "Advanced Analytics",
-    description: "Get deep insights with real-time data visualization"
+    title: "Conceal",
+    description: "Hide your personal information and learn the tools to get deep insights with real-time data visualization"
   },
   {
     icon: Users,
-    title: "Team Collaboration",
-    description: "Work seamlessly with your team in real-time"
+    title: "Enforce",
+    description: "Work seamlessly online with the tools that enforce your protection"
   },
   {
     icon: Shield,
-    title: "Enterprise Security",
-    description: "Bank-grade security to protect your sensitive data"
+    title: "Lengthen",
+    description: "Get the highest-grade security to protect your sensitive data"
   }
 ];
 
