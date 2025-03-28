@@ -46,7 +46,7 @@ export default function Home() {
         </Link>
         <Link to="/pricing">
           {/* // sign-up is known as pricing */}
-          <button className="nav-button">Sign-up</button> 
+          <button className="nav-button">Login</button> 
         </Link>
         <Link to="/blog">
           <button className="nav-button">Blog</button>

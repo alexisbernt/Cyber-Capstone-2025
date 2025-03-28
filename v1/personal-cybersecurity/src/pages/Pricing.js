@@ -10,15 +10,18 @@ const SignUpPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      // const response = await axios.post("http://localhost:3001/typeorm/signup", formData);
-      const response = await axios.post("http://localhost:3001/typeorm/auth", formData);
-      alert(response.data.message);
-    } catch (error) {
-      console.error("Signup error:", error);
-      alert("Error signing up. Try again!");
-    }
+      try {
+          const response = await axios.post("http://localhost:3001/typeorm/auth", {
+              ...formData, // Spread form data
+              action: "signup" // Explicitly specify the action
+          });
+          alert(response.data.message);
+      } catch (error) {
+          console.error("Signup error:", error);
+          alert("Error signing up. Try again!");
+      }
   };
+
 
   return (
     <div className="signup-container">
