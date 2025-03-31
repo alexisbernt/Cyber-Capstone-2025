@@ -58,7 +58,7 @@ export default function Home() {
         <img 
           src="/banner2.png" 
           alt="Cybersecurity"  
-          style={{ width: "100%", height: "285px", objectFit: "cover" }} 
+          style={{ width: "100%", height: "325px", objectFit: "cover" }} 
         />
       </div>
 
@@ -73,7 +73,7 @@ export default function Home() {
         </div>
       </div>
 
-      <GridPattern />
+      {/* <GridPattern /> */}
 
       {/* Flex Container for Left Image & Right Hero Section */}
       <div className="split-container">
