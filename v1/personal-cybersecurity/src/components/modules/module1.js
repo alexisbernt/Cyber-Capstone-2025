@@ -1,6 +1,6 @@
 import Hero from "../../components/layout/home/Hero";
 import Features from "../../components/layout/home/Features";
-import Booklet from "../ui/Booklet";
+import Booklet from "../ui/BookletMod1";
 import DragDropGame from "../ui/DragDrop";
 import GridPattern from "../patterns";
 import { useNavigate } from "react-router-dom";
@@ -35,7 +35,7 @@ export default function Module1() {
         </div>
 
         <Features />
-        <GridPattern />
+        {/* <GridPattern /> */}
         
         {/* Flex Container for Left Image & Right Hero Section */}
       <div className="split-container">
