@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 // import Button from "../../ui/Button"; // Ensure this imports the correct Button component
 
 const images = [
-  "/discover.png",
+  // "/golden-rules.png",
   "/lengthen.png",
   "/conceal.png",
   "/enforce.png"

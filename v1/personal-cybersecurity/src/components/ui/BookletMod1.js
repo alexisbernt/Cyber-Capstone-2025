@@ -2,8 +2,8 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const pages = [
-  { content: "Learn Cybersecurity Video #1", image: "/YouTube1.png" },
-  { content: "Watch this cybersecurity video", video: "https://www.youtube.com/embed/bCu3qh7xXzQ?si=T6cbYKSdSnGEHBFJ" } // Embed video using the '/embed' then the YouTube ID 
+  // { content: "Click the Button for Learn Cybersecurity Video #1", image: "/lesson1-img.png" },
+  { content: <br/> , video: "https://www.youtube.com/embed/bCu3qh7xXzQ?si=T6cbYKSdSnGEHBFJ" } // Embed video using the '/embed' then the YouTube ID 
 ];
 
 export default function Booklet() {
@@ -33,7 +33,7 @@ export default function Booklet() {
           >
             {pages[currentPage].video ? (
               <iframe // iframe to embed video 
-                className="w-full h-3/4"
+                className="w-full h-full"
                 src={pages[currentPage].video}
                 title="Embedded Video"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
