@@ -5,13 +5,14 @@ import DragDropGame from "../ui/DragDrop";
 import GridPattern from "../patterns";
 import { useNavigate } from "react-router-dom";
 
+// Banner Component
 const Banner = () => {
   const navigate = useNavigate();
 
   return (
     <div className="w-full">
       <img 
-        src="/module1-starter.png" 
+        src="/module-2.png" 
         alt="Banner"  
         style={{ width: "100%", height: "705px", objectFit: "cover", cursor: "pointer" }} 
         onClick={() => navigate("/blog/why-cybersecurity")}
@@ -21,57 +22,50 @@ const Banner = () => {
 };
 
 export default function Module2() {
-    return (
-      <div className="bg-black min-h-screen">
-        {/* <Header /> */}
-        <main>
-          {/* Banner Image */}
-        <div className="w-full">
-          <img 
-            src="/module1_banner.png" 
-            alt="Banner"  
-            style={{ width: "100%", height: "345px", objectFit: "cover" }} 
-          />
-          </div>
-  
-          <Features />
-          {/* <GridPattern /> */}
-          
-          {/* Flex Container for Left Image & Right Hero Section */}
-        <div className="split-container">
-          {/* Left-side Image */}
-          <div className="split-left">
-            <img 
-              src="/three-why.png"  
-              alt="Left-side Image"  
-              className="split-image"
-              style={{ width: "96%", height: "700px", objectFit: "cover" }} 
-            />
-          </div>
-  
-          {/* Right-side Hero Section */}
-          <div className="split-right">
-            <Hero />
-          </div>
-        </div>
-  
-        {/* <GridPattern /> */}
-  
-          <div className="w-full">
-          <img 
-            src="/definitions-mod1.png" 
-            alt="Banner"  
-            style={{ width: "98%", height: "705px", objectFit: "cover" }} 
-          />
-          </div>
-          <GridPattern />
-          <Booklet/>
-          <GridPattern />
-          <DragDropGame/>
-          <Banner/>
-          <Hero />
-          <Features />
-        </main>
-        </div>
-    );
-  }
+  return (
+    <div className="bg-black min-h-screen">
+      <main>
+
+      <div className="container">
+      {/* Left Side - Image */}
+      <div className="left">
+        <img
+          src="/bitwarden-phone.png"
+          alt="Password Hashing Illustration"
+          className="image"
+        />
+      </div>
+
+      {/* Right Side - Text */}
+      <div className="right">
+        <h2>Passwords are hashed.</h2>
+        <p>
+          This means that there is a one-way process where a password gets
+          converted into a fixed-length number of characters (hash) using a
+          cryptographic algorithm. The original password cannot be retrieved
+          from the hash.
+        </p>
+        <p>
+          Then, when a user logs in, the system hashes the entered password and
+          checks if it matches the stored hash.
+        </p>
+        <p>
+          The more characters in a password, the more possible combinations
+          exist, making it harder to crack.
+        </p>
+      </div>
+    </div>
+
+        {/* Additional Sections */}
+        <GridPattern />
+        <Booklet />
+        <GridPattern />
+        <DragDropGame />
+        <Banner />
+        <Hero />
+        <Features />
+
+      </main>
+    </div>
+  );
+}
