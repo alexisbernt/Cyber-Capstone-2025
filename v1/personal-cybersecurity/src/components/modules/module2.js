@@ -26,35 +26,32 @@ export default function Module2() {
     <div className="bg-black min-h-screen">
       <main>
 
-      <div className="container">
-      {/* Left Side - Image */}
-      <div className="left">
-        <img
-          src="/bitwarden-phone.png"
-          alt="Password Hashing Illustration"
-          className="image"
-        />
-      </div>
+      {/* Flex Container for Left Image & Right Hero Section */}
+      <div className="split-container">
+        {/* Left-side Image */}
+        <div className="split-left">
+          <img 
+            src="/bitwarden-computer.png"  
+            alt="Left-side Image"  
+            className="split-image"
+          />
+        </div>
 
-      {/* Right Side - Text */}
-      <div className="right">
-        <h2>Passwords are hashed.</h2>
+        {/* Right-side Hero Section */}
+        <div className="split-right">
         <p>
+        <h2>Passwords are hashed.</h2> <br />
           This means that there is a one-way process where a password gets
           converted into a fixed-length number of characters (hash) using a
           cryptographic algorithm. The original password cannot be retrieved
           from the hash.
-        </p>
-        <p>
           Then, when a user logs in, the system hashes the entered password and
           checks if it matches the stored hash.
-        </p>
-        <p>
           The more characters in a password, the more possible combinations
           exist, making it harder to crack.
         </p>
+        </div>
       </div>
-    </div>
 
         {/* Additional Sections */}
         <GridPattern />
