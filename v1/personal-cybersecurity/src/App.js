@@ -12,7 +12,7 @@ import LoginPage from "./pages/Login"
 import Blog from "./pages/Blog";
 // import { queryClient } from "./lib/queryClient";
 // import { QueryClientProvider } from ".tanstack/react-query"; -- 3001 server (which is my back-end) 
-import { Toaster } from "./components/ui/toaster";
+import { Divider } from "./components/ui/divider-pattern";
 import NotFound from "./pages/NotFound";
 import BlogPage1 from "./pages/parts/BlogPage1";
 import BlogPage2 from "./pages/parts/BlogPage2";
@@ -76,7 +76,6 @@ function App() {
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/blog" element={<Toaster />} />
           <Route path="/blog/why-cybersecurity" element={<BlogPage1 />} />
           <Route path="/blog/phishing" element={<BlogPage2 />} />
           <Route path="*" element={<NotFound />} /> 

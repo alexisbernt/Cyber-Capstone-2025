@@ -2,7 +2,8 @@ import Features from "../../components/layout/home/Features";
 import Booklet from "../ui/BookletMod1";
 import DragDropGame from "../ui/DragDrop";
 import GridPattern from "../patterns";
-import PhotoPattern from "../ui/pattern-photos";
+import { Divider } from "../ui/divider-pattern";
+import ColorPattern from "../color-pattern";
 import { useNavigate } from "react-router-dom";
 
 const Banner = () => {
@@ -22,40 +23,44 @@ const Banner = () => {
 
 export default function Module1() {
   return (
+    // The Header Section
     <div className="bg-black min-h-screen">
-      {/* <Header /> */}
       <main>
         {/* Banner Image */}
-      <div className="w-full">
-        <img 
-          src="/module1_banner.png" 
-          alt="Banner"  
-          style={{ width: "100%", height: "405px", objectFit: "cover" }} 
-        />
+        <div className="w-full">
+          <img 
+            src="/module1_banner.png" 
+            alt="Banner"  
+            style={{ width: "100%", height: "405px", objectFit: "cover" }} 
+          />
         </div>
 
         {/* Divider of Text Section */}
-        <div className="flex items-center justify-center p-10">
-        <br /> <br />
-          <h1 className="text-6xl font-extrabold font-[Poppins] text-center">
+        <div className="flex items-center justify-center py-6">
+          <h1 className="text-6xl font-extrabold font-[Poppins] text-center text-white">
+            <br/> <br/>
             Welcome to Cybersecurity Learning Module #1!
           </h1>
-          <br /> <br />
         </div>
 
+        <Divider/>
         {/* <GridPattern/> */}
-        <PhotoPattern />
         
         {/* Flex Container for Left Image & Right Hero Section */}
-      <div className="split-container">
+        <div className="split-container">
         {/* Left-side Image */}
         <div className="split-left">
-        <Booklet/>
+          <img 
+            src="/mod1-graphic1.png"  
+            alt="Right-side Image"  
+            className="split-image"
+          />
         </div>
+
 
         {/* Right-side Hero Section */}
         <div className="split-right flex items-center justify-center p-10">
-          <h1 className="text-6xl font-extrabold font-[Poppins] text-center">
+          {/* <h1 className="text-6xl font-extrabold font-[Poppins] text-center">
             The Why of This Section: 
           </h1>
           <br /> <br />
@@ -67,7 +72,12 @@ export default function Module1() {
             Learning how to be tech-savvy through personal cybersecurity skills goes a long way.
             <br /> <br />
             Follow along this step-by-step to learn more.
-          </p>
+          </p> */}
+          <img 
+              src="/text-mod1.png"  
+              alt="Right-side Image"  
+              className="split-image"
+            />
         </div>
         </div>
 
@@ -79,7 +89,7 @@ export default function Module1() {
           <br /> <br />
         </div>
 
-
+        <Booklet/>
       {/* <GridPattern /> */}
 
         <div className="w-full">
