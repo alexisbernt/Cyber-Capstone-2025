@@ -58,8 +58,69 @@ export default function Home() {
         <img 
           src="/banner2.png" 
           alt="Cybersecurity"  
-          style={{ width: "100%", height: "325px", objectFit: "cover" }} 
+          style={{ width: "100%", height: "320px", objectFit: "cover" }} 
         />
+      </div>
+
+      {/* Flex Container for Right Content & Left Image */}
+      <div className="split-container">
+        
+        {/* Left-side Image */}     
+        <div className="split-left">
+          <img 
+            src="/home-image.png"  
+            alt="Right-side Image"  
+            className="split-image"
+          />
+        </div>
+
+        {/* Right-side Section */}
+        <div className="split-right">
+          <p className="text-3xl font-bold font-[Poppins] text-center mt-6">
+          <h1 className="text-6xl font-extrabold font-[Poppins] text-center">
+            The Why of This Section: 
+          </h1>
+          <br /> <br />
+            <span className="text-blue-600">
+              Cybersecurity saves us money, time, and an unnecessary headache.
+            </span>
+            <br /> <br />
+            Learning how to be tech-savvy through personal cybersecurity skills goes a long way.
+            <br /> <br />
+            Follow along this step-by-step to learn more.
+          </p>
+        </div>
+      </div>
+
+      {/* Flex Container for Left Content & Right Image */}
+      <div className="split-container">
+        
+        {/* Right-side Image */}   
+        <div className="split-right">
+          <p className="text-3xl font-bold font-[Poppins] text-center mt-6">
+          <h1 className="text-6xl font-extrabold font-[Poppins] text-center">
+            The Why of This Section: 
+          </h1>
+          <br /> <br />
+            <span className="text-blue-600">
+              Cybersecurity saves us money, time, and an unnecessary headache.
+            </span>
+            <br /> <br />
+            Learning how to be tech-savvy through personal cybersecurity skills goes a long way.
+            <br /> <br />
+            Follow along this step-by-step to learn more.
+          </p>
+        </div>  
+
+        {/* Left-side Section */}
+        <div className="split-left">
+          <img 
+            src="/home-image2.png"  
+            alt="Right-side Image"  
+            className="split-image"
+          />
+        </div>
+        
       </div>
 
       {/* // Was previously Tailwind css */}
