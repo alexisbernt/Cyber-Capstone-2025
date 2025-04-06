@@ -54,25 +54,37 @@ export default function Home() {
       </div>
 
         {/* Divider Image */}
-      <div className="w-full">
-        <img 
-          src="/banner2.png" 
-          alt="Cybersecurity"  
-          style={{ width: "100%", height: "320px", objectFit: "cover" }} 
-        />
-      </div>
-
-      {/* Flex Container for Right Content & Left Image */}
-      <div className="split-container">
-        
-        {/* Left-side Image */}     
-        <div className="split-left">
+        <div className="w-full">
           <img 
-            src="/home-image.png"  
-            alt="Right-side Image"  
-            className="split-image"
+            src="/banner2.png" 
+            alt="Cybersecurity"  
+            style={{ width: "100%", height: "320px", objectFit: "cover" }} 
           />
         </div>
+
+        {/* Clickable Link */}
+        <div className="text-center my-4">
+          <Link to="/pricing">
+            <img 
+              src="/enter2win.png" 
+              alt="Enter to Win" 
+              className="mx-auto cursor-pointer hover:scale-105 transition-transform duration-200"
+            />
+          </Link>
+        </div>
+
+        {/* Flex Container for Right Content & Left Image */}
+        <div className="split-container">
+          
+          {/* Left-side Image */}     
+          <div className="split-left">
+            <img 
+              src="/home-image.png"  
+              alt="Right-side Image"  
+              className="split-image"
+            />
+          </div>
+
 
         {/* Right-side Section */}
         <div className="split-right">
