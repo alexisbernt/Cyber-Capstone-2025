@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import Hero from "../components/layout/home/Hero";
 import Features from "../components/layout/home/Features";
 import ProductShowcase from "../components/layout/home/ProductShowcase";
+import HorizontalShowcase from "../components/layout/home/HorizontalShowcase";
 import '../App.css';
 import { useState } from "react";
 import GridPattern from "../components/patterns";
@@ -88,19 +89,13 @@ export default function Home() {
 
         {/* Right-side Section */}
         <div className="split-right">
-          <p className="text-3xl font-bold font-[Poppins] text-center mt-6">
-          <h1 className="text-6xl font-extrabold font-[Poppins] text-center">
-            The Why of This Section: 
-          </h1>
-          <br /> <br />
-            <span className="text-blue-600">
-              Cybersecurity saves us money, time, and an unnecessary headache.
-            </span>
-            <br /> <br />
-            Learning how to be tech-savvy through personal cybersecurity skills goes a long way.
-            <br /> <br />
-            Follow along this step-by-step to learn more.
-          </p>
+          <Link to="/modules">
+            <img 
+              src="/starter-text.png"  
+              alt="Right-side Image"  
+              className="split-image"
+            />
+          </Link>
         </div>
       </div>
 
@@ -134,6 +129,8 @@ export default function Home() {
         </div>
         
       </div>
+
+      <HorizontalShowcase />
 
       {/* // Was previously Tailwind css */}
       <div className="tail-container">
