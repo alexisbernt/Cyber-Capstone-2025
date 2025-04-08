@@ -101,23 +101,16 @@ export default function Home() {
 
       {/* Flex Container for Left Content & Right Image */}
       <div className="split-container">
-        
         {/* Right-side Image */}   
         <div className="split-right">
-          <p className="text-3xl font-bold font-[Poppins] text-center mt-6">
-          <h1 className="text-6xl font-extrabold font-[Poppins] text-center">
-            The Why of This Section: 
-          </h1>
-          <br /> <br />
-            <span className="text-blue-600">
-              Cybersecurity saves us money, time, and an unnecessary headache.
-            </span>
-            <br /> <br />
-            Learning how to be tech-savvy through personal cybersecurity skills goes a long way.
-            <br /> <br />
-            Follow along this step-by-step to learn more.
-          </p>
-        </div>  
+        <Link to="/modules">
+            <img 
+              src="/starter-text2.png"  
+              alt="Right-side Image"  
+              className="split-image"
+            />
+        </Link>
+      </div>
 
         {/* Left-side Section */}
         <div className="split-left">
@@ -131,58 +124,7 @@ export default function Home() {
       </div>
 
       <HorizontalShowcase />
-
-      {/* // Was previously Tailwind css */}
-      <div className="tail-container">
-        <div className="left">
-          <GridPattern/>
-          <Features />
-        </div>
-        <div className="right">
-          <ProductShowcase />
-        </div>
-      </div>
-
-      {/* <GridPattern /> */}
-
-      {/* Flex Container for Left Image & Right Hero Section */}
-      <div className="split-container">
-        {/* Left-side Image */}
-        <div className="split-left">
-          <img 
-            src="/cyber-bubbles.png"  
-            alt="Left-side Image"  
-            className="split-image"
-          />
-        </div>
-
-        {/* Right-side Hero Section */}
-        <div className="split-right">
-          <Hero />
-        </div>
-      </div>
-
-      {/* Flex Container for Right Image & Left Hero Section */}
-      <div className="split-container">
-        {/* Left-side Hero Section */}
-        <div className="split-left">
-          <Hero />
-        </div>
-
-        {/* Right-side Image */}
-        <div className="split-right">
-          <img 
-            src="/demo.png"  
-            alt="Right-side Image"  
-            className="split-image"
-          />
-        </div>
-      </div>
-
-      <div>
-       <ColorPattern />
-      </div>
-
+      
       </main>
     </div>
   );

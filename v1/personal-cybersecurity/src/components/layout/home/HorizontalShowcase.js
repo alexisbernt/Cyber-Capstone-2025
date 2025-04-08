@@ -3,9 +3,8 @@ import { useInView } from "react-intersection-observer";
 import { useState, useEffect } from "react";
 
 const images = [
-  "/lengthen.png",
   "/bubbles1.png",
-  "/enforce.png"
+  "/bubbles2.png"
 ];
 
 function HorizontalShowcase() {
@@ -48,7 +47,7 @@ function HorizontalShowcase() {
             onClick={prevSlide}
             className="absolute left-2 bg-white/30 text-white p-2 rounded-full z-10"
           >
-            ◀
+            {/* ◀ */}
           </button>
 
           <div className="w-full h-48 overflow-hidden rounded-lg shadow-lg">
@@ -70,7 +69,7 @@ function HorizontalShowcase() {
             onClick={nextSlide}
             className="absolute right-2 bg-white/30 text-white p-2 rounded-full z-10"
           >
-            ▶
+            {/* ▶ */}
           </button>
         </div>
       </div>
