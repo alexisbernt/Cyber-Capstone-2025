@@ -124,7 +124,16 @@ export default function Home() {
       </div>
 
       <HorizontalShowcase />
-      
+
+      {/* Final Banner Image */}
+      <div className="w-full">
+          <img 
+            src="/bottom-banner.png" 
+            alt="Cybersecurity"  
+            style={{ width: "100%", height: "320px", objectFit: "cover" }} 
+          />
+        </div>
+
       </main>
     </div>
   );
