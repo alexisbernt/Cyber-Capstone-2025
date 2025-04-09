@@ -1,4 +1,5 @@
 import Features from "../../components/layout/home/Features";
+import Definitions from "../layout/home/Definitions";
 import Booklet from "../ui/BookletMod1";
 import DragDropGame from "../ui/DragDrop";
 import GridPattern from "../patterns";
@@ -107,6 +108,8 @@ export default function Module1() {
         <Divider/>
 
         <GridPattern />
+
+        <Definitions/>
 
         <div className="w-full">
         <img 
