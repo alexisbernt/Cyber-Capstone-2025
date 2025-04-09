@@ -52,7 +52,7 @@ export default function Module1() {
         {/* Left-side Image */}
         <div className="split-left">
           <img 
-            src="/mod1-graphic1.png"  
+            src="/mod1-graphic1.gif"  
             alt="Right-side Image"  
             className="split-image"
           />
@@ -98,10 +98,21 @@ export default function Module1() {
         </div>
         </div>
 
+        {/* --------- Learning Steps Start -----------------------------------------------------------------*/}
+       
         {/* Divider of Text Section */}
         <div className="flex items-center justify-center p-10">
           <h1 className="text-6xl font-extrabold font-[Poppins] text-center">
-            Let's start things off with some definitions!
+             3 Steps!
+          </h1>
+          <Divider/>
+          <br/> <br/> <br/>
+        </div>
+
+        {/* Divider of Text Section */}
+        <div className="flex items-center justify-center p-10">
+          <h1 className="text-6xl font-extrabold font-[Poppins] text-center">
+            Step 1: Let's start things off with some definitions!
           </h1>
         </div>
 
@@ -111,16 +122,28 @@ export default function Module1() {
 
         <Definitions/>
 
-        <div className="w-full">
-        <img 
-          src="/definitions-mod1.png" 
-          alt="Banner"  
-          style={{ width: "98%", height: "705px", objectFit: "cover" }} 
-        />
+        {/* Divider of Text Section */}
+        <div className="flex items-center justify-center p-10">
+          <h1 className="text-6xl font-extrabold font-[Poppins] text-center">
+            <br/> <br/> <br/>
+            Step 2: Test your knowledge by playing this drag and drop game!
+          </h1>
         </div>
+
+        <Divider/>
+
         <GridPattern />
         <DragDropGame/>
-        <Banner/>
+
+        {/* Divider of Text Section */}
+        <div className="flex items-center justify-center p-10">
+          <h1 className="text-6xl font-extrabold font-[Poppins] text-center">
+            <br/> <br/> <br/>
+            Step 3: Start Implementing Cybersecurity Into Your Day-To-Day!
+          </h1>
+          <Divider/>
+        </div>
+        <GridPattern />
         <Features />
       </main>
       </div>
