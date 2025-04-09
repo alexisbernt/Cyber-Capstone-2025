@@ -14,7 +14,7 @@ export default function Booklet() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-200 p-5">
-      <div className="relative w-full max-w-3xl h-[800px] bg-white shadow-lg rounded-lg overflow-hidden flex items-center justify-center">
+      <div className="relative w-full max-w-5xl aspect-video bg-white shadow-lg rounded-lg overflow-hidden flex items-center justify-center mx-auto">
         <button
           onClick={prevPage}
           className="absolute left-4 bg-gray-800 text-white px-3 py-2 rounded-full text-lg hover:bg-gray-600"
@@ -32,13 +32,13 @@ export default function Booklet() {
             className="absolute inset-0 flex flex-col items-center justify-center w-full h-full"
           >
             {pages[currentPage].video ? (
-              <iframe // iframe to embed video 
-                className="w-full h-full"
-                src={pages[currentPage].video}
-                title="Embedded Video"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
+              <iframe
+              className="absolute inset-0 w-full h-full"
+              src={pages[currentPage].video}
+              title="Embedded Video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
             ) : (
               <img src={pages[currentPage].image} alt={pages[currentPage].content} className="w-full h-3/4 object-cover" />
             )}

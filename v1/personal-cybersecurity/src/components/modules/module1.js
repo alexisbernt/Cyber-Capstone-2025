@@ -81,16 +81,32 @@ export default function Module1() {
         </div>
         </div>
 
+        {/* Flex Container for Left Video Text Descriptor & Right Video*/}
+        <div className="split-container">
+        {/* Left-side Image/Text */}
+        <div className="split-left">
+          <img 
+            src="/text-mod1a.png"  
+            alt="Left-side Image"  
+            className="split-image"
+          />
+        </div>
+        {/* Right-side Video (Booklet) Section */}
+        <div className="split-right flex items-center justify-center p-10">
+          <Booklet/>
+        </div>
+        </div>
+
         {/* Divider of Text Section */}
         <div className="flex items-center justify-center p-10">
           <h1 className="text-6xl font-extrabold font-[Poppins] text-center">
             Let's start things off with some definitions!
           </h1>
-          <br /> <br />
         </div>
 
-        <Booklet/>
-      {/* <GridPattern /> */}
+        <Divider/>
+
+        <GridPattern />
 
         <div className="w-full">
         <img 
