@@ -26,6 +26,58 @@ export default function Module2() {
     <div className="bg-black min-h-screen">
       <main>
 
+      <div className="w-full">
+      <img 
+        src="/password-title.png" 
+        style={{ width: "80%", height: "100%", objectFit: "cover", cursor: "pointer" }} 
+      />
+      </div>
+
+    <div>
+    <p>
+      <bold>Secure Your Stuff: </bold>For better password protection and management, it is recommended to use a password manager. A common password manager is Bitwarden. Bitwarden is suitable on phones and computers (basically any device that you want to use).<br/>
+<br/>I was experiencing rejection and thought, “Well, it’d be nice to reject something in return.” So, I started rejecting hackers—with Bitwarden.
+<br/>Here’s how you can incorporate Bitwarden into your daily life.<br/>
+<br/>Create your account: https://vault.bitwarden.com/#/signup 
+<br/>Login: https://vault.bitwarden.com/#/login 
+<br/>Get familiar with “The Vault”
+<br/>The Vault is essentially your home screen / dashboard.
+<br/>The blue column on the left side of your screen is what you can think of as the “Overhead Navigation.” Your Overhead Navigation takes you to the general things that Bitwarden can do. 
+<br/>On Overhead Navigation: Vaults, Send, Tools, Reports, Settings, and additional Premium Features.
+<br/>Vaults allows you to safely store data which can be passwords, secret notes, credit cards, and more.
+<br/>Go to “Login” 
+<br/>Login is the main component I recommend to use to safely store your passwords.
+<br/>Click the Blue “+ New” Button in the top right corner
+<br/>Select “New Login”
+<br/>Create The Item
+<br/>“Item Name” will be what you want to label the saved information as
+<br/>Enter Username
+<br/>Enter Password
+<br/>Create an Authenticator Key (if you would like). An Authenticator Key is an extra layer of security (a pin) that you would enter to confirm you would like to see or enter the password.
+<br/>Link the item to a website (if you would like).
+<br/>Add any additional notes (if you would like).
+<br/>Require your Master Password to be entered before accessing the information. This is an extra layer of security (if you would like). 
+<br/>Save
+<br/>Reload the page and you should see your saved password information!<br/>
+<br/>Repeat for each password you want to remember and protect. 
+
+        </p>
+      </div>
+
+      <div className="w-full">
+      <img 
+        src="/bitwarden-infographic.png" 
+        style={{ width: "80%", height: "100%", objectFit: "cover", cursor: "pointer" }} 
+      />
+      </div>
+
+      <div className="w-full">
+      <img 
+        src="/password-title.png" 
+        style={{ width: "80%", height: "100%", objectFit: "cover", cursor: "pointer" }} 
+      />
+      </div>
+
       {/* Flex Container for Left Image & Right Content Section */}
       <div className="split-container">
         {/* Left-side Image */}
