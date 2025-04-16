@@ -33,6 +33,17 @@ export default function Module2() {
       />
       </div>
 
+      <div>
+    <p style={{ width: '80%', margin: '0 auto' }}>
+    There are many things that leave you susceptible to attacks via technology. <br/> Here are three of them: <br/> <br/>
+      1. Weak passwords<br/>
+      2. Having no backup system<br/>
+      3. Leaving your computer, laptop, device on open when you leave a room<br/> <br/>
+      You are always a liability when you use technology. In this module we make sure your risk is reduced through using strong passwords.
+      </p>
+      </div>
+
+
       {/* Flex Container for Left Image & Right Content Section */}
       <div className="split-container">
         {/* Left-side Image */}
