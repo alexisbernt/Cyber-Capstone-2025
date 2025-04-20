@@ -54,22 +54,13 @@ export default function Home() {
         </Link>
       </div>
 
-        {/* Divider Image */}
+        {/* Divider Image & Clickable Link */}
         <div className="w-full">
-          <img 
-            src="/banner2.png" 
-            alt="Cybersecurity"  
-            style={{ width: "100%", height: "320px", objectFit: "cover" }} 
-          />
-        </div>
-
-        {/* Clickable Link */}
-        <div className="text-center my-4">
           <Link to="/pricing">
             <img 
-              src="/enter2win.png" 
+              src="/banner2.png" 
               alt="Enter to Win" 
-              className="mx-auto cursor-pointer hover:scale-105 transition-transform duration-200"
+              style={{ width: "100%", height: "430px", objectFit: "cover" }} 
             />
           </Link>
         </div>

@@ -142,7 +142,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px; /* Optional: Add some padding for spacing */
+  padding: 20px; /* This is Optional but can Add some padding for spacing (here 20) */
 }
 
 .flex {
