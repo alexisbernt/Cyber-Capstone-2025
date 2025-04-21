@@ -7,6 +7,7 @@ import Resources from "./pages/Resources";
 // import Modules from "./pages/Modules"
 import Module1 from "./components/modules/module1";
 import Module2 from "./components/modules/module2";
+import Module3 from "./components/modules/module3";
 import Pricing from "./pages/Pricing";
 import LoginPage from "./pages/Login"
 import Blog from "./pages/Blog";
@@ -73,6 +74,7 @@ function App() {
           <Route path="/modules" element={<Roadmap />} />
           <Route path="/module1" element={<Module1 />} />
           <Route path="/module2" element={<Module2 />} />
+          <Route path="/module3" element={<Module3 />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/blog" element={<Blog />} />

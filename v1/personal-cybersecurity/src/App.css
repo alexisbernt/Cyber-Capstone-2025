@@ -150,6 +150,7 @@ body {
 }
 
 /* Clickable Modules */
+
 .module {
   width: 250px;
   height: 150px;
@@ -202,3 +203,77 @@ body {
   font-family: Verdana, sans-serif;
 }
 
+/* Card Styling  */
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.custom-card {
+  position: relative;
+  background-color: #37474f;
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+  font-family: sans-serif;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.card-image img {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+}
+
+.card-content {
+  padding: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: #64b5f6;
+  cursor: pointer;
+}
+
+.card-content a {
+  color: #64b5f6;
+  text-decoration: none;
+}
+
+.card-content a:hover {
+  color: #bbdefb;
+}
+
+.card-reveal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #263238;
+  color: white;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+.reveal-card.revealed .card-reveal {
+  transform: translateY(0);
+}
