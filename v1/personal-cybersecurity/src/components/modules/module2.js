@@ -1,9 +1,10 @@
 import Hero from "../../components/layout/home/Hero";
 import Features from "../../components/layout/home/Features";
-import Booklet from "../ui/BookletMod1";
 import DragDropGame from "../ui/DragDrop";
 import GridPattern from "../patterns";
 import { useNavigate } from "react-router-dom";
+import Divider from "../ui/divider-pattern";
+import Booklet2 from "../ui/BookletMod2";
 
 // Banner Component
 const Banner = () => {
@@ -20,22 +21,34 @@ const Banner = () => {
     </div>
   );
 };
-
 export default function Module2() {
   return (
+    // The Header Section
     <div className="bg-black min-h-screen">
       <main>
-
-      <div className="w-full">
-      <img 
-        src="/password-title.png" 
-        style={{ width: "80%", height: "100%", objectFit: "cover", cursor: "pointer" }} 
-      />
+        {/* Banner Image */}
+        <div className="w-full">
+          <img 
+            src="/module2_banner.png" 
+            alt="Banner"  
+            style={{ width: "100%", height: "405px", objectFit: "cover" }} 
+          />
       </div>
+
+    {/* Divider of Text Section */}
+            <div className="flex items-center justify-center py-6">
+              <h1 className="text-6xl font-extrabold font-[Poppins] text-center text-white">
+                <br/> <br/>
+                Welcome to Cybersecurity Learning Module #2!
+                <br/> 
+              </h1>
+            </div>
+    
+            <Divider/>
 
       <div>
     <p style={{ width: '80%', margin: '0 auto' }}>
-    There are many things that leave you susceptible to attacks via technology. <br/> Here are three of them: <br/> <br/>
+    There are many things that leave you susceptible to attacks via technology. <br/> <br/> Here are three of them: <br/> <br/>
       1. Weak passwords<br/>
       2. Having no backup system<br/>
       3. Leaving your computer, laptop, device on open when you leave a room<br/> <br/>
@@ -43,6 +56,16 @@ export default function Module2() {
       </p>
       </div>
 
+    {/* Divider of Text Section */}
+    <div className="flex items-center justify-center py-6">
+              <h1 className="text-6xl font-extrabold font-[Poppins] text-center text-white">
+                <br/> <br/>
+                Some answers to the password puzzle: 
+                <br/> 
+              </h1>
+            </div>
+    
+            <Divider/>
 
       {/* Flex Container for Left Image & Right Content Section */}
       <div className="split-container">
@@ -96,17 +119,41 @@ export default function Module2() {
         </div>
       </div>
 
-      <div className="w-full">
+    {/* Divider of Text Section */}
+    <div className="flex items-center justify-center py-6">
+              <h1 className="text-6xl font-extrabold font-[Poppins] text-center text-white">
+                <br/> <br/>
+                Using Bitwarden To Protect Passwords 
+                <br/> 
+              </h1>
+            </div>
+    
+            <Divider/>
+
+    {/* Flex Container for Left Video Text Descriptor & Right Video*/}
+    <div className="split-container">
+              {/* Left-side Image/Text */}
+              <div className="split-left">
+              Secure Your Stuff: <br/>
+              <br/> For better password protection and management, it is recommended to use a password manager. A common password manager is Bitwarden. Bitwarden is suitable on phones and computers (basically any device that you want to use).<br/>
+              <br/>I was experiencing rejection and thought, “Well, it’d be nice to reject something in return.” So, I started rejecting hackers—with Bitwarden.
+              </div>
+              {/* Right-side Video (Booklet) Section */}
+              <div className="split-right flex items-center justify-center p-10">
+                <Booklet2/>
+              </div>
+              </div>
+              
+    <div>
+
+    <div className="w-full">
       <img 
-        src="/password-title.png" 
+        src="/bitwarden-infographic.png" 
         style={{ width: "80%", height: "100%", objectFit: "cover", cursor: "pointer" }} 
       />
       </div>
 
-    <div>
     <p style={{ width: '80%', margin: '0 auto' }}>
-      <bold>Secure Your Stuff: </bold>For better password protection and management, it is recommended to use a password manager. A common password manager is Bitwarden. Bitwarden is suitable on phones and computers (basically any device that you want to use).<br/>
-<br/>I was experiencing rejection and thought, “Well, it’d be nice to reject something in return.” So, I started rejecting hackers—with Bitwarden.
 <br/>Here’s how you can incorporate Bitwarden into your daily life.<br/>
 <br/>1. Create your account: https://vault.bitwarden.com/#/signup 
 <br/>2. Login: https://vault.bitwarden.com/#/login 
@@ -134,16 +181,16 @@ export default function Module2() {
         </p>
       </div>
 
-      <div className="w-full">
-      <img 
-        src="/bitwarden-infographic.png" 
-        style={{ width: "80%", height: "100%", objectFit: "cover", cursor: "pointer" }} 
-      />
-      </div>
+    <div className="w-full">
+    <img 
+      src="/password-title.png" 
+      style={{ width: "80%", height: "50%", objectFit: "cover", cursor: "pointer" }} 
+    />
+    </div>
 
         {/* Additional Sections */}
         <GridPattern />
-        <Booklet />
+        <Booklet2 />
         <GridPattern />
         <DragDropGame />
         <Banner />
