@@ -5,6 +5,7 @@ import GridPattern from "../patterns";
 import { useNavigate } from "react-router-dom";
 import Divider from "../ui/divider-pattern";
 import Booklet2 from "../ui/BookletMod2";
+import MultipleChoiceGame from "../ui/MultipleChoice";
 
 // Banner Component
 const Banner = () => {
@@ -192,7 +193,8 @@ export default function Module2() {
         <GridPattern />
         <Booklet2 />
         <GridPattern />
-        <DragDropGame />
+        <MultipleChoiceGame/>
+        {/* <DragDropGame /> */}
         <Banner />
         <Hero />
         <Features />
