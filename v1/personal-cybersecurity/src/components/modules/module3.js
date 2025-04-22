@@ -5,7 +5,8 @@
 // import GridPattern from "../patterns";
 import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import createRevealCard from "../../reveal"; // Assuming this returns a DOM node
+import createRevealCard from "../../reveal"; 
+import createSeparatorCard from "../../separatorCard";
 
 export default function Module3() {
   const cardContainerRef = useRef(null);
@@ -13,8 +14,11 @@ export default function Module3() {
 
   useEffect(() => {
     const cardElement = createRevealCard();
+    const separatorCard = createSeparatorCard();
+  
     if (cardContainerRef.current) {
-      cardContainerRef.current.appendChild(cardElement);
+      cardContainerRef.current.appendChild(cardElement); // Image card
+      cardContainerRef.current.appendChild(separatorCard); // Separator card
     }
   }, []);
 
@@ -48,7 +52,7 @@ export default function Module3() {
           </div>
         </div>
 
-        {/* Reveal Card insert*/}
+        {/* Reveal Card insert w/ Separator Card following*/}
         <div ref={cardContainerRef}></div>
       </main>
     </div>
