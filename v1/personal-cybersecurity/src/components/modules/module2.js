@@ -194,6 +194,7 @@ export default function Module2() {
         <Booklet2 />
         <GridPattern />
         <MultipleChoiceGame/>
+        <GridPattern />
         {/* <DragDropGame /> */}
         <Banner />
         <Hero />

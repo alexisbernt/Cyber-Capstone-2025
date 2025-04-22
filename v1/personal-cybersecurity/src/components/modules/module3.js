@@ -28,29 +28,44 @@ export default function Module3() {
         {/* Banner Image */}
         <div className="w-full">
           <img
-            src="/module2_banner.png"
+            src="/module3_banner.png"
             alt="Banner"
             style={{ width: "100%", height: "405px", objectFit: "cover" }}
           />
         </div>
 
-        {/* Plain card */}
-        <div className="card-container">
-          <div className="custom-card">
-            <div className="card-content">
-              <h2 className="card-title">Card Title</h2>
-              <p>
-                I am a very simple card. I am good at containing small bits of
-                information. I am convenient because I require little markup to
-                use effectively.
-              </p>
-            </div>
-            <div className="card-action">
-              <a href="#">This is a link</a>
-              <a href="#">This is a link</a>
+        {/* Flex Container for Left Image & Right Card */}
+        <div className="split-container">
+          {/* Left-side Image */}
+          <div className="split-left flex items-center justify-center p-10">
+            <img 
+              src="/encryption-graphic.png" 
+              alt="Encryption Illustration" 
+              className="image-style"
+            />
+          </div>
+
+          {/* Right-side Card */}
+          <div className="split-right flex items-center justify-center p-10">
+            <div className="card-container">
+              <div className="custom-card">
+                <div className="card-content">
+                  <h2 className="card-title">Card Title</h2>
+                  <p>
+                    I am a very simple card. I am good at containing small bits of
+                    information. I am convenient because I require little markup to
+                    use effectively.
+                  </p>
+                </div>
+                <div className="card-action">
+                  <a href="#">This is a link</a>
+                  <a href="#">This is a link</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+
 
         {/* Reveal Card insert w/ Separator Card following*/}
         <div ref={cardContainerRef}></div>
