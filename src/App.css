@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* App Container */
+.App {
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 20px 40px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.logo {
+  height: 120px;
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  gap: 40px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: #007bff;
+}
+
+/* Styles for the navigation buttons */
+.nav-buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem; /* Adds spacing between buttons */
+  margin: 1.5rem 0; /* Adds vertical spacing */
+}
+
+.nav-button {
+  background-color: #5c565693; /* Tailwind's bg-gray-800 */
+  color: white;
+  padding: 62px 124px; /* Equivalent to px-6 py-3 */
+  border-radius: 0px; /* Fully rounded buttons at 244px */
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.nav-button-modules {
+  background-color: #d3d3d3b6; /* Button background color */
+  color: white;
+  padding: 80px 24px; /* Reduced vertical padding, keeping width */
+  border-radius: 244px;
+  border: none;
+  font-size: 1rem; /* Increased font size for better vertical usage */
+  font-weight: bold;
+  line-height: 1.4; /* Allows text to take up more space vertically */
+  text-align: top;
+  white-space: normal; /* Allows text wrapping */
+  word-wrap: break-word;
+  max-width: 90vw; /* Prevents buttons from exceeding screen width */
+  max-height: 20vh; /* Ensures it doesn’t take up too much vertical space */
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.nav-button:hover {
+  background-color: #374151; /* Tailwind's hover:bg-gray-700 */
+}
+.nav-icon {
+  width: 50px;  /* Adjust as needed */
+  height: 50px;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-icon:hover {
+  transform: scale(1.1);
+}
+.left-image-container {
+  display: flex;
+  width: 100%;
+  height: 300px; /* Fixed height */
+}
+
+.left-image {
+  width: 50%; /* Takes up half the screen */
+  height: 50%;
+  object-fit: cover; /* Ensures the image scales properly */
+}
+
+.right-empty-space {
+  width: 50%; /* Keeps the right side empty */
+}
+
+.split-container {
+  display: flex;
+  width: 100%;
+  height: 100vh; /* Makes sure it takes the full viewport height */
+}
+
+.split-left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.split-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image properly fills its space */
+}
+
+.split-right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px; /* This is Optional but can Add some padding for spacing (here 20) */
+}
+
+.flex {
+  flex-direction: column;
+}
+
+/* Clickable Modules */
+
+.module {
+  width: 250px;
+  height: 150px;
+  background-color: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  font-size: 120px;
+  font-weight: bold;
+  color: #333;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.module:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.tail-container {
+  display: flex;
+  flex-direction: row;
+}
+.left, .right {
+  width: 50%;
+}
+
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Verdana&display=swap');
+
+.font-verdana {
+  font-family: Verdana, sans-serif;
+}
+
+.leading-snug {
+  line-height: 2.3;
+}
+
+.leading-relaxed {
+  line-height: 2.6;
+}
+
+.tracking-wide {
+  letter-spacing: 0.05em;
+}
+.font-verdana {
+  font-family: Verdana, sans-serif;
+}
+
+/* Card Styling  */
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.custom-card {
+  position: relative;
+  background-color: #37474f;
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+  font-family: sans-serif;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.card-image img {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+}
+
+.card-content {
+  padding: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: #64b5f6;
+  cursor: pointer;
+}
+
+.card-content a {
+  color: #64b5f6;
+  text-decoration: none;
+}
+
+.card-content a:hover {
+  color: #bbdefb;
+}
+
+.card-reveal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #263238;
+  color: white;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+.reveal-card.revealed .card-reveal {
+  transform: translateY(0);
+}
+
+/* Separator Card  */
+
+.separator-container {
+  width: 100%;
+  padding: 2rem 1rem;
+  background-color: #1e1e1e;
+  box-sizing: border-box;
+}
+
+.separator-card {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #2c2c2c;
+  color: white;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.separator-card .card-image img {
+  width: 100%;
+  max-width: 500px; /* Optional: control image size */
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.separator-card .card-content {
+  padding: 2rem;
+  flex: 1;
+}
+
+.separator-card .card-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Inserting the cards  */
+
+.card-row {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px; /* space between cards */
+  padding: 20px;
+  flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+.card-wrapper {
+  flex: 1 1 0;
+  max-width: 300px; /* or whatever you want */
+}
