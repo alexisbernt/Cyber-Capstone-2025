@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 import Divider from "../ui/divider-pattern";
 import Booklet2 from "../ui/BookletMod2";
 import MultipleChoiceGame from "../ui/MultipleChoice";
+import RevealCard from "../../reveal";
+import SeparatorCard from "../../separatorCard";
 
 // Banner Component
 const Banner = () => {
@@ -37,25 +39,48 @@ export default function Module2() {
       </div>
 
     {/* Divider of Text Section */}
-            <div className="flex items-center justify-center py-6">
-              <h1 className="text-6xl font-extrabold font-[Poppins] text-center text-white">
-                <br/> <br/>
-                Welcome to Cybersecurity Learning Module #2!
-                <br/> 
-              </h1>
-            </div>
-    
-            <Divider/>
+    <div style={{ width: '100%' }}>
+      <SeparatorCard
+        imageUrl="/banner-wide.png"
+        imageAlt="Wide Graphic"
+        titleText="Welcome to Cybersecurity Personal Learning Module #2!"
+        paragraphText="There are many things that leave you susceptible to attacks via technology. You are always a liability when you use technology. In this module we make sure your risk is reduced through using strong passwords."
+      />
+    </div>
 
-      <div>
-    <p style={{ width: '80%', margin: '0 auto' }}>
-    There are many things that leave you susceptible to attacks via technology. <br/> <br/> Here are three of them: <br/> <br/>
-      1. Weak passwords<br/>
-      2. Having no backup system<br/>
-      3. Leaving your computer, laptop, device on open when you leave a room<br/> <br/>
-      You are always a liability when you use technology. In this module we make sure your risk is reduced through using strong passwords.
-      </p>
+    {/* <GridPattern /> */}
+
+    <div className="card-row">
+      {/* Left-side Card */}
+      <div className="card-wrapper2">
+        <RevealCard
+          imageUrl="/enforce.png"
+          imageAlt="Encryption Image"
+          titleText="Weak passwords"
+          revealInfo="In this module, we explore the foundations of encryption..."
+        />
       </div>
+
+      {/* Middle-side Card */}
+      <div className="card-wrapper2">
+        <RevealCard
+          imageUrl="/enforce.png"
+          imageAlt="Middle Image"
+          titleText="No back-up system"
+          revealInfo="Dive into the logic and algorithms that power encryption: primes, modulo, and more."
+        />
+      </div>
+
+      {/* Right-side Card */}
+      <div className="card-wrapper2">
+        <RevealCard
+          imageUrl="/enforce.png"
+          imageAlt="Encryption Image"
+          titleText="Left On Open"
+          revealInfo="Leaving your computer, laptop, device on open when you leave a room."
+        />
+      </div>
+    </div>
 
     {/* Divider of Text Section */}
     <div className="flex items-center justify-center py-6">

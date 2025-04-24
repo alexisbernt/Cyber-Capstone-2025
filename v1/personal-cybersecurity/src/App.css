@@ -316,3 +316,24 @@ body {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
+
+/* Inserting the cards  */
+
+.card-row {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px; /* space between cards */
+  padding: 20px;
+  flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+.card-wrapper {
+  flex: 1 1 0;
+  max-width: 300px; 
+}
+
+.card-wrapper2 {
+  flex: 1 1 0;
+  max-width: 650px; 
+}

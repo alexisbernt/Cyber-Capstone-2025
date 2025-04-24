@@ -5,21 +5,16 @@
 // import GridPattern from "../patterns";
 import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import createRevealCard from "../../reveal"; 
-import createSeparatorCard from "../../separatorCard";
+import RevealCard from "../../reveal"; // this is the component
+import SeparatorCard from "../../separatorCard";
 
 export default function Module3() {
   const cardContainerRef = useRef(null);
   const navigate = useNavigate();
 
   useEffect(() => {
-    const cardElement = createRevealCard();
-    const separatorCard = createSeparatorCard();
-  
-    if (cardContainerRef.current) {
-      cardContainerRef.current.appendChild(cardElement); // Image card
-      cardContainerRef.current.appendChild(separatorCard); // Separator card
-    }
+    // You can still use this for non-React elements if needed
+    // But now we're handling the custom card via JSX directly
   }, []);
 
   return (
@@ -34,41 +29,60 @@ export default function Module3() {
           />
         </div>
 
-        {/* Flex Container for Left Image & Right Card */}
-        <div className="split-container">
-          {/* Left-side Image */}
-          <div className="split-left flex items-center justify-center p-10">
-            <img 
-              src="/encryption-graphic.png" 
-              alt="Encryption Illustration" 
-              className="image-style"
+        <div className="card-row">
+          {/* Left-side Card */}
+          <div className="card-wrapper">
+            <RevealCard
+              imageUrl="/enforce.png"
+              imageAlt="Encryption Image"
+              titleText="Encryption & Cryptography"
+              revealInfo="In this module, we explore the foundations of encryption..."
+            />
+          </div>
+
+          {/* Middle-side Card */}
+          <div className="card-wrapper">
+            <RevealCard
+              imageUrl="/enforce.png"
+              imageAlt="Middle Image"
+              titleText="Cryptography (Kinda)"
+              revealInfo="Dive into the logic and algorithms that power encryption: primes, modulo, and more."
             />
           </div>
 
           {/* Right-side Card */}
-          <div className="split-right flex items-center justify-center p-10">
-            <div className="card-container">
-              <div className="custom-card">
-                <div className="card-content">
-                  <h2 className="card-title">Card Title</h2>
-                  <p>
-                    I am a very simple card. I am good at containing small bits of
-                    information. I am convenient because I require little markup to
-                    use effectively.
-                  </p>
-                </div>
-                <div className="card-action">
-                  <a href="#">This is a link</a>
-                  <a href="#">This is a link</a>
-                </div>
-              </div>
-            </div>
+          <div className="card-wrapper">
+            <RevealCard
+              imageUrl="/enforce.png"
+              imageAlt="Encryption Image"
+              titleText="Encryption (Kinda)"
+              revealInfo="Learn how encryption is used in messaging, security protocols, and everyday apps."
+            />
           </div>
         </div>
 
+        {/* Separator Card */}
 
-        {/* Reveal Card insert w/ Separator Card following*/}
-        <div ref={cardContainerRef}></div>
+          <div style={{ width: '100%' }} className="card-wrapper">
+            <SeparatorCard
+              imageUrl="/enforce.png"
+              imageAlt="Encryption Image"
+              titleText="Encryption (Kinda)"
+              paragraphText="Learn how encryption is used in messaging, security protocols, and everyday apps."
+            />
+          </div>
+
+          <div style={{ width: '100%' }}>
+            <SeparatorCard
+              imageUrl="/banner-wide.png"
+              imageAlt="Wide Graphic"
+              titleText="Need a Break?"
+              paragraphText="This is a full-width separator card that gives you a moment to reflect."
+            />
+          </div>
+
+        {/* Reveal Card insert w/ Separator Card following */}
+        {/* <div ref={cardContainerRef}></div> */}
       </main>
     </div>
   );
