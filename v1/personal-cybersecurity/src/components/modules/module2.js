@@ -8,6 +8,7 @@ import Booklet2 from "../ui/BookletMod2";
 import MultipleChoiceGame from "../ui/MultipleChoice";
 import RevealCard from "../../reveal";
 import SeparatorCard from "../../separatorCard";
+import ThinCard from "../../ThinCard";
 
 // Banner Component
 const Banner = () => {
@@ -41,7 +42,7 @@ export default function Module2() {
     {/* Divider of Text Section */}
     <div style={{ width: '100%' }}>
       <SeparatorCard
-        imageUrl="/banner-wide.png"
+        imageUrl="/enforce.png"
         imageAlt="Wide Graphic"
         titleText="Welcome to Cybersecurity Personal Learning Module #2!"
         paragraphText="There are many things that leave you susceptible to attacks via technology. You are always a liability when you use technology. In this module we make sure your risk is reduced through using strong passwords."
@@ -109,9 +110,9 @@ export default function Module2() {
         <p>
         <h2>Passwords are #hashed.</h2> <br />
           To understand why having a "good" password matters let's understand some of the tech-y stuff.
-          <br/> Let's start with - What does hashed mean? <br/>Having hashed passwords means that we use a cryptographic algorithm.
+          <br/><br/> Let's start with - What does hashed mean? <br/>Having hashed passwords means that we use a cryptographic algorithm.
           This basically means the original password is turned into a random-looking string (the hash) using a special math formula. 
-          This process only goes one way, so no one can easily retrieve the password (turn the hash back into the real password)
+          <br/> <br/> This process only goes one way, so no one can easily retrieve the password (turn the hash back into the real password)
           from the hash.
           Then, when a user logs in, the system hashes the entered password and
           checks if it matches the stored hash.
@@ -127,10 +128,11 @@ export default function Module2() {
         <div className="split-left">
         <p>
         <h2>Selecting a Good Password.</h2> <br />
-        The more characters in a password, the more possibility of combinations. 
-        You want to create passwords that are 12 to 18 characters in length. This means that for better password protection and management, 
+        The more characters in a password, the more possibility of combinations. <br/>
+        You want to create passwords that are 12 to 18 characters in length. That's a lot of characters per password, and you don't want to use the same password for each login.
+        <br/> <br/> This means that for better password protection and management, 
         it is recommended to use a password manager. 
-        A common password manager is Bitwarden. 
+        <br/> <br/> A common password manager is Bitwarden. 
         Bitwarden is suitable on phones and computers (basically any device that you want to use).
         </p>
         </div>
@@ -145,85 +147,69 @@ export default function Module2() {
         </div>
       </div>
 
-    {/* Divider of Text Section */}
-    <div className="flex items-center justify-center py-6">
-              <h1 className="text-6xl font-extrabold font-[Poppins] text-center text-white">
-                <br/> <br/>
-                Using Bitwarden To Protect Passwords 
-                <br/> 
-              </h1>
-            </div>
-    
-            <Divider/>
-
-    {/* Flex Container for Left Video Text Descriptor & Right Video*/}
-    <div className="split-container">
-              {/* Left-side Image/Text */}
-              <div className="split-left">
-              Secure Your Stuff: <br/>
-              <br/> For better password protection and management, it is recommended to use a password manager. A common password manager is Bitwarden. Bitwarden is suitable on phones and computers (basically any device that you want to use).<br/>
-              <br/>I was experiencing rejection and thought, “Well, it’d be nice to reject something in return.” So, I started rejecting hackers—with Bitwarden.
-              </div>
-              {/* Right-side Video (Booklet) Section */}
-              <div className="split-right flex items-center justify-center p-10">
-                <Booklet2/>
-              </div>
-              </div>
-              
-    <div>
-
-    <div className="w-full">
-      <img 
-        src="/bitwarden-infographic.png" 
-        style={{ width: "80%", height: "100%", objectFit: "cover", cursor: "pointer" }} 
-      />
+      <div style={{ width: '100%' }}>
+        <ThinCard
+          titleText="Using Bitwarden to protect passwords: "
+          />
       </div>
 
-    <p style={{ width: '80%', margin: '0 auto' }}>
-<br/>Here’s how you can incorporate Bitwarden into your daily life.<br/>
-<br/>1. Create your account: https://vault.bitwarden.com/#/signup 
-<br/>2. Login: https://vault.bitwarden.com/#/login 
-<br/>3. Get familiar with “The Vault”
-<br/> The Vault is essentially your home screen / dashboard.
-<br/>4. The blue column on the left side of your screen is what you can think of as the “Overhead Navigation.” Your Overhead Navigation takes you to the general things that Bitwarden can do. 
-<br/> On Overhead Navigation: Vaults, Send, Tools, Reports, Settings, and additional Premium Features.
-<br/> Vaults allows you to safely store data which can be passwords, secret notes, credit cards, and more.
-<br/>5. Go to “Login” 
-<br/>Login is the main component I recommend to use to safely store your passwords.
-<br/>6. Click the Blue “+ New” Button in the top right corner
-<br/>7. Select “New Login”
-<br/>8. Create The Item
-<br/>“Item Name” will be what you want to label the saved information as
-<br/>Enter Username
-<br/>Enter Password
-<br/>Create an Authenticator Key (if you would like). An Authenticator Key is an extra layer of security (a pin) that you would enter to confirm you would like to see or enter the password.
-<br/>Link the item to a website (if you would like).
-<br/>Add any additional notes (if you would like).
-<br/>9. Require your Master Password to be entered before accessing the information. This is an extra layer of security (if you would like). 
-<br/>10. Save
-<br/>Reload the page and you should see your saved password information!<br/>
-<br/>Repeat for each password you want to remember and protect. 
-
-        </p>
+      {/* Flex Container for Left Video Text Descriptor & Right Video*/}
+      <div className="split-container">
+        {/* Left-side Image/Text */}
+        <div className="split-left">
+          <p>
+          <h2>Securing your stuff.</h2> <br />
+          <br/> For better password protection and management, it is recommended to use a password manager. A common password manager is Bitwarden. Bitwarden is suitable on phones and computers (basically any device that you want to use).<br/>
+          <br/>I was experiencing rejection and thought, “Well, it’d be nice to reject something in return.” So, I started rejecting hackers—with Bitwarden.
+          </p>
+        </div>
+        {/* Right-side Video (Booklet) Section */}
+        <div className="split-right2">
+          <Booklet2/>
+        </div>
+      </div>
+      
+      <div style={{ width: '100%' }}>
+        <SeparatorCard
+          imageUrl="/bitwarden-infographic.png"
+          imageAlt="Bitwarden Graphic"
+          titleText="The Bitwarden Roadmap"
+          paragraphText="Here’s how you can incorporate Bitwarden into your daily life.
+1. Create your account: https://vault.bitwarden.com/#/signup 
+2. Login: https://vault.bitwarden.com/#/login 
+3. Get familiar with “The Vault”
+The Vault is essentially your home screen / dashboard.
+4. The blue column on the left side of your screen is what you can think of as the “Overhead Navigation.” Your Overhead Navigation takes you to the general things that Bitwarden can do. 
+On Overhead Navigation: Vaults, Send, Tools, Reports, Settings, and additional Premium Features.
+Vaults allows you to safely store data which can be passwords, secret notes, credit cards, and more.
+5. Go to “Login” 
+Login is the main component I recommend to use to safely store your passwords.
+6. Click the Blue “+ New” Button in the top right corner
+7. Select “New Login”
+8. Create The Item
+“Item Name” will be what you want to label the saved information as
+Enter Username
+Enter Password
+Create an Authenticator Key (if you would like). An Authenticator Key is an extra layer of security (a pin) that you would enter to confirm you would like to see or enter the password.
+Link the item to a website (if you would like).
+Add any additional notes (if you would like).
+9. Require your Master Password to be entered before accessing the information. This is an extra layer of security (if you would like). 
+10. Save
+Reload the page and you should see your saved password information!
+Repeat for each password you want to remember and protect. "
+        />
       </div>
 
-    <div className="w-full">
-    <img 
-      src="/password-title.png" 
-      style={{ width: "80%", height: "50%", objectFit: "cover", cursor: "pointer" }} 
-    />
-    </div>
-
-        {/* Additional Sections */}
-        <GridPattern />
-        <Booklet2 />
         <GridPattern />
         <MultipleChoiceGame/>
-        <GridPattern />
-        {/* <DragDropGame /> */}
-        <Banner />
-        <Hero />
-        <Features />
+        {/* Final Banner Image */}
+        <div className="w-full">
+          <img 
+            src="/bottom-banner.png" 
+            alt="Cybersecurity"  
+            style={{ width: "100%", height: "320px", objectFit: "cover" }} 
+          />
+        </div>
 
       </main>
     </div>

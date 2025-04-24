@@ -126,9 +126,12 @@ body {
   width: 50%;
   height: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center;      /* Vertical alignment (centered vertically) */
+  justify-content: flex-start; /* Horizontal alignment (aligned to the left) */
+  padding: 50px;
+  text-align: left;
 }
+
 
 .split-image {
   width: 100%;
@@ -140,10 +143,22 @@ body {
   width: 50%;
   height: 100%;
   display: flex;
+  align-items: center;      /* Vertical alignment (centered vertically) */
+  justify-content: flex-start; /* Horizontal alignment (aligned to the left) */
+  padding: 50px;
+  text-align: left;
+}
+
+.split-right2 {
+  width: 50%;
+  height: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px; /* This is Optional but can Add some padding for spacing (here 20) */
+  text-align: left;
 }
+
 
 .flex {
   flex-direction: column;
