@@ -44,7 +44,7 @@ export default function Home() {
         {/* Left-side Card */}
         <Link to="/modules">
           <RevealCard
-            imageUrl="/enforce.png"
+            imageUrl="/learn.png"
             imageAlt="Module Image"
             titleText="Learn"
             revealInfo="Learning modules teach you the fundamentals of cybersecurity."
@@ -94,7 +94,7 @@ export default function Home() {
           imageUrl="/proud-cyber-nerd.png"
           imageAlt="Cyber Nerd Graphic"
           titleText="Earn your badge of NERDom today"
-          paragraphText="Get ahead of online threats by learning practices that will keep you safe when using technology. If you earn your cybersecurity nerd badge, you'll be ahead of the game."
+          paragraphText="Get ahead of online threats by learning practices that will keep you safe when using technology. If you earn your Cybersecurity Nerd Badge, you'll be ahead of the game."
         />
       </div>
 
@@ -134,6 +134,15 @@ export default function Home() {
         </div>
       </div>
 
+      <div cardClassName="separator-card2" >
+        <SeparatorCard cardClassName="separator-card2"
+          imageUrl="/color-2c2c2c.png"
+          imageAlt="Cyber Nerd Graphic"
+          titleText="Earn your badge of NERDom today"
+          paragraphText="Get ahead of online threats by learning practices that will keep you safe when using technology. If you earn your Cybersecurity Nerd Badge, you'll be ahead of the game."
+        />
+      </div>
+
       {/* Flex Container for Left Content & Right Image */}
       <div className="split-container">
         {/* Right-side Image */}   
@@ -157,8 +166,7 @@ export default function Home() {
         </div>
         
       </div>
-
-      <HorizontalShowcase />
+    <HorizontalShowcase />
 
       {/* Final Banner Image */}
       <div className="w-full">
