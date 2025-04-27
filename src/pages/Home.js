@@ -11,6 +11,8 @@ import '../App.css';
 import { useState } from "react";
 import GridPattern from "../components/patterns";
 import ColorPattern from "../components/color-pattern";
+import RevealCard from "../reveal";
+import SeparatorCard from "../separatorCard";
 
 export default function Home() {
   const [name, setName] = useState('');
@@ -36,25 +38,67 @@ export default function Home() {
       </div>
 
       <main>
-      {/* Navigation Buttons */}
-      <div className="nav-buttons-container">
-      <Link to="/modules">
-          {/* // sign-up is known as pricing */}
-          <button className="nav-button">Learn</button> 
+      <div className="card-container">
+        {/* Navigation Buttons */}
+        <div className="card-wrapper">
+        {/* Left-side Card */}
+        <Link to="/modules">
+          <RevealCard
+            imageUrl="/enforce.png"
+            imageAlt="Module Image"
+            titleText="Learn"
+            revealInfo="Learning modules teach you the fundamentals of cybersecurity."
+          />
         </Link>
+        </div>
+
+        {/* Middle-side Card */}
+        <div className="card-wrapper">
         <Link to="/resources">
-          <button className="nav-button">Resources</button>
+          <RevealCard
+            imageUrl="/enforce.png"
+            imageAlt="Resources Image"
+            titleText="Resources"
+            revealInfo="Explore the resouces avaliable on this site"
+          />
         </Link>
+        </div>
+
+        <div className="card-wrapper">
+        {/* Middle-side Card */}
         <Link to="/pricing">
-          {/* // sign-up is known as pricing */}
-          <button className="nav-button">Login</button> 
+          <RevealCard
+            imageUrl="/enforce.png"
+            imageAlt="Login Image"
+            titleText="Login"
+            revealInfo="Create your personal cybersecurity account"
+          />
         </Link>
+        </div>
+
+        {/* Right-side Card */}
+        <div className="card-wrapper">
         <Link to="/blog">
-          <button className="nav-button">Blog</button>
+          <RevealCard
+            imageUrl="/enforce.png"
+            imageAlt="Blog Image"
+            titleText="Blog"
+            revealInfo="Check out updated blog posts"
+          />
         </Link>
+        </div>
       </div>
 
-        {/* Divider Image & Clickable Link */}
+      <div cardClassName="separator-card2" >
+        <SeparatorCard cardClassName="separator-card2"
+          imageUrl="/proud-cyber-nerd.png"
+          imageAlt="Cyber Nerd Graphic"
+          titleText="Earn your badge of NERDom today"
+          paragraphText="Get ahead of online threats by learning practices that will keep you safe when using technology. If you earn your cybersecurity nerd badge, you'll be ahead of the game."
+        />
+      </div>
+
+        {/* Divider Image & Clickable Link
         <div className="w-full">
           <Link to="/pricing">
             <img 
@@ -63,7 +107,7 @@ export default function Home() {
               style={{ width: "100%", height: "430px", objectFit: "cover" }} 
             />
           </Link>
-        </div>
+        </div> */}
 
         {/* Flex Container for Right Content & Left Image */}
         <div className="split-container">

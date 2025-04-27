@@ -126,9 +126,12 @@ body {
   width: 50%;
   height: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center;      /* Vertical alignment (centered vertically) */
+  justify-content: flex-start; /* Horizontal alignment (aligned to the left) */
+  padding: 50px;
+  text-align: left;
 }
+
 
 .split-image {
   width: 100%;
@@ -140,10 +143,22 @@ body {
   width: 50%;
   height: 100%;
   display: flex;
+  align-items: center;      /* Vertical alignment (centered vertically) */
+  justify-content: flex-start; /* Horizontal alignment (aligned to the left) */
+  padding: 50px;
+  text-align: left;
+}
+
+.split-right2 {
+  width: 50%;
+  height: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px; /* This is Optional but can Add some padding for spacing (here 20) */
+  text-align: left;
 }
+
 
 .flex {
   flex-direction: column;
@@ -299,6 +314,20 @@ body {
   overflow: hidden;
 }
 
+.separator-card2 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #2c2c2c;
+  color: white;
+  box-shadow: 0 0 10px 2px white; /* Add this */
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: left;
+}
+
+
 .separator-card .card-image img {
   width: 100%;
   max-width: 500px; /* Optional: control image size */
@@ -310,11 +339,15 @@ body {
 .separator-card .card-content {
   padding: 2rem;
   flex: 1;
+  padding: 20px; /* This is Optional but can Add some padding for spacing (here 20) */
+  text-align: left;
 }
 
 .separator-card .card-title {
   font-size: 2rem;
   margin-bottom: 1rem;
+  padding: 20px; /* This is Optional but can Add some padding for spacing (here 20) */
+  text-align: left;
 }
 
 /* Inserting the cards  */
@@ -330,5 +363,10 @@ body {
 
 .card-wrapper {
   flex: 1 1 0;
-  max-width: 300px; /* or whatever you want */
+  max-width: 300px; 
+}
+
+.card-wrapper2 {
+  flex: 1 1 0;
+  max-width: 650px; 
 }

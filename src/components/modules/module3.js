@@ -82,7 +82,7 @@ export default function Module3() {
           </div>
 
         {/* Reveal Card insert w/ Separator Card following */}
-        <div ref={cardContainerRef}></div>
+        {/* <div ref={cardContainerRef}></div> */}
       </main>
     </div>
   );
