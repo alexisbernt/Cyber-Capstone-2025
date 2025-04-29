@@ -55,30 +55,33 @@ export default function Module2() {
       {/* Left-side Card */}
       <div className="card-wrapper2">
         <RevealCard
-          imageUrl="/enforce.png"
+          imageUrl="/rocks.png"
           imageAlt="Encryption Image"
           titleText="Weak passwords"
-          revealInfo="In this module, we explore the foundations of encryption..."
+          revealInfo="A weak password is one that is easy for others to guess or crack, often because it’s short, uses common words or patterns, or lacks a mix of letters, numbers, and symbols. 
+          Instead, you want to create unique passwords that are 12 to 18 characters in length."
         />
       </div>
 
       {/* Middle-side Card */}
       <div className="card-wrapper2">
         <RevealCard
-          imageUrl="/enforce.png"
+          imageUrl="/field.png"
           imageAlt="Middle Image"
           titleText="No back-up system"
-          revealInfo="Dive into the logic and algorithms that power encryption: primes, modulo, and more."
+          revealInfo="A backup system is a method of copying and storing important files, passwords, or system data in a separate location to protect against data loss. 
+          It makes sure that information can be recovered in case of hardware failure, accidental deletion, or cyberattacks."
         />
       </div>
 
       {/* Right-side Card */}
       <div className="card-wrapper2">
         <RevealCard
-          imageUrl="/enforce.png"
+          imageUrl="/flowers.png"
           imageAlt="Encryption Image"
           titleText="Left On Open"
-          revealInfo="Leaving your computer, laptop, device on open when you leave a room."
+          revealInfo="Leaving your computer, laptop, device on open (unattended) when you leave a room is dangerous.
+           Someone could easily access your files, steal personal information, or install malicious software without your knowledge."
         />
       </div>
     </div>
