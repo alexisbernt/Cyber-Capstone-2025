@@ -101,7 +101,7 @@ export default function Module3() {
               revealInfo="Encryption is the process of protecting data by turning it into a coded form that only authorized users can read."
             />
           </div>
-        </div>
+        </div> <br/> <br/>
 
         {/* Separator */}
         <SeparatorCard
@@ -110,50 +110,57 @@ export default function Module3() {
           titleText="Cryptography and Encryption"
           paragraphText="Using cryptography and encryption we can prevent our data from being stolen, 
           changed, or seen by unauthorized people. This helps keep data private and secure."
-        /> <br/>
+        /> <br/> <br/>
 
         <GridPattern />
 
-        {/* Step-by-Step Encryption UI */}
-        <div style={{ width: '100%', marginTop: '2rem' }} className="card-wrapper">
-          <div className="p-6 rounded-2xl shadow-lg bg-white flex flex-col gap-4 items-center">
-            <h2 className="text-2xl font-bold">🛡️ Step-by-Step Encryption!</h2>
-            <p className="text-center text-gray-600">Encrypt a message using the Caesar cipher!</p>
+        <div className="container">
+        {/* Left Half */}
+        <div className="left-pane">
+          <div className="card">
+            <h2>🛡️ Step-by-Step Encryption!</h2>
+            <p>Encrypt a message using the Caesar cipher!</p>
 
-            <div className="w-full">
-              <label className="block mb-2 font-semibold">Step 1: What is the shift value?</label>
+            <div className="form-group">
+              <label>Step 1: What is the shift value?</label>
               <input
                 type="number"
                 placeholder="Enter the shift (e.g., 3)"
                 value={shiftInput}
                 onChange={(e) => setShiftInput(e.target.value)}
-                className="border rounded p-2 w-full"
               />
             </div>
 
-            <div className="w-full">
-              <label className="block mb-2 font-semibold mt-4">Step 2: Enter your message to encrypt:</label>
+            <div className="form-group">
+              <label>Step 2: Enter your message to encrypt:</label>
               <input
                 type="text"
                 placeholder="Enter plaintext message..."
                 value={userInput}
                 onChange={(e) => setUserInput(e.target.value)}
-                className="border rounded p-2 w-full"
               />
             </div>
 
-            <button
-              onClick={checkEncryption}
-              className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded mt-4"
-            >
-              Encrypt Message
-            </button>
+            <button onClick={checkEncryption}>Encrypt Message</button>
 
-            <div className="w-full mt-4 text-center">
-              <p className="font-semibold mb-1">Step 3: Your encrypted message:</p>
-              <div className="bg-gray-100 p-4 rounded font-mono text-lg">{encryptedMessage}</div>
+            <div className="output">
+              <p>Step 3: Your encrypted message:</p>
+              <div className="encrypted-box">{encryptedMessage}</div>
             </div>
           </div>
+        </div>
+
+        {/* Right Half */}
+        <div className="right-pane">
+          <div className="card">
+            <SeparatorCard
+              imageUrl="/enforce.png"
+              imageAlt="Encryption Image"
+              titleText="Encryption (Kinda)"
+              paragraphText="Learn how encryption is used in messaging, security protocols, and everyday apps."
+            />
+          </div>
+        </div>
         </div>
 
         {/* Decryption UI */}

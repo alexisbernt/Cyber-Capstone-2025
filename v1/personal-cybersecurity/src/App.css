@@ -382,3 +382,80 @@ body {
   margin-left: auto; /* Aligns to the right */
   padding: 20px;     /* Adds space inside the card */
 }
+
+/* Layout container for the encryption game and module 3*/
+
+.container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f9fafb;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Left and right panes */
+.left-pane,
+.right-pane {
+  width: 50%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Card styling */
+.card {
+  background-color: white;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Form elements */
+.form-group {
+  margin-top: 16px;
+}
+
+.form-group label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Button styling */
+button {
+  margin-top: 16px;
+  padding: 10px 16px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Output styling */
+.output {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.encrypted-box {
+  background-color: #f3f4f6;
+  padding: 12px;
+  font-family: monospace;
+  font-size: 18px;
+  border-radius: 8px;
+}
