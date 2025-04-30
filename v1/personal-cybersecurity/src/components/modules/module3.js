@@ -115,11 +115,74 @@ export default function Module3() {
         <GridPattern />
 
         <div className="container">
-        {/* Left Half */}
+          {/* Left Half */}
+          <div className="left-pane">
+            <div className="card">
+              <h2>🛡️ Step-by-Step Encryption!</h2>
+              <p>Encrypt a message using the Caesar cipher!</p>
+
+              <div className="form-group">
+                <label>Step 1: What is the shift value?</label>
+                <input
+                  type="number"
+                  placeholder="Enter the shift (e.g., 3)"
+                  value={shiftInput}
+                  onChange={(e) => setShiftInput(e.target.value)}
+                />
+              </div>
+
+              <div className="form-group">
+                <label>Step 2: Enter your message to encrypt:</label>
+                <input
+                  type="text"
+                  placeholder="Enter plaintext message..."
+                  value={userInput}
+                  onChange={(e) => setUserInput(e.target.value)}
+                />
+              </div>
+
+              <button onClick={checkEncryption}>Encrypt Message</button>
+
+              <div className="output">
+                <p>Step 3: Your encrypted message:</p>
+                <div className="encrypted-box">{encryptedMessage}</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Half */}
+          <div className="right-pane">
+            <div className="card">
+              <SeparatorCard
+                imageUrl="/ceasar-cipher.png"
+                imageAlt="Encryption Image"
+                titleText="Caesar Cipher"
+                paragraphText="A encryption method. Using this method, each letter in the message is shifted a certain number of places down or up the alphabet."
+              />
+            </div>
+          </div>
+        </div>
+
+          <div className="container">
+        {/* Left Half: Separator Card */}
         <div className="left-pane">
           <div className="card">
-            <h2>🛡️ Step-by-Step Encryption!</h2>
-            <p>Encrypt a message using the Caesar cipher!</p>
+            <SeparatorCard
+              imageUrl="/ceasar-cipher.png"
+              imageAlt="Decryption Image"
+              titleText="Reverse the Cipher"
+              paragraphText="Learn how Caesar decryption works and try it yourself."
+            />
+          </div>
+        </div>
+
+        {/* Right Half: Decryption UI */}
+        <div className="right-pane">
+          <div className="card">
+            <h2>🛡️ Step-by-Step Decryption!</h2>
+            <p>This message is encrypted with a Caesar cipher (shift of 3).</p>
+
+            <div className="encrypted-box">"Khoor Zruog!"</div>
 
             <div className="form-group">
               <label>Step 1: What is the shift value?</label>
@@ -132,82 +195,25 @@ export default function Module3() {
             </div>
 
             <div className="form-group">
-              <label>Step 2: Enter your message to encrypt:</label>
-              <input
-                type="text"
-                placeholder="Enter plaintext message..."
-                value={userInput}
-                onChange={(e) => setUserInput(e.target.value)}
-              />
-            </div>
-
-            <button onClick={checkEncryption}>Encrypt Message</button>
-
-            <div className="output">
-              <p>Step 3: Your encrypted message:</p>
-              <div className="encrypted-box">{encryptedMessage}</div>
-            </div>
-          </div>
-        </div>
-
-        {/* Right Half */}
-        <div className="right-pane">
-          <div className="card">
-            <SeparatorCard
-              imageUrl="/enforce.png"
-              imageAlt="Encryption Image"
-              titleText="Encryption (Kinda)"
-              paragraphText="Learn how encryption is used in messaging, security protocols, and everyday apps."
-            />
-          </div>
-        </div>
-        </div>
-
-        {/* Decryption UI */}
-        <div style={{ width: '100%', marginTop: '2rem' }} className="card-wrapper">
-          <div className="p-6 rounded-2xl shadow-lg bg-white flex flex-col gap-4 items-center">
-            <h2 className="text-2xl font-bold">🛡️ Step-by-Step Decryption!</h2>
-            <p className="text-center text-gray-600">This message is encrypted with a Caesar cipher (shift of 3).</p>
-
-            <div className="bg-gray-100 p-4 rounded w-full text-center font-mono text-lg">"Khoor Zruog!"</div>
-
-            <div className="w-full">
-              <label className="block mb-2 font-semibold">Step 1: What is the shift value?</label>
-              <input
-                type="number"
-                placeholder="Enter the shift (e.g., 3)"
-                value={shiftInput}
-                onChange={(e) => setShiftInput(e.target.value)}
-                className="border rounded p-2 w-full"
-              />
-            </div>
-
-            <div className="w-full">
-              <label className="block mb-2 font-semibold mt-4">Step 2: Now, decrypt the message!</label>
+              <label>Step 2: Now, decrypt the message!</label>
               <input
                 type="text"
                 placeholder="Enter the decrypted text..."
                 value={userInput}
                 onChange={(e) => setUserInput(e.target.value)}
-                className="border rounded p-2 w-full"
               />
             </div>
 
-            <button
-              onClick={checkDecryption}
-              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mt-4"
-            >
-              Submit
-            </button>
+            <button onClick={checkDecryption}>Submit</button>
 
             {result && (
-              <div className={`mt-4 font-semibold ${result === 'Success!' ? 'text-green-600' : 'text-red-600'}`}>
+              <div className={`result ${result === "Success!" ? "success" : "fail"}`}>
                 {result}
               </div>
             )}
           </div>
         </div>
-
+      </div>
         {/* Final Separator Card */}
         <div style={{ width: '100%' }} className="card-wrapper2">
           <SeparatorCard
