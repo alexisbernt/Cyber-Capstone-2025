@@ -148,6 +148,26 @@ export default function Module3() {
           </div>
         </div>
 
+        {/* Another Separator Card */}
+        <div className="container">
+          {/* Left Half: Separator Card */}
+          <div className="left-pane">
+            <div className="card-wrapper2">
+              <SeparatorCard
+                imageUrl="/enforce.png"
+                imageAlt="Encryption Image"
+                titleText="What is Encryption?"
+                paragraphText="Cryptography creates the code to protect information. 
+                Cryptanalysis, a part of cryptography, is the practice of trying to break or 'crack' encrypted messages to find hidden information without knowing the key."
+              />
+            </div>
+          </div>
+          {/* Right Half (can be anything else, or left empty) */}
+          <div className="right-pane">
+            {/* Optional content for right side */}
+          </div>
+        </div>
+
         <div className="container">
           {/* Left Half */}
           <div className="left-pane">
@@ -248,6 +268,14 @@ export default function Module3() {
           </div>
         </div>
       </div>
+      {/* Final Banner Image */}
+      <div className="w-full">
+          <img 
+            src="/bottom-banner.png" 
+            alt="Cybersecurity"  
+            style={{ width: "100%", height: "320px", objectFit: "cover" }} 
+          />
+        </div>
       </main>
     </div>
   );
