@@ -375,3 +375,10 @@ body {
   flex: 1 1 0;
   max-width: 650px; 
 }
+
+.card-wrapper3 {
+  flex: 1 1 0;
+  max-width: 650px;
+  margin-left: auto; /* Aligns to the right */
+  padding: 20px;     /* Adds space inside the card */
+}
