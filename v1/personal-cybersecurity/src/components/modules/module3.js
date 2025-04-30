@@ -7,6 +7,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import RevealCard from "../../reveal";
 import SeparatorCard from "../../separatorCard";
+import ThinCard from "../../ThinCard";
 
 export default function Module3() {
   const cardContainerRef = useRef(null);
@@ -112,7 +113,40 @@ export default function Module3() {
           changed, or seen by unauthorized people. This helps keep data private and secure."
         /> <br/> <br/>
 
+        <div style={{ width: '100%' }}>
+          <ThinCard
+            titleText={
+              <>
+                "Cryptography is secret codes. It's making and breaking codes."
+                <br />
+                 – Max Levchin, Founder of PayPal.
+              </>
+            }
+            />
+        </div> <br/> <br/>
+
         <GridPattern />
+
+        {/* Another Separator Card */}
+        <div className="container">
+          {/* Left Half (can be anything else, or left empty) */}
+          <div className="left-pane">
+            {/* Optional content for left side */}
+          </div>
+
+          {/* Right Half: Separator Card */}
+          <div className="right-pane">
+            <div className="card-wrapper2">
+              <SeparatorCard
+                imageUrl="/enforce.png"
+                imageAlt="Encryption Image"
+                titleText="Cracking the Code"
+                paragraphText="Cryptography creates the code to protect information. 
+                Cryptanalysis, a part of cryptography, is the practice of trying to break or 'crack' encrypted messages to find hidden information without knowing the key."
+              />
+            </div>
+          </div>
+        </div>
 
         <div className="container">
           {/* Left Half */}
@@ -214,17 +248,7 @@ export default function Module3() {
           </div>
         </div>
       </div>
-        {/* Final Separator Card */}
-        <div style={{ width: '100%' }} className="card-wrapper2">
-          <SeparatorCard
-            imageUrl="/enforce.png"
-            imageAlt="Encryption Image"
-            titleText="Encryption (Kinda)"
-            paragraphText="Learn how encryption is used in messaging, security protocols, and everyday apps."
-          />
-        </div>
       </main>
     </div>
   );
 }
-
