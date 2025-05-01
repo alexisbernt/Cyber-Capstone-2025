@@ -91,7 +91,8 @@ export default function Module3() {
               imageUrl="/cryptography-image.png"
               imageAlt="Middle Image"
               titleText="Cryptography (Kinda)"
-              revealInfo=" Where information is hidden, coded, and/or protected so that only the person a message was intended for can read it."
+              revealInfo=" Where information is hidden, coded, and/or protected so that only the person a message was intended for can read it.
+              Read more to know more."
             />
           </div>
           <div className="card-wrapper">
@@ -99,7 +100,8 @@ export default function Module3() {
               imageUrl="/encrypt-image.png"
               imageAlt="Encryption Image"
               titleText="Encryption (Kinda)"
-              revealInfo="Encryption is the process of protecting data by turning it into a coded form that only authorized users can read."
+              revealInfo="Encryption is the process of protecting data by turning it into a coded form that only authorized users can read.
+              Read more to know more."
             />
           </div>
         </div> <br/> <br/>
@@ -138,7 +140,7 @@ export default function Module3() {
           <div className="right-pane">
             <div className="card-wrapper2">
               <SeparatorCard
-                imageUrl="/enforce.png"
+                imageUrl="/crack-code.png"
                 imageAlt="Encryption Image"
                 titleText="Cracking the Code"
                 paragraphText="Cryptography creates the code to protect information. 
@@ -154,11 +156,11 @@ export default function Module3() {
           <div className="left-pane">
             <div className="card-wrapper2">
               <SeparatorCard
-                imageUrl="/enforce.png"
+                imageUrl="/encryption-graphic.png"
                 imageAlt="Encryption Image"
                 titleText="What is Encryption?"
-                paragraphText="Cryptography creates the code to protect information. 
-                Cryptanalysis, a part of cryptography, is the practice of trying to break or 'crack' encrypted messages to find hidden information without knowing the key."
+                paragraphText="Encryption uses a public key to lock (or hide) the message and a private key to unlock (or read) it, 
+                so only the right person can see the information."
               />
             </div>
           </div>
@@ -222,7 +224,7 @@ export default function Module3() {
         <div className="left-pane">
           <div className="card">
             <SeparatorCard
-              imageUrl="/ceasar-cipher.png"
+              imageUrl="/cipher2.png"
               imageAlt="Decryption Image"
               titleText="Reverse the Cipher"
               paragraphText="Learn how Caesar decryption works and try it yourself."
