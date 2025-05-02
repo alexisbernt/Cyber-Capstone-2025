@@ -1,13 +1,13 @@
 // import Hero from "../../components/layout/home/Hero";
 // import Features from "../../components/layout/home/Features";
 // import Booklet from "../ui/BookletMod1";
-import Divider from "../ui/divider-pattern";
 import GridPattern from "../patterns";
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import RevealCard from "../../reveal";
 import SeparatorCard from "../../separatorCard";
 import ThinCard from "../../ThinCard";
+import { Key } from "lucide-react";
 
 export default function Module3() {
   const cardContainerRef = useRef(null);
@@ -17,6 +17,9 @@ export default function Module3() {
   const [userInput, setUserInput] = useState('');
   const [result, setResult] = useState('');
   const [encryptedMessage, setEncryptedMessage] = useState('');
+  const [revealed, setRevealed] = useState(false);
+  const [revealed1, setRevealed1] = useState(false);
+  const [revealed2, setRevealed2] = useState(false);
 
   useEffect(() => {
     // Reserved for side effects
@@ -129,14 +132,25 @@ export default function Module3() {
 
         <GridPattern />
 
-        {/* Another Separator Card */}
         <div className="container">
-          {/* Left Half (can be anything else, or left empty) */}
+          {/* Left Pane: Secret Message */}
           <div className="left-pane">
-            {/* Optional content for left side */}
+            <br/> <br/> <br/> <br/> <br/> <br/>
+            <div className={`message-box ${revealed ? "revealed" : ""}`}>
+              {revealed
+                ? "Meet at 9PM where we first had class."
+                : "•••••• ••• ••••• ••• ••••••••"}
+              <button
+                className="key-button"
+                onClick={() => setRevealed(!revealed)}
+                aria-label="Reveal Secret"
+              >
+                <Key size={20} />
+              </button>
+            </div>
           </div>
 
-          {/* Right Half: Separator Card */}
+          {/* Right Pane: SeparatorCard */}
           <div className="right-pane">
             <div className="card-wrapper2">
               <SeparatorCard
@@ -149,9 +163,7 @@ export default function Module3() {
             </div>
           </div>
         </div>
-
-        {/* Another Separator Card */}
-        <div className="container">
+        <div className="container"> 
           {/* Left Half: Separator Card */}
           <div className="left-pane">
             <div className="card-wrapper2">
@@ -164,9 +176,36 @@ export default function Module3() {
               />
             </div>
           </div>
-          {/* Right Half (can be anything else, or left empty) */}
+
+          {/* Right Half: Two Secret Reveals */}
           <div className="right-pane">
-            {/* Optional content for right side */}
+            <div className="secret-container"> <br/> <br/> <br/> <br/> 
+              <div className={`message-box ${revealed1 ? "revealed" : ""}`}>
+                {revealed1
+                  ? "Public key: 5a2b3c1e… used for encryption."
+                  : "•••••• ••••• •••••• ••••"}
+                <button
+                  className="key-button"
+                  onClick={() => setRevealed1(!revealed1)}
+                  aria-label="Reveal Secret 1"
+                >
+                  <Key size={20} />
+                </button>
+              </div>
+
+              <div className={`message-box ${revealed2 ? "revealed" : ""}`}>
+                {revealed2
+                  ? "Private key: decryption then succeeds when the correct key is used."
+                  : "******** ******** ******** ********"}
+                <button
+                  className="key-button"
+                  onClick={() => setRevealed2(!revealed2)}
+                  aria-label="Reveal Secret 2"
+                >
+                  <Key size={20} />
+                </button>
+              </div>
+            </div>
           </div>
         </div>
 
