@@ -3,14 +3,9 @@
 
 // import Header from "../components/Header";
 import { Link } from "react-router-dom"; 
-import Hero from "../components/layout/home/Hero";
-import Features from "../components/layout/home/Features";
-import ProductShowcase from "../components/layout/home/ProductShowcase";
 import HorizontalShowcase from "../components/layout/home/HorizontalShowcase";
 import '../App.css';
 import { useState } from "react";
-import GridPattern from "../components/patterns";
-import ColorPattern from "../components/color-pattern";
 import RevealCard from "../reveal";
 import SeparatorCard from "../separatorCard";
 
@@ -56,7 +51,7 @@ export default function Home() {
         <div className="card-wrapper">
         <Link to="/resources">
           <RevealCard
-            imageUrl="/enforce.png"
+            imageUrl="/resources.png"
             imageAlt="Resources Image"
             titleText="Resources"
             revealInfo="Explore the resouces avaliable on this site"
@@ -68,7 +63,7 @@ export default function Home() {
         {/* Middle-side Card */}
         <Link to="/pricing">
           <RevealCard
-            imageUrl="/enforce.png"
+            imageUrl="/lock3.png"
             imageAlt="Login Image"
             titleText="Login"
             revealInfo="Create your personal cybersecurity account"
@@ -80,7 +75,7 @@ export default function Home() {
         <div className="card-wrapper">
         <Link to="/blog">
           <RevealCard
-            imageUrl="/enforce.png"
+            imageUrl="/blog.png"
             imageAlt="Blog Image"
             titleText="Blog"
             revealInfo="Check out updated blog posts"
@@ -88,26 +83,6 @@ export default function Home() {
         </Link>
         </div>
       </div>
-
-      <div cardClassName="separator-card2" >
-        <SeparatorCard cardClassName="separator-card2"
-          imageUrl="/proud-cyber-nerd.png"
-          imageAlt="Cyber Nerd Graphic"
-          titleText="Earn your badge of NERDom today"
-          paragraphText="Get ahead of online threats by learning practices that will keep you safe when using technology. If you earn your Cybersecurity Nerd Badge, you'll be ahead of the game."
-        />
-      </div>
-
-        {/* Divider Image & Clickable Link
-        <div className="w-full">
-          <Link to="/pricing">
-            <img 
-              src="/banner2.png" 
-              alt="Enter to Win" 
-              style={{ width: "100%", height: "430px", objectFit: "cover" }} 
-            />
-          </Link>
-        </div> */}
 
         {/* Flex Container for Right Content & Left Image */}
         <div className="split-container">
@@ -134,15 +109,6 @@ export default function Home() {
         </div>
       </div>
 
-      <div cardClassName="separator-card2" >
-        <SeparatorCard cardClassName="separator-card2"
-          imageUrl="/color-2c2c2c.png"
-          imageAlt="Cyber Nerd Graphic"
-          titleText="Earn your badge of NERDom today"
-          paragraphText="Get ahead of online threats by learning practices that will keep you safe when using technology. If you earn your Cybersecurity Nerd Badge, you'll be ahead of the game."
-        />
-      </div>
-
       {/* Flex Container for Left Content & Right Image */}
       <div className="split-container">
         {/* Right-side Image */}   
@@ -166,7 +132,16 @@ export default function Home() {
         </div>
         
       </div>
-    <HorizontalShowcase />
+      <HorizontalShowcase />
+
+      <div cardClassName="separator-card2" >
+        <SeparatorCard cardClassName="separator-card2"
+          imageUrl="/proud-cyber-nerd.png"
+          imageAlt="Cyber Nerd Graphic"
+          titleText="Earn your badge of NERDom today"
+          paragraphText="Get ahead of online threats by learning practices that will keep you safe when using technology. If you earn your Cybersecurity Nerd Badge, you'll be ahead of the game."
+        />
+      </div>
 
       {/* Final Banner Image */}
       <div className="w-full">
