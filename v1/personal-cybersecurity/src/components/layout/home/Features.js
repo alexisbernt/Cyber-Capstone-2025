@@ -1,9 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Card } from "react-bootstrap";
 import { Settings2, LineChart, Users, Shield } from "lucide-react";
-import Button from "../../ui/Button";
-// import "/lock-bckgrnd.png";
 
 const features = [
   {
@@ -30,7 +27,7 @@ const features = [
 
 export default function Features() {
   const [currentScreen, setCurrentScreen] = useState(0);
-  const itemsPerPage = 2; // Number of items per screen
+  const itemsPerPage = 2;
   const totalScreens = Math.ceil(features.length / itemsPerPage);
 
   const nextScreen = () => {
@@ -51,18 +48,32 @@ export default function Features() {
   );
 
   return (
-    <section className="py-24 bg-black text-center font-verdana">
-      <div className="container mx-auto px-6">
-        {/* Section Title */}
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 tracking-wide">
+    <section style={{
+      backgroundColor: 'black',
+      color: 'white',
+      fontFamily: 'Verdana, sans-serif',
+      padding: '60px 20px',
+      textAlign: 'center'
+    }}>
+      <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+        <h2 style={{ fontSize: '40px', marginBottom: '20px' }}>
           How to Implement Cybersecurity:
         </h2>
-        <p className="text-xl text-gray-400 leading-relaxed tracking-wide mb-12">
+        <p style={{
+          fontSize: '20px',
+          color: '#ccc',
+          marginBottom: '40px'
+        }}>
           Discover, Conceal, Enforce, and Lengthen
         </p>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: '1fr 1fr',
+          gap: '40px',
+          marginBottom: '40px'
+        }}>
           {visibleFeatures.map((feature, index) => {
             const Icon = feature.icon;
             return (
@@ -71,35 +82,62 @@ export default function Features() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
+                style={{
+                  backgroundColor: '#1e1e1e',
+                  padding: '30px',
+                  borderRadius: '8px',
+                  boxShadow: '0 4px 10px rgba(0,0,0,0.5)',
+                }}
               >
-                <Card className="p-8 bg-gray-900/50 backdrop-blur-lg border-gray-800 hover:bg-gray-900/70 transition-all duration-300 shadow-lg">
-                  <Icon className="w-16 h-16 text-white mb-6" />
-                  <h3 className="text-3xl font-semibold text-white mb-4">
-                    {feature.title}
-                  </h3>
-                  <p className="text-xl text-gray-400">{feature.description}</p>
-                </Card>
+                <Icon style={{ width: '50px', height: '50px', marginBottom: '20px' }} />
+                <h3 style={{ fontSize: '24px', marginBottom: '10px' }}>
+                  {feature.title}
+                </h3>
+                <p style={{ fontSize: '16px', color: '#ccc' }}>
+                  {feature.description}
+                </p>
               </motion.div>
             );
           })}
         </div>
 
         {/* Navigation Buttons */}
-        <div className="mt-12 flex justify-center space-x-8">
-          <Button 
-            onClick={prevScreen} 
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '40px' }}>
+          <button
+            onClick={prevScreen}
             disabled={currentScreen === 0}
-            className="px-[200px] py-[100px] text-3xl font-semibold tracking-wide bg-[#9cc0cf] text-white hover:bg-[#374151] border-none rounded-none transition-colors duration-300"
+            style={{
+              padding: '15px 30px',
+              fontSize: '18px',
+              backgroundColor: '#007bff',
+              color: 'white',
+              border: 'none',
+              borderRadius: '5px',
+              cursor: currentScreen === 0 ? 'not-allowed' : 'pointer',
+              opacity: currentScreen === 0 ? 0.5 : 1,
+              transition: 'background-color 0.3s'
+            }}
           >
             Prior Page
-          </Button>
-          <Button 
-            onClick={nextScreen} 
+          </button>
+
+          <button
+            onClick={nextScreen}
             disabled={currentScreen === totalScreens - 1}
-            className="px-[200px] py-[100px] text-3xl font-semibold tracking-wide bg-[#9cc0cf] text-white hover:bg-[#374151] border-none rounded-none transition-colors duration-300"
+            style={{
+              padding: '15px 30px',
+              fontSize: '18px',
+              backgroundColor: '#007bff',
+              color: 'white',
+              border: 'none',
+              borderRadius: '5px',
+              cursor: currentScreen === totalScreens - 1 ? 'not-allowed' : 'pointer',
+              opacity: currentScreen === totalScreens - 1 ? 0.5 : 1,
+              transition: 'background-color 0.3s'
+            }}
           >
             Next Page
-          </Button>
+          </button>
         </div>
       </div>
     </section>

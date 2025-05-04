@@ -111,9 +111,10 @@ export default function Module1() {
 
         <Divider/>
 
+        <GridPattern />
+
         {/* Divider of Text Section */}
         <div className="flex items-center justify-center p-10">
-          <br/> <br/> <br/> <br/> 
           <h1 className="text-6xl font-extrabold font-[Poppins] text-center">
             Step 1: Let's start things off with some definitions!
           </h1>
@@ -121,32 +122,26 @@ export default function Module1() {
 
         <Divider/> <br/>
 
-        <GridPattern />
-
         <Definitions/>
+
+        <GridPattern />
 
         {/* Divider of Text Section */}
         <div className="flex items-center justify-center p-10">
           <h1 className="text-6xl font-extrabold font-[Poppins] text-center">
-            <br/> <br/> <br/>
             Step 2: Test your knowledge by playing this drag and drop game!
           </h1>
         </div>
-
         <Divider/> <br/>
-
-        <GridPattern />
         <DragDropGame/>
-
+        <GridPattern />
         {/* Divider of Text Section */}
         <div className="flex items-center justify-center p-10">
           <h1 className="text-6xl font-extrabold font-[Poppins] text-center">
-            <br/> <br/> <br/>
             Step 3: Start Implementing Cybersecurity Into Your Day-To-Day!
           </h1>
           <Divider/> <br/>
         </div>
-        <GridPattern />
         <Features />
 
         {/* Final Banner Image */}
