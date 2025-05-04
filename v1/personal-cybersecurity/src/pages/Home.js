@@ -32,6 +32,16 @@ export default function Home() {
         />
       </div>
 
+      {/* Website Descriptor */}
+      <div style={{ maxWidth: "850px", margin: "40px auto", padding: "0 20px", color: "black" }}>
+        <h1 style={{ fontSize: "2em", fontWeight: "bold", marginBottom: "20px" }}>
+          Welcome To Cyber Club!
+        </h1>
+        <p style={{ fontSize: "1.1em", lineHeight: "1.6" }}>
+          This website is meant to help users learn about cybersecurity and how to stay safe online.
+        </p>
+      </div>
+
       <main>
       <div className="card-container">
         {/* Navigation Buttons */}
