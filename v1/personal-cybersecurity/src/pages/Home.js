@@ -123,7 +123,7 @@ export default function Home() {
       <div className="split-container">
         {/* Right-side Image */}   
         <div className="split-right">
-        <Link to="/modules">
+        <Link to="/pricing">
             <img 
               src="/starter-text2.png"  
               alt="Right-side Image"  
