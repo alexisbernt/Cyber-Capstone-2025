@@ -1,0 +1,7 @@
+## My computer broke during dead week
+
+I had to get two loaner computers. Both had running scripts disabled. 
+
+ PowerShell was blocking the execution of scripts, including the npm.ps1 script, due to a restrictive execution policy.
+
+ So, I had to go in and Temporarily allow scripts by running: Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
