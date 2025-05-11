@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "../App.css";
 
 const LoginPage = () => {
   const [formData, setFormData] = useState({ email: "", password: "", action: "login" });
@@ -25,22 +26,44 @@ const LoginPage = () => {
     }
   };
 
-  return (
-    <div className="login-container">
-      <h1 className="login-title">Welcome Back</h1>
-      <p className="login-subtitle">Log in to continue</p>
-      
-      <form className="login-form" onSubmit={handleSubmit}>
-        <label htmlFor="email">Email Address</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email" onChange={handleChange} required />
-        
-        <label htmlFor="password">Password</label>
-        <input type="password" id="password" name="password" placeholder="Enter your password" onChange={handleChange} required />
+ return (
+    <div className="login-page">
+      <div className="login-card">
+        <h1 className="login-title">Welcome Back</h1>
+        <p className="login-subtitle">Log in to your account</p>
 
-        <button type="submit" className="login-button">Log In</button>
-      </form>
-      
-      <p className="signup-redirect">Don't have an account? <a href="/signup">Sign up here</a></p>
+        <form className="login-form" onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="you@example.com"
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <button type="submit" className="login-button">Log In</button>
+        </form>
+
+        <p className="signup-redirect">
+          Don't have an account? <a href="/signup">Sign up here</a>
+        </p>
+      </div>
     </div>
   );
 };

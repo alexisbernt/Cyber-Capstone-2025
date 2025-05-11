@@ -22,28 +22,57 @@ const SignUpPage = () => {
       }
   };
 
+return (
+    <div className="login-page">
+      <div className="login-card">
+        <h1 className="login-title">Create an Account</h1>
+        <p className="login-subtitle">Join us today and start your journey!</p>
 
-  return (
-    <div className="signup-container">
-      <h1 className="signup-title">Create an Account</h1>
-      <p className="signup-subtitle">Join us today and start your journey!</p>
-      
-      <form className="signup-form" onSubmit={handleSubmit}>
-        <label htmlFor="name">Full Name</label>
-        <input type="text" id="name" name="name" placeholder="Enter your full name" onChange={handleChange} required />
+        <form className="login-form" onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="name">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your full name"
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-        <label htmlFor="email">Email Address</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email" onChange={handleChange} required />
-        
-        <label htmlFor="password">Password</label>
-        <input type="password" id="password" name="password" placeholder="Create a password" onChange={handleChange} required />
+          <div className="form-group">
+            <label htmlFor="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-        <button type="submit" className="signup-button">Sign Up</button>
-      </form>
-      
-      <p className="login-redirect">Already have an account? <a href="/login">Log in here</a></p>
+          <div className="form-group">
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Create a password"
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <button type="submit" className="login-button">Sign Up</button>
+        </form>
+
+        <p className="signup-redirect">
+          Already have an account? <a href="/login">Log in here</a>
+        </p>
+      </div>
     </div>
   );
 };
-
 export default SignUpPage;
