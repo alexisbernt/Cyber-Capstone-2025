@@ -558,7 +558,7 @@ button:hover {
   flex-direction: column;
   align-items: center;
   padding: 30px;
-  max-width: 1400px;        /* Increased width */
+  max-width: 1600px;     /* Increased from 1400px */
   width: 100%;
   margin: 0 auto;
 }
@@ -574,6 +574,8 @@ button:hover {
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
+  max-width: 100%;
+  overflow-x: auto; /* allows content to remain accessible if it overflows */
 }
 
 .roadmap-grid {
@@ -584,40 +586,100 @@ button:hover {
   width: 100%;
 }
 
-.roadmap-page {
-  margin-top: 300px; /* Adjust as needed to clear navbar */
+/* Blog Design  */
+
+.blog-page {
+  background-color: #0c0c0c;
+  min-height: 100vh;
+  color: #fff;
+  font-family: 'Helvetica Neue', sans-serif;
+  padding-top: 100px;
 }
 
-.roadmap-step {
-  background-color: #f4f6f8;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  text-decoration: none;
-  color: inherit;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.blog-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
-.roadmap-step:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-}
-
-.step-title {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 16px;
+.blog-header {
   text-align: center;
+  margin-bottom: 40px;
 }
 
-.step-button {
+.blog-title {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.blog-subtitle {
+  color: #ccc;
+  font-size: 18px;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+.blog-card {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 24px;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.blog-card:hover {
+  background-color: #222;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.blog-category {
+  background-color: #2a2a2a;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  color: #ccc;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.blog-post-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.blog-excerpt {
+  font-size: 15px;
+  color: #aaa;
+  margin-bottom: 16px;
+}
+
+.blog-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-size: 14px;
-  width: 100px;
-  height: 40px;
+  color: #888;
+}
+
+.blog-author-info span {
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 6px;
+  margin-right: 16px;
+}
+
+.blog-link {
+  color: #888;
+  transition: transform 0.2s ease;
+}
+
+.blog-link:hover {
+  transform: translateX(4px);
+  color: #fff;
 }

@@ -8,9 +8,14 @@ import '../App.css';
 import { useState } from "react";
 import RevealCard from "../reveal";
 import SeparatorCard from "../separatorCard";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+
 
 export default function Home() {
   const [name, setName] = useState('');
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
 
   fetch("http://localhost:3001/")
     .then((results) => {
@@ -33,14 +38,25 @@ export default function Home() {
       </div>
 
       {/* Website Descriptor */}
-      <div style={{ maxWidth: "850px", margin: "40px auto", padding: "0 20px", color: "black" }}>
-        <h1 style={{ fontSize: "2em", fontWeight: "bold", marginBottom: "20px" }}>
-          Welcome To Cyber Club!
-        </h1>
-        <p style={{ fontSize: "1.1em", lineHeight: "1.6" }}>
-          This website is meant to help users learn about cybersecurity and how to stay safe online.
-        </p>
-      </div>
+      <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      style={{
+        maxWidth: "850px",
+        margin: "40px auto",
+        padding: "0 20px",
+        color: "black",
+      }}
+    >
+      <h1 style={{ fontSize: "2em", fontWeight: "bold", marginBottom: "20px" }}>
+        Welcome To Cyber Club!
+      </h1>
+      <p style={{ fontSize: "1.1em", lineHeight: "1.6" }}>
+        This website is meant to help users learn about cybersecurity and how to stay safe online.
+      </p>
+    </motion.div>
 
       <main>
       <div className="card-container">
