@@ -30,11 +30,13 @@ export default function Home() {
 
       {/* Banner Image */}
       <div className="w-full">
-        <img 
-          src="/banner_lcc.png" 
-          alt="Banner"  
-          style={{ width: "100%", height: "345px", objectFit: "cover" }} 
-        />
+        <Link to="/pricing">
+          <img 
+            src="/banner_lcc.png" 
+            alt="Banner"  
+            style={{ width: "100%", height: "345px", objectFit: "cover", cursor: "pointer" }} 
+          />
+        </Link>
       </div>
 
       {/* Website Descriptor */}
@@ -171,12 +173,14 @@ export default function Home() {
 
       {/* Final Banner Image */}
       <div className="w-full">
+        <Link to="/resources">
           <img 
             src="/bottom-banner.png" 
-            alt="Cybersecurity"  
-            style={{ width: "100%", height: "320px", objectFit: "cover" }} 
+            alt="Banner"  
+            style={{ width: "100%", height: "345px", objectFit: "cover", cursor: "pointer" }} 
           />
-        </div>
+        </Link>
+      </div>
 
       </main>
     </div>
