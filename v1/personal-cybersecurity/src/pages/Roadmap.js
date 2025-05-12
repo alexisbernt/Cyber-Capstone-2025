@@ -2,22 +2,22 @@ import { Link } from "react-router-dom";
 
 export default function Roadmap() {
   return (
-    <div className="bg-black min-h-screen text-white flex flex-col items-center p-10">
-      <h1 className="text-4xl font-bold mb-6">Your Learning Roadmap</h1>
-      <p className="text-lg mb-8">Follow these steps to complete your journey!</p>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-4xl">
-        {steps.map((step, index) => (
-          <Link key={index} to={step.path}>
-            <div className="p-6 bg-gray-800 rounded-xl shadow-lg hover:bg-gray-700 transition duration-300 cursor-pointer flex flex-col items-center">
-              <h2 className="text-2xl font-semibold mb-4">{step.title}</h2>
-              <button className="w-24 h-24 bg-blue-500 text-white text-sm rounded-full flex items-center justify-center hover:bg-blue-400 transition duration-300">
-                {step.description}
-              </button>
-            </div>
-          </Link>
-        ))}
+    <div className="login-page">
+      <div className="login-page roadmap-page">
+      <div className="login-card roadmap-card">
+        <h1 className="login-title">Your Learning Roadmap</h1>
+        <p className="login-subtitle">Follow these steps to complete your journey!</p>
+
+        <div className="roadmap-grid">
+          {steps.map((step, index) => (
+            <Link key={index} to={step.path} className="roadmap-step">
+              <h2 className="step-title">{step.title}</h2>
+              <div className="login-button step-button">{step.description}</div>
+            </Link>
+          ))}
+        </div>
       </div>
+    </div>
     </div>
   );
 }
