@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 export default function Roadmap() {
   return (
     <div className="login-page">
-      <div className="login-page roadmap-page">
-      <div className="login-card roadmap-card">
+      <div className="login-page roadmap-page outlined-roadmap">
+        <div className="login-card roadmap-card">
         <h1 className="login-title">Your Learning Roadmap</h1>
         <p className="login-subtitle">Follow these steps to complete your journey!</p>
 
