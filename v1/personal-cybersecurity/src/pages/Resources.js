@@ -1,19 +1,15 @@
 import '../css-sections/about.css';
-import deviceImage1 from "../assets/device-2.png";
-import deviceImage2 from "../assets/device-3.png";
 import arrowupright from "../assets/arrow-up-right.svg";
 
-const AboutUs = () => {
+function AboutUs() {
   return (
-    <div className="login-page">
+    <div className="about-page-container">
+      {/* Left: Text Card */}
       <div className="login-card about-card">
-        <div className="about-images">
-          <img src={deviceImage1} alt="Device 1" className="about-img" />
-          <img src={deviceImage2} alt="Device 2" className="about-img" />
-        </div>
-
         <div className="about-content">
-          <p className="login-subtitle">About Cyber Club / 01000011 01111001 01100010 01100101 01110010 01110011 01100101 01100011 01110101 01110010 01101001 01110100 01111001</p>
+          <p className="login-subtitle">
+            About Cyber Club / 01000011 01111001 01100010 01100101 01110010 01110011 01100101 01100011 01110101 01110010 01101001 01110100 01111001
+          </p>
           <h1 className="login-title">The Goal of LCC</h1>
           <p className="sushi__description">
             The mission of <em>Lexi's Cyber Club</em> is to bring you cybersecurity knowledge that will help you personally and get you to live with ease.
@@ -24,9 +20,22 @@ const AboutUs = () => {
           </a>
         </div>
       </div>
+
+      {/* Right: Video Card */}
+      <div className="login-card about-card">
+        <div className="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/bCu3qh7xXzQ?si=T6cbYKSdSnGEHBFJ"
+            title="Cybersecurity Video"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
+      </div>
     </div>
   );
-};
+}
 
 export default AboutUs;
 
