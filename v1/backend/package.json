@@ -16,6 +16,7 @@
     "cors": "^2.8.5",
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
+    "react-scripts": "^5.0.1",
     "reflect-metadata": "^0.2.2",
     "typeorm": "^0.3.20"
   },
