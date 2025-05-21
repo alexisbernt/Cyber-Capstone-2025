@@ -71,7 +71,7 @@ export default function Home() {
 
         <div className="card-wrapper">
         {/* Middle-side Card */}
-        <Link to="/pricing">
+        <Link to="/signin">
           <RevealCard
             imageUrl="/lock3.png"
             imageAlt="Login Image"

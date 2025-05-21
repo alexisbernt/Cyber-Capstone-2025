@@ -30,7 +30,7 @@ export default function Home() {
 
       {/* Banner Image */}
       <div className="w-full">
-        <Link to="/pricing">
+        <Link to="/signin">
           <img 
             src="/banner_lcc.png" 
             alt="Banner"  
@@ -89,7 +89,7 @@ export default function Home() {
 
         <div className="card-wrapper">
         {/* Middle-side Card */}
-        <Link to="/pricing">
+        <Link to="/signin">
           <RevealCard
             imageUrl="/lock3.png"
             imageAlt="Login Image"
@@ -141,7 +141,7 @@ export default function Home() {
       <div className="split-container">
         {/* Right-side Image */}   
         <div className="split-right">
-        <Link to="/pricing">
+        <Link to="/signin">
             <img 
               src="/starter-text2.png"  
               alt="Right-side Image"  

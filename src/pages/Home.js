@@ -66,7 +66,7 @@ export default function Home() {
 
         <div className="card-wrapper">
         {/* Middle-side Card */}
-        <Link to="/pricing">
+        <Link to="/signin">
           <RevealCard
             imageUrl="/enforce.png"
             imageAlt="Login Image"
@@ -100,7 +100,7 @@ export default function Home() {
 
         {/* Divider Image & Clickable Link
         <div className="w-full">
-          <Link to="/pricing">
+          <Link to="/signin">
             <img 
               src="/banner2.png" 
               alt="Enter to Win" 

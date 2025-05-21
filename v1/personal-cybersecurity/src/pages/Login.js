@@ -61,7 +61,7 @@ const LoginPage = () => {
         </form>
 
         <p className="signup-redirect">
-          Don't have an account? <a href="/pricing">Sign up here</a>
+          Don't have an account? <a href="/signin">Sign up here</a>
         </p>
       </div>
     </div>

@@ -45,9 +45,9 @@ export default function Header() {
               Resources
             </span>
           </Link>
-          <Link href="/pricing">
+          <Link href="/signin">
             <span className={`cursor-pointer transition-colors ${
-              isActive("/pricing") ? "text-white" : "text-gray-300 hover:text-white"
+              isActive("/signin") ? "text-white" : "text-gray-300 hover:text-white"
             }`}>
               Pricing
             </span>
