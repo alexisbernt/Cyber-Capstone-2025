@@ -22,18 +22,18 @@ export default function Home() {
   return (
     <div className="bg-black min-h-screen">
       {name}
-
+  
       {/* Banner Image */}
-      <div className="w-full">
+      <div>
         <img 
           src="/banner_lcc.png" 
           alt="Banner"  
-          style={{ width: "100%", height: "345px", objectFit: "cover" }} 
+          className="banner-image"
         />
       </div>
-
+  
       {/* Website Descriptor */}
-      <div style={{ maxWidth: "850px", margin: "40px auto", padding: "0 20px", color: "black" }}>
+      <div className="frozen-container" style={{ color: "black", marginTop: "40px", marginBottom: "40px" }}>
         <h1 style={{ fontSize: "2em", fontWeight: "bold", marginBottom: "20px" }}>
           Welcome To Cyber Club!
         </h1>
@@ -41,111 +41,86 @@ export default function Home() {
           This website is meant to help users learn about cybersecurity and how to stay safe online.
         </p>
       </div>
-
+  
       <main>
+  
+      {/* Navigation Cards */}
       <div className="card-container">
-        {/* Navigation Buttons */}
         <div className="card-wrapper">
-        {/* Left-side Card */}
-        <Link to="/modules">
-          <RevealCard
-            imageUrl="/learn.png"
-            imageAlt="Module Image"
-            titleText="Learn"
-            revealInfo="Learning modules teach you the fundamentals of cybersecurity."
-          />
-        </Link>
-        </div>
-
-        {/* Middle-side Card */}
-        <div className="card-wrapper">
-        <Link to="/resources">
-          <RevealCard
-            imageUrl="/resources.png"
-            imageAlt="Resources Image"
-            titleText="Resources"
-            revealInfo="Explore the resouces avaliable on this site"
-          />
-        </Link>
-        </div>
-
-        <div className="card-wrapper">
-        {/* Middle-side Card */}
-        <Link to="/signin">
-          <RevealCard
-            imageUrl="/lock3.png"
-            imageAlt="Login Image"
-            titleText="Login"
-            revealInfo="Create your personal cybersecurity account"
-          />
-        </Link>
-        </div>
-
-        {/* Right-side Card */}
-        <div className="card-wrapper">
-        <Link to="/blog">
-          <RevealCard
-            imageUrl="/blog.png"
-            imageAlt="Blog Image"
-            titleText="Blog"
-            revealInfo="Check out updated blog posts"
-          />
-        </Link>
-        </div>
-      </div>
-
-        {/* Flex Container for Right Content & Left Image */}
-        <div className="split-container">
-          
-          {/* Left-side Image */}     
-          <div className="split-left">
-            <img 
-              src="/home-image.png"  
-              alt="Right-side Image"  
-              className="split-image"
-            />
-          </div>
-
-
-        {/* Right-side Section */}
-        <div className="split-right">
           <Link to="/modules">
-            <img 
-              src="/starter-text.png"  
-              alt="Right-side Image"  
-              className="split-image"
+            <RevealCard
+              imageUrl="/learn.png"
+              imageAlt="Module Image"
+              titleText="Learn"
+              revealInfo="Learning modules teach you the fundamentals of cybersecurity."
+            />
+          </Link>
+        </div>
+        <div className="card-wrapper">
+          <Link to="/resources">
+            <RevealCard
+              imageUrl="/resources.png"
+              imageAlt="Resources Image"
+              titleText="Resources"
+              revealInfo="Explore the resources available on this site"
+            />
+          </Link>
+        </div>
+        <div className="card-wrapper">
+          <Link to="/signin">
+            <RevealCard
+              imageUrl="/lock3.png"
+              imageAlt="Login Image"
+              titleText="Login"
+              revealInfo="Create your personal cybersecurity account"
+            />
+          </Link>
+        </div>
+        <div className="card-wrapper">
+          <Link to="/blog">
+            <RevealCard
+              imageUrl="/blog.png"
+              imageAlt="Blog Image"
+              titleText="Blog"
+              revealInfo="Check out updated blog posts"
             />
           </Link>
         </div>
       </div>
 
-      {/* Flex Container for Left Content & Right Image */}
+      {/* Split Section 1 */}
       <div className="split-container">
-        {/* Right-side Image */}   
-        <div className="split-right">
-        <Link to="/modules">
-            <img 
-              src="/starter-text2.png"  
-              alt="Right-side Image"  
-              className="split-image"
-            />
-        </Link>
-      </div>
-
-        {/* Left-side Section */}
         <div className="split-left">
-          <img 
-            src="/home-image2.png"  
-            alt="Right-side Image"  
-            className="split-image"
-          />
+          <img src="/home-image.png" alt="Left-side Image" className="split-image" />
         </div>
-        
+        <div className="split-right">
+          <Link to="/modules">
+            <img src="/starter-text.png" alt="Right-side Text" className="split-image" />
+          </Link>
+        </div>
       </div>
-      <HorizontalShowcase />
 
-      <div cardClassName="separator-card2" >
-        <SeparatorCard cardClassName="separator-card2"
+      {/* Split Section 2 */}
+      <div className="split-container">
+        <div className="split-right">
+          <Link to="/modules">
+            <img src="/starter-text2.png" alt="Right-side Text" className="split-image" />
+          </Link>
+        </div>
+        <div className="split-left">
+          <img src="/home-image2.png" alt="Left-side Image" className="split-image" />
+        </div>
+      </div>
+
+      {/* Showcase Section */}
+      <div className="frozen-container">
+        <HorizontalShowcase />
+      </div>
+
+      {/* Separator Card */}
+      <div className="separator-card2">
+        <SeparatorCard
+          cardClassName="separator-card2"
           imageUrl="/proud-cyber-nerd.png"
           imageAlt="Cyber Nerd Graphic"
           titleText="Earn your badge of NERDom today"
@@ -153,16 +128,16 @@ export default function Home() {
         />
       </div>
 
-      {/* Final Banner Image */}
-      <div className="w-full">
-          <img 
-            src="/bottom-banner.png" 
-            alt="Cybersecurity"  
-            style={{ width: "100%", height: "320px", objectFit: "cover" }} 
-          />
-        </div>
+      {/* Final Banner */}
+      <div>
+        <img 
+          src="/bottom-banner.png" 
+          alt="Cybersecurity"  
+          className="bottom-banner"
+        />
+      </div>
 
-      </main>
-    </div>
-  );
+    </main>
+  </div>
+);
 }
