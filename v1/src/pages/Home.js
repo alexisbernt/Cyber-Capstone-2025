@@ -1,143 +1,121 @@
-// top clickable button 
-// button colors 
-
-// import Header from "../components/Header";
-import { Link } from "react-router-dom"; 
-import HorizontalShowcase from "../components/layout/home/HorizontalShowcase";
-import '../App.css';
-import { useState } from "react";
+import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import Header from "../components/Header";
+import GridPattern from "../components/ui/GridPattern";
 import RevealCard from "../reveal";
 import SeparatorCard from "../separatorCard";
+import HorizontalShowcase from "../components/layout/home/HorizontalShowcase";
+import "../App.css";
 
 export default function Home() {
-  const [name, setName] = useState('');
+  const [name, setName] = useState("");
 
-  fetch("http://localhost:3001/")
-    .then((results) => {
-      results.json().then((j) => {
-        setName(j.name);
-      });
-    });
+  useEffect(() => {
+    fetch("http://localhost:3001/")
+      .then((res) => res.json())
+      .then((data) => setName(data.name));
+  }, []);
 
   return (
-    <div className="bg-black min-h-screen">
-      {name}
-  
-      {/* Banner Image */}
-      <div>
-        <img 
-          src="/banner_lcc.png" 
-          alt="Banner"  
-          className="banner-image"
-        />
-      </div>
-  
-      {/* Website Descriptor */}
-      <div className="frozen-container" style={{ color: "black", marginTop: "40px", marginBottom: "40px" }}>
-        <h1 style={{ fontSize: "2em", fontWeight: "bold", marginBottom: "20px" }}>
-          Welcome To Cyber Club!
-        </h1>
-        <p style={{ fontSize: "1.1em", lineHeight: "1.6" }}>
-          This website is meant to help users learn about cybersecurity and how to stay safe online.
-        </p>
-      </div>
-  
-      <main>
-  
-      {/* Navigation Cards */}
-      <div className="card-container">
-        <div className="card-wrapper">
+    <div className="home-screen">
+      <Header />
+      <GridPattern />
+
+      <main className="main-content">
+        {/* Welcome Text */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="intro-text"
+        >
+          <h1>Working?</h1>
+          <p>
+            {name ? `${name}, g` : "G"}et ready to explore the world of
+            cybersecurity!
+          </p>
+        </motion.div>
+
+        {/* Feature Cards */}
+        <div className="feature-cards">
           <Link to="/modules">
             <RevealCard
               imageUrl="/learn.png"
-              imageAlt="Module Image"
               titleText="Learn"
-              revealInfo="Learning modules teach you the fundamentals of cybersecurity."
+              revealInfo="Learn cybersecurity fundamentals"
             />
           </Link>
-        </div>
-        <div className="card-wrapper">
           <Link to="/resources">
             <RevealCard
               imageUrl="/resources.png"
-              imageAlt="Resources Image"
               titleText="Resources"
-              revealInfo="Explore the resources available on this site"
+              revealInfo="Explore cybersecurity tools"
             />
           </Link>
-        </div>
-        <div className="card-wrapper">
           <Link to="/signin">
             <RevealCard
               imageUrl="/lock3.png"
-              imageAlt="Login Image"
               titleText="Login"
-              revealInfo="Create your personal cybersecurity account"
+              revealInfo="Create your account"
             />
           </Link>
-        </div>
-        <div className="card-wrapper">
           <Link to="/blog">
             <RevealCard
               imageUrl="/blog.png"
-              imageAlt="Blog Image"
               titleText="Blog"
-              revealInfo="Check out updated blog posts"
+              revealInfo="Read expert articles"
             />
           </Link>
         </div>
-      </div>
 
-      {/* Split Section 1 */}
-      <div className="split-container">
-        <div className="split-left">
-          <img src="/home-image.png" alt="Left-side Image" className="split-image" />
-        </div>
-        <div className="split-right">
+        {/* Split Section 1 */}
+        <div className="split-section">
+          <img src="/home-image.png" alt="Cyber Visual 1" />
           <Link to="/modules">
-            <img src="/starter-text.png" alt="Right-side Text" className="split-image" />
+            <img
+              src="/starter-text.png"
+              alt="Get Started"
+              className="clickable-image"
+            />
           </Link>
         </div>
-      </div>
 
-      {/* Split Section 2 */}
-      <div className="split-container">
-        <div className="split-right">
+        {/* Split Section 2 */}
+        <div className="split-section reverse">
           <Link to="/modules">
-            <img src="/starter-text2.png" alt="Right-side Text" className="split-image" />
+            <img
+              src="/starter-text2.png"
+              alt="Continue Learning"
+              className="clickable-image"
+            />
           </Link>
+          <img src="/home-image2.png" alt="Cyber Visual 2" />
         </div>
-        <div className="split-left">
-          <img src="/home-image2.png" alt="Left-side Image" className="split-image" />
+
+        {/* Showcase Section */}
+        <div className="showcase-section">
+          <HorizontalShowcase />
         </div>
-      </div>
 
-      {/* Showcase Section */}
-      <div className="frozen-container">
-        <HorizontalShowcase />
-      </div>
-
-      {/* Separator Card */}
-      <div className="separator-card2">
+        {/* Separator Card */}
         <SeparatorCard
           cardClassName="separator-card2"
           imageUrl="/proud-cyber-nerd.png"
           imageAlt="Cyber Nerd Graphic"
           titleText="Earn your badge of NERDom today"
-          paragraphText="Get ahead of online threats by learning practices that will keep you safe when using technology. If you earn your Cybersecurity Nerd Badge, you'll be ahead of the game."
+          paragraphText="Master your cybersecurity skills and earn your place as a Cybersecurity Nerd!"
         />
-      </div>
 
-      {/* Final Banner */}
-      <div>
-        <img 
-          src="/bottom-banner.png" 
-          alt="Cybersecurity"  
-          className="bottom-banner"
-        />
-      </div>
-
-    </main>
-  </div>
-);
+        {/* Footer Banner */}
+        <div className="footer-banner">
+          <img
+            src="/bottom-banner.png"
+            alt="Cybersecurity Footer"
+            className="footer-image"
+          />
+        </div>
+      </main>
+    </div>
+  );
 }
