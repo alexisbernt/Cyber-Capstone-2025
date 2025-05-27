@@ -93,7 +93,7 @@ export default function Home() {
         <SeparatorCard cardClassName="separator-card2"
           imageUrl="/proud-cyber-nerd.png"
           imageAlt="Cyber Nerd Graphic"
-          titleText="Earn your badge of NERDom today"
+          titleText="Earn your badge of NERDom today!!"
           paragraphText="Get ahead of online threats by learning practices that will keep you safe when using technology. If you earn your cybersecurity nerd badge, you'll be ahead of the game."
         />
       </div>

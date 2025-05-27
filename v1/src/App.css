@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-body {
+/* body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-}
+} */
 
 /* General Reset */
 * {
@@ -119,8 +119,91 @@ body {
   margin: 0 auto;
 }
 
-body {
+
+body, .bg-black {
+  background: radial-gradient(circle at 20% 20%, #0f0f0f, #000000 70%);
+  background-attachment: fixed;
+  color: #e0e0e0;
   font-size: 16px;
+}
+
+.home-screen {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at 20% 20%, #0f0f0f, #000000 70%);
+  background-attachment: fixed;
+  color: #e0e0e0;
+}
+
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 24px;
+  position: relative;
+  z-index: 10;
+}
+
+.intro-text {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 4rem auto;
+}
+
+.intro-text h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.intro-text p {
+  font-size: 1.2rem;
+  color: #cccccc;
+}
+
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-bottom: 80px;
+}
+
+.split-section {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 80px;
+  flex-wrap: wrap;
+}
+
+.split-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.split-section img,
+.clickable-image {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.3s ease;
+}
+
+.clickable-image:hover {
+  opacity: 0.8;
+}
+
+.showcase-section {
+  margin-bottom: 80px;
+}
+
+.footer-banner {
+  margin-top: 80px;
+}
+
+.footer-image {
+  width: 100%;
+  border-radius: 12px;
 }
 
 .left-image-container {
