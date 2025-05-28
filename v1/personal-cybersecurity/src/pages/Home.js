@@ -53,7 +53,7 @@ export default function Home() {
       }}
     >
       <h1 style={{ fontSize: "2em", fontWeight: "bold", marginBottom: "20px" }}>
-        Welcome To Cyber Club!
+        Welcome To Cyber Club!!!
       </h1>
       <p style={{ fontSize: "1.1em", lineHeight: "1.6" }}>
         This website is meant to help users learn about cybersecurity and how to stay safe online.
@@ -124,17 +124,16 @@ export default function Home() {
             />
           </div>
 
+          {/* Right-side Section as a Clickable Box Styled Like .separator-card */}
+          <div className="split-right">
+            <Link to="/modules" className="styled-click-box">
+              <div className="click-box-text">
+                <div className="click-box-header">Header</div>
+                <div className="click-box-content">This is where the content goes</div>
+              </div>
+            </Link>
+          </div>
 
-        {/* Right-side Section */}
-        <div className="split-right">
-          <Link to="/modules">
-            <img 
-              src="/starter-text.png"  
-              alt="Right-side Image"  
-              className="split-image"
-            />
-          </Link>
-        </div>
       </div>
 
       {/* Flex Container for Left Content & Right Image */}
