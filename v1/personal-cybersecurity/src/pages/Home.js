@@ -41,24 +41,27 @@ export default function Home() {
 
       {/* Website Descriptor */}
       <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 50 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      style={{
-        maxWidth: "850px",
-        margin: "40px auto",
-        padding: "0 20px",
-        color: "black",
-      }}
-    >
-      <h1 style={{ fontSize: "2em", fontWeight: "bold", marginBottom: "20px" }}>
-        Welcome To Cyber Club!!!
-      </h1>
-      <p style={{ fontSize: "1.1em", lineHeight: "1.6" }}>
-        This website is meant to help users learn about cybersecurity and how to stay safe online.
-      </p>
-    </motion.div>
+        ref={ref}
+        initial={{ opacity: 0, y: 50 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        style={{
+          maxWidth: "850px",
+          margin: "60px auto",
+          padding: "40px 30px",
+          backgroundColor: "#2c2c2c",
+          borderRadius: "16px",
+          color: "#ffffff",
+          boxShadow: "0 8px 24px rgba(0, 0, 0, 0.2)",
+        }}
+      >
+        <h1 style={{ fontSize: "2.5em", fontWeight: "700", marginBottom: "20px", color: "#e0e0e0" }}>
+          Welcome to Cyber Club
+        </h1>
+        <p style={{ fontSize: "1.2em", lineHeight: "1.8", color: "#e0e0e0" }}>
+          Explore the world of cybersecurity. Learn how to protect your data, recognize threats, and stay safe in the digital age.
+        </p>
+      </motion.div>
 
       <main>
       <div className="card-container">
