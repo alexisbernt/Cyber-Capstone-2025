@@ -129,11 +129,12 @@ export default function Home() {
 
           {/* Right-side Section as a Clickable Box Styled Like .separator-card */}
           <div className="split-right">
-            <Link to="/modules" className="styled-click-box">
-              <div className="click-box-text">
-                <div className="click-box-header">Header</div>
-                <div className="click-box-content">This is where the content goes</div>
-              </div>
+            <Link to="/signin">
+                <img 
+                  src="/starter-text.png"  
+                  alt="Right-side Image"  
+                  className="split-image"
+                />
             </Link>
           </div>
 
