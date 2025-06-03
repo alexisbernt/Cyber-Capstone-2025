@@ -578,3 +578,10 @@ button:hover {
   margin: 0 auto;
   padding: 0 20px;
 }
+
+.road-line {
+  transition: background-color 0.3s ease;
+}
+.road-circle {
+  transition: background-color 0.3s ease;
+}

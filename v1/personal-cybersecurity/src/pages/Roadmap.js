@@ -1,23 +1,28 @@
 import { Link } from "react-router-dom";
+import "../css-sections/Roadmap.css";
 
 export default function Roadmap() {
   return (
-    <div className="login-page">
-      <div className="login-page roadmap-page outlined-roadmap">
-        <div className="login-card roadmap-card">
-        <h1 className="login-title">Your Learning Roadmap</h1>
-        <p className="login-subtitle">Follow these steps to complete your journey!</p>
-
-        <div className="roadmap-grid">
-          {steps.map((step, index) => (
-            <Link key={index} to={step.path} className="roadmap-step">
-              <h2 className="step-title">{step.title}</h2>
-              <div className="login-button step-button">{step.description}</div>
-            </Link>
-          ))}
-        </div>
+    <div className="roadmap-container">
+      <div className="roadmap-header">
+        <h1>Your Learning Roadmap</h1>
+        <p>Follow these steps to complete your journey!</p>
       </div>
-    </div>
+
+      <div className="roadmap-track">
+        {steps.map((step, index) => (
+          <div key={index} className="roadmap-step-wrapper">
+            <div className="roadmap-marker">
+              <div className="circle"></div>
+              {index < steps.length - 1 && <div className="line"></div>}
+            </div>
+            <Link to={step.path} className="roadmap-step">
+              <h2>{step.title}</h2>
+              <div className="step-description">{step.description}</div>
+            </Link>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

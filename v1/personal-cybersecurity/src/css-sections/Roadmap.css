@@ -1,0 +1,84 @@
+.roadmap-container {
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.roadmap-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.roadmap-header h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.roadmap-header p {
+  color: #555;
+  font-size: 1.1em;
+}
+
+.roadmap-track {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.roadmap-step-wrapper {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.roadmap-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
+  position: relative;
+}
+
+.circle {
+  width: 16px;
+  height: 16px;
+  background-color: #007bff;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 0 2px #007bff;
+  z-index: 1;
+}
+
+.line {
+  width: 2px;
+  height: 60px;
+  background-color: #007bff;
+  margin-top: 2px;
+}
+
+.roadmap-step {
+  background-color: #f9f9f9;
+  padding: 16px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #333;
+  border: 1px solid #ddd;
+  transition: box-shadow 0.3s ease;
+  flex: 1;
+}
+
+.roadmap-step:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.roadmap-step h2 {
+  font-size: 1.1em;
+  margin-bottom: 8px;
+}
+
+.step-description {
+  font-size: 0.95em;
+  color: #666;
+}
