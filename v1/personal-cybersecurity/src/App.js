@@ -37,7 +37,7 @@ function App() {
             <img src="/oregon.png" alt="Blog" className="nav-icon" />
           </a>
           <a href="/resources">
-          <img src="/oregon-rock.jpg" alt="Learn" className="nav-icon" />
+          <img src="/oregon-rock.png" alt="Learn" className="nav-icon" />
           </a>
           <a href="/blog">
             <img src="/mountains.png" alt="Blog" className="nav-icon" />
@@ -52,7 +52,7 @@ function App() {
             <img src="/oregon.png" alt="Blog" className="nav-icon" />
           </a>
           <a href="/resources">
-          <img src="/oregon-rock.jpg" alt="Learn" className="nav-icon" />
+          <img src="/oregon-rock.png" alt="Learn" className="nav-icon" />
           </a>
           <a href="/blog">
             <img src="/mountains.png" alt="Blog" className="nav-icon" />
