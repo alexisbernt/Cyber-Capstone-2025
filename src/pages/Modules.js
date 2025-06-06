@@ -17,7 +17,7 @@ export default function Modules() {
         <Link to="/resources">
           <button className="nav-button-modules">Module 2: The Types of Cyberattacks That Get Personal</button>
         </Link>
-        <Link to="/signin">
+        <Link to="/pricing">
           <button className="nav-button-modules">Sign-up</button> 
         </Link>
         <Link to="/blog">

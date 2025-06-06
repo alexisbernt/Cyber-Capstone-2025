@@ -1,174 +1,120 @@
-// top clickable button 
-// button colors 
-
-// import Header from "../components/Header";
-import { Link } from "react-router-dom"; 
-import Hero from "../components/layout/home/Hero";
-import Features from "../components/layout/home/Features";
-import ProductShowcase from "../components/layout/home/ProductShowcase";
-import HorizontalShowcase from "../components/layout/home/HorizontalShowcase";
-import '../App.css';
-import { useState } from "react";
-import GridPattern from "../components/patterns";
-import ColorPattern from "../components/color-pattern";
+import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import Header from "../components/Header";
+// import GridPattern from "../components/ui/GridPattern";
 import RevealCard from "../reveal";
 import SeparatorCard from "../separatorCard";
+import HorizontalShowcase from "../components/layout/home/HorizontalShowcase";
+import "../App.css";
 
 export default function Home() {
-  const [name, setName] = useState('');
+  const [name, setName] = useState("");
 
-  fetch("http://localhost:3001/")
-    .then((results) => {
-      results.json().then((j) => {
-        setName(j.name);
-      });
-    });
+  useEffect(() => {
+    fetch("http://localhost:3001/")
+      .then((res) => res.json())
+      .then((data) => setName(data.name));
+  }, []);
 
   return (
-    <div className="bg-black min-h-screen">
-      {name}
+    <div className="home-screen">
+      {/* <Header /> */}
+      {/* <GridPattern /> */}
 
-      {/* Banner Image */}
-      <div className="w-full">
-        <img 
-          src="/banner_lcc.png" 
-          alt="Banner"  
-          style={{ width: "100%", height: "345px", objectFit: "cover" }} 
-        />
-      </div>
+      <main className="main-content">
+        {/* Welcome Text */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="intro-text"
+        >
+          <h1>Working?</h1>
+          <p>
+            {name ? `${name}, g` : "G"}et ready to explore the world of
+            cybersecurity!
+          </p>
+        </motion.div>
 
-      <main>
-      <div className="card-container">
-        {/* Navigation Buttons */}
-        <div className="card-wrapper">
-        {/* Left-side Card */}
-        <Link to="/modules">
-          <RevealCard
-            imageUrl="/enforce.png"
-            imageAlt="Module Image"
-            titleText="Learn"
-            revealInfo="Learning modules teach you the fundamentals of cybersecurity."
-          />
-        </Link>
+        {/* Feature Cards */}
+        <div className="feature-cards">
+          <Link to="/modules">
+            <RevealCard
+              imageUrl="/learn.png"
+              titleText="Learn"
+              revealInfo="Learn cybersecurity fundamentals"
+            />
+          </Link>
+          <Link to="/resources">
+            <RevealCard
+              imageUrl="/resources.png"
+              titleText="Resources"
+              revealInfo="Explore cybersecurity tools"
+            />
+          </Link>
+          <Link to="/signin">
+            <RevealCard
+              imageUrl="/lock3.png"
+              titleText="Login"
+              revealInfo="Create your account"
+            />
+          </Link>
+          <Link to="/blog">
+            <RevealCard
+              imageUrl="/blog.png"
+              titleText="Blog"
+              revealInfo="Read expert articles"
+            />
+          </Link>
         </div>
 
-        {/* Middle-side Card */}
-        <div className="card-wrapper">
-        <Link to="/resources">
-          <RevealCard
-            imageUrl="/enforce.png"
-            imageAlt="Resources Image"
-            titleText="Resources"
-            revealInfo="Explore the resouces avaliable on this site"
-          />
-        </Link>
+        {/* Split Section 1 */}
+        <div className="split-section">
+          <img src="/home-image.png" alt="Cyber Visual 1" />
+          <Link to="/modules">
+            <img
+              src="/starter-text.png"
+              alt="Get Started"
+              className="clickable-image"
+            />
+          </Link>
         </div>
 
-        <div className="card-wrapper">
-        {/* Middle-side Card */}
-        <Link to="/signin">
-          <RevealCard
-            imageUrl="/enforce.png"
-            imageAlt="Login Image"
-            titleText="Login"
-            revealInfo="Create your personal cybersecurity account"
-          />
-        </Link>
+        {/* Split Section 2 */}
+        <div className="split-section reverse">
+          <Link to="/modules">
+            <img
+              src="/starter-text2.png"
+              alt="Continue Learning"
+              className="clickable-image"
+            />
+          </Link>
+          <img src="/home-image2.png" alt="Cyber Visual 2" />
         </div>
 
-        {/* Right-side Card */}
-        <div className="card-wrapper">
-        <Link to="/blog">
-          <RevealCard
-            imageUrl="/enforce.png"
-            imageAlt="Blog Image"
-            titleText="Blog"
-            revealInfo="Check out updated blog posts"
-          />
-        </Link>
+        {/* Showcase Section */}
+        <div className="showcase-section">
+          <HorizontalShowcase />
         </div>
-      </div>
 
-      <div cardClassName="separator-card2" >
-        <SeparatorCard cardClassName="separator-card2"
+        {/* Separator Card */}
+        <SeparatorCard
+          cardClassName="separator-card2"
           imageUrl="/proud-cyber-nerd.png"
           imageAlt="Cyber Nerd Graphic"
-          titleText="Earn your badge of NERDom today!!"
-          paragraphText="Get ahead of online threats by learning practices that will keep you safe when using technology. If you earn your cybersecurity nerd badge, you'll be ahead of the game."
+          titleText="Earn your badge of NERDom today"
+          paragraphText="Master your cybersecurity skills and earn your place as a Cybersecurity Nerd!"
         />
-      </div>
 
-        {/* Divider Image & Clickable Link
-        <div className="w-full">
-          <Link to="/signin">
-            <img 
-              src="/banner2.png" 
-              alt="Enter to Win" 
-              style={{ width: "100%", height: "430px", objectFit: "cover" }} 
-            />
-          </Link>
-        </div> */}
-
-        {/* Flex Container for Right Content & Left Image */}
-        <div className="split-container">
-          
-          {/* Left-side Image */}     
-          <div className="split-left">
-            <img 
-              src="/home-image.png"  
-              alt="Right-side Image"  
-              className="split-image"
-            />
-          </div>
-
-
-        {/* Right-side Section */}
-        <div className="split-right">
-          <Link to="/modules">
-            <img 
-              src="/starter-text.png"  
-              alt="Right-side Image"  
-              className="split-image"
-            />
-          </Link>
-        </div>
-      </div>
-
-      {/* Flex Container for Left Content & Right Image */}
-      <div className="split-container">
-        {/* Right-side Image */}   
-        <div className="split-right">
-        <Link to="/modules">
-            <img 
-              src="/starter-text2.png"  
-              alt="Right-side Image"  
-              className="split-image"
-            />
-        </Link>
-      </div>
-
-        {/* Left-side Section */}
-        <div className="split-left">
-          <img 
-            src="/home-image2.png"  
-            alt="Right-side Image"  
-            className="split-image"
+        {/* Footer Banner */}
+        <div className="footer-banner">
+          <img
+            src="/bottom-banner.png"
+            alt="Cybersecurity Footer"
+            className="footer-image"
           />
         </div>
-        
-      </div>
-
-      <HorizontalShowcase />
-
-      {/* Final Banner Image */}
-      <div className="w-full">
-          <img 
-            src="/bottom-banner.png" 
-            alt="Cybersecurity"  
-            style={{ width: "100%", height: "320px", objectFit: "cover" }} 
-          />
-        </div>
-
       </main>
     </div>
   );

@@ -37,7 +37,7 @@ function Header() {
 
         {/* Navigation with Images */}
         <nav role="navigation" className="hidden md:flex items-center space-x-8">
-          {["/resources", "/signin", "/blog"].map((path, index) => (
+          {["/resources", "/pricing", "/blog"].map((path, index) => (
             <Link
               key={path}
               href={path}

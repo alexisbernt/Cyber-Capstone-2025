@@ -75,7 +75,7 @@ function App() {
           <Route path="/module1" element={<Module1 />} />
           <Route path="/module2" element={<Module2 />} />
           <Route path="/module3" element={<Module3 />} />
-          <Route path="/signin" element={<Pricing />} />
+          <Route path="/pricing" element={<Pricing />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/why-cybersecurity" element={<BlogPage1 />} />

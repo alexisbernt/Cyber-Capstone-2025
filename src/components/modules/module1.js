@@ -6,6 +6,7 @@ import GridPattern from "../patterns";
 import { Divider } from "../ui/divider-pattern";
 import ColorPattern from "../color-pattern";
 import { useNavigate } from "react-router-dom";
+import ThinCard from "../../ThinCard";
 
 const Banner = () => {
   const navigate = useNavigate();
@@ -36,12 +37,18 @@ export default function Module1() {
           />
         </div>
 
-        {/* Divider of Text Section */}
+        {/* Divider of Text Section
         <div className="flex items-center justify-center py-6">
           <h1 className="text-6xl font-extrabold font-[Poppins] text-center text-white">
             <br/> <br/>
             Welcome to Cybersecurity Learning Module #1!
           </h1>
+        </div> */}
+
+        <div style={{ width: '100%' }}>
+          <ThinCard
+            titleText="Welcome to Cybersecurity Learning Module #1! "
+            />
         </div>
 
         <Divider/>
@@ -61,19 +68,6 @@ export default function Module1() {
 
         {/* Right-side Hero Section */}
         <div className="split-right flex items-center justify-center p-10">
-          {/* <h1 className="text-6xl font-extrabold font-[Poppins] text-center">
-            The Why of This Section: 
-          </h1>
-          <br /> <br />
-          <p className="text-3xl font-bold font-[Poppins] text-center mt-6">
-            <span className="text-blue-600">
-              Cybersecurity saves us money, time, and an unnecessary headache.
-            </span>
-            <br /> <br />
-            Learning how to be tech-savvy through personal cybersecurity skills goes a long way.
-            <br /> <br />
-            Follow along this step-by-step to learn more.
-          </p> */}
           <img 
               src="/text-mod1.png"  
               alt="Right-side Image"  
@@ -82,32 +76,42 @@ export default function Module1() {
         </div>
         </div>
 
-        {/* Flex Container for Left Video Text Descriptor & Right Video*/}
+        <div style={{ width: '100%' }}>
+          <ThinCard
+            titleText="Watch this video if you want to see nerds dance: "
+            />
+        </div>
+
+        <Divider/> <br/> 
+
         <div className="split-container">
-        {/* Left-side Image/Text */}
-        <div className="split-left">
-          <img 
-            src="/text-mod1a.png"  
-            alt="Left-side Image"  
-            className="split-image"
-          />
+          <div className="split-left w-1/2 flex items-center justify-center bg-white">
+            <img 
+              src="/text-mod1ab.png"  
+              alt="Left-side Image"  
+              className="split-image"
+            />
+          </div>
+
+          <div className="split-right w-1/2 flex items-center justify-center bg-gray-200 p-5">
+            <div className="relative w-full max-w-3xl aspect-video bg-white shadow-lg rounded-lg overflow-hidden flex items-center justify-center booklet-wrapper">
+              <Booklet />
+            </div>
+          </div>
         </div>
-        {/* Right-side Video (Booklet) Section */}
-        <div className="split-right flex items-center justify-center p-10">
-          <Booklet/>
-        </div>
-        </div>
+
 
         {/* --------- Learning Steps Start -----------------------------------------------------------------*/}
        
-        {/* Divider of Text Section */}
-        <div className="flex items-center justify-center p-10">
-          <h1 className="text-6xl font-extrabold font-[Poppins] text-center">
-             3 Steps!
-          </h1>
-          <Divider/>
-          <br/> <br/> <br/>
+        <div style={{ width: '100%' }}>
+          <ThinCard
+            titleText="The 3 Steps! "
+            />
         </div>
+
+        <Divider/>
+
+        <GridPattern />
 
         {/* Divider of Text Section */}
         <div className="flex items-center justify-center p-10">
@@ -116,34 +120,28 @@ export default function Module1() {
           </h1>
         </div>
 
-        <Divider/>
-
-        <GridPattern />
+        <Divider/> <br/>
 
         <Definitions/>
 
+        <GridPattern />
+
         {/* Divider of Text Section */}
         <div className="flex items-center justify-center p-10">
           <h1 className="text-6xl font-extrabold font-[Poppins] text-center">
-            <br/> <br/> <br/>
             Step 2: Test your knowledge by playing this drag and drop game!
           </h1>
         </div>
-
-        <Divider/>
-
-        <GridPattern />
+        <Divider/> <br/>
         <DragDropGame/>
-
+        <GridPattern />
         {/* Divider of Text Section */}
         <div className="flex items-center justify-center p-10">
           <h1 className="text-6xl font-extrabold font-[Poppins] text-center">
-            <br/> <br/> <br/>
             Step 3: Start Implementing Cybersecurity Into Your Day-To-Day!
           </h1>
-          <Divider/>
+          <Divider/> <br/>
         </div>
-        <GridPattern />
         <Features />
 
         {/* Final Banner Image */}
