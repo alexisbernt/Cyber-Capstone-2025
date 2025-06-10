@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import logo from "./lcc_logo.png";
@@ -20,6 +20,8 @@ import BlogPage2 from "./pages/parts/BlogPage2";
 import Roadmap from "./pages/Roadmap";
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const toggleMenu = () => setMenuOpen(prev => !prev);
   return (
     <Router>
       <div className="App">
@@ -28,44 +30,106 @@ function App() {
         <a href="/" className="logo-link">
           <img src={logo} alt="Logo" className="logo" />
         </a>
-        
         <nav className="navbar">
-          <a href="/resources">
-          <img src="/flowers.png" alt="Learn" className="nav-icon" />
-          </a>
-          <a href="/blog">
-            <img src="/oregon.png" alt="Blog" className="nav-icon" />
-          </a>
-          <a href="/resources">
-          <img src="/oregon-rock.png" alt="Learn" className="nav-icon" />
-          </a>
-          <a href="/blog">
-            <img src="/mountains.png" alt="Blog" className="nav-icon" />
-          </a>
-          <a href="/resources">
-          <img src="/rocks.png" alt="Learn" className="nav-icon" />
-          </a>
-          <a href="/resources">
-          <img src="/flowers.png" alt="Learn" className="nav-icon" />
-          </a>
-          <a href="/blog">
-            <img src="/oregon.png" alt="Blog" className="nav-icon" />
-          </a>
-          <a href="/resources">
-          <img src="/oregon-rock.png" alt="Learn" className="nav-icon" />
-          </a>
-          <a href="/blog">
-            <img src="/mountains.png" alt="Blog" className="nav-icon" />
-          </a>
-          <a href="/resources">
-          <img src="/rocks.png" alt="Learn" className="nav-icon" />
-          </a>
-          <a href="/resources">Learn</a>
-          <a href="/blog">Blog</a>
-          <a href="/login">Login</a>
+        <div className="navbar-left">
+          <a href="/" className="brand">Lexi's Cyber Club</a>
+        </div>
 
-        </nav>
-      </header>
+        <div className="hamburger" onClick={toggleMenu}>
+          ☰
+        </div>
+
+        <div className={`navbar-right ${menuOpen ? 'active' : ''}`}>
+          <a href="/resources">
+            <span className="icon">📝</span>
+            <span>Learn</span>
+          </a>
+          <a href="/blog">
+            <span className="icon">📰</span>
+            <span>Blog</span>
+          </a>
+          <a href="/login">
+            <span className="icon">🔐</span>
+            <span>Login</span>
+          </a>
+        </div>
+      </nav>
+
+      <style>{`
+        * {
+          box-sizing: border-box;
+        }
+
+        .navbar {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: #ffffff;
+          padding: 12px 24px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          font-family: Arial, sans-serif;
+          position: relative;
+        }
+
+        .brand {
+          font-size: 20px;
+          font-weight: bold;
+          color: #333;
+          text-decoration: none;
+        }
+
+        .hamburger {
+          display: none;
+          font-size: 26px;
+          cursor: pointer;
+          user-select: none;
+        }
+
+        .navbar-right {
+          display: flex;
+          gap: 24px;
+        }
+
+        .navbar-right a {
+          color: #444;
+          text-decoration: none;
+          font-size: 16px;
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          transition: color 0.3s ease;
+        }
+
+        .navbar-right a:hover {
+          color: #0077cc;
+        }
+
+        @media (max-width: 768px) {
+          .hamburger {
+            display: block;
+          }
+
+          .navbar-right {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            right: 24px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+          }
+
+          .navbar-right.active {
+            display: flex;
+          }
+        }
+      `}</style>
+    </header>
+
 
         {/* Page Routes */}
         <Routes>
