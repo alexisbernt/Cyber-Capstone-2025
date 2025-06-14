@@ -115,29 +115,29 @@ export default function Home() {
         </div>
       </div>
 
-        {/* Flex Container for Right Content & Left Image */}
-        <div className="split-container">
-          
-          {/* Left-side Image */}     
-          <div className="split-left">
-            <img 
-              src="/home-image.png"  
-              alt="Right-side Image"  
-              className="split-image"
-            />
-          </div>
+      {/* Flex Container for Left Image & Right Text Card */}
+      <div className="split-container">
 
-          {/* Right-side Section as a Clickable Box Styled Like .separator-card */}
-          <div className="split-right">
-            <Link to="/signin">
-                <img 
-                  src="/starter-text.png"  
-                  alt="Right-side Image"  
-                  className="split-image"
-                />
-            </Link>
-          </div>
+        {/* Left-side Image */}
+        <div className="split-left">
+          <img 
+            src="/home-image.png"  
+            alt="Left-side Image"  
+            className="split-image"
+          />
+        </div>
 
+        {/* Right-side Clickable Half-Card */}
+        <div className="split-right-card">
+          <Link to="/signin" className="card-link">
+            <h1>
+              Welcome to Cyber Club
+            </h1>
+            <p>
+              Explore the world of cybersecurity. Learn how to protect your data, recognize threats, and stay safe in the digital age.
+            </p>
+          </Link>
+        </div>
       </div>
 
       {/* Flex Container for Left Content & Right Image */}
