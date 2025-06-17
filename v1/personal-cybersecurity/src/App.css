@@ -707,7 +707,12 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 0 60px;
+  margin-top: 160px; /* Moves the card down */
+  padding: 60px 30px;         /* Smaller padding for a more compact card */
+  border-radius: 12px;        /* Rounded corners */
+  /* max-width: 350px;           Smaller width */
+  max-height: 300px;
+  box-sizing: border-box;     /* Ensure padding doesn't add to width */
   transition: background-color 0.3s ease;
 }
 
@@ -723,15 +728,15 @@ button:hover {
 }
 
 /* Reuse heading & paragraph style */
-.card-link h1 {
-  font-size: 2.5em;
+.card-link h2 {
+  font-size: 1.8em;
   font-weight: 700;
   margin-bottom: 20px;
   color: #e0e0e0;
 }
 
 .card-link p {
-  font-size: 1.2em;
+  font-size: 1.1em;
   line-height: 1.8;
   color: #e0e0e0;
 }

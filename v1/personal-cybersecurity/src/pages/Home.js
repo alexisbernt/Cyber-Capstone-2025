@@ -130,11 +130,13 @@ export default function Home() {
         {/* Right-side Clickable Half-Card */}
         <div className="split-right-card">
           <Link to="/signin" className="card-link">
-            <h1>
-              Welcome to Cyber Club
-            </h1>
+            <h2>
+              What is Cybersecurity and Why is it "Personal"?
+            </h2>
             <p>
-              Explore the world of cybersecurity. Learn how to protect your data, recognize threats, and stay safe in the digital age.
+              There are more cyberattacks now than ever. In 2024, the average cost of a data breach rose to $4.88 million—the highest ever recorded.
+              That's why we need cybersecurity to protect our digital systems and data from technological threats.
+              This website is meant to help you learn how to detect, manage, and protect.
             </p>
           </Link>
         </div>
