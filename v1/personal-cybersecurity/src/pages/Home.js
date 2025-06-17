@@ -142,28 +142,30 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Flex Container for Left Content & Right Image */}
+      {/* Flex Container for Right Image & Left Text Card */}
       <div className="split-container">
-        {/* Right-side Image */}   
-        <div className="split-right">
-        <Link to="/signin">
-            <img 
-              src="/starter-text2.png"  
-              alt="Right-side Image"  
-              className="split-image"
-            />
-        </Link>
-      </div>
 
-        {/* Left-side Section */}
-        <div className="split-left">
+        {/* Left-side Clickable Half-Card */}
+        <div className="split-left-card">
+          <Link to="/signin" className="card-link">
+            <h2>
+              Find the Best Ways to Protect your Online Information!
+            </h2>
+            <p>
+              The goal of Lexi's Cyber Club is to create a mechanism to share the best practices to keep your digital information safe.
+              Creating an account (free!) to be a Cyber Club member will help you build your overall knowledge of technology.
+            </p>
+          </Link>
+        </div>
+
+        {/* Right-side Image */}
+        <div className="split-right">
           <img 
             src="/home-image2.png"  
-            alt="Right-side Image"  
+            alt="Left-side Image"  
             className="split-image"
           />
         </div>
-        
       </div>
       <HorizontalShowcase />
 

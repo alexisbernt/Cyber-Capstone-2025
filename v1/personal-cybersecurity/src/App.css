@@ -720,6 +720,25 @@ button:hover {
   background-color: #2a2a2a;
 }
 
+/* Left-side card styling */
+.split-left-card {
+  background-color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 120px;             /* Consistent spacing down the page */
+  padding: 60px 30px;          /* Matches right-side card */
+  border-radius: 12px;          /* Rounded corners */
+  max-width: 750px;             
+  max-height: 350px;            /* Let content define height */
+  box-sizing: border-box;       /* Prevent padding from affecting size */
+  transition: background-color 0.3s ease;
+}
+
+.split-left-card:hover {
+  background-color: #2a2a2a;
+}
+
 .card-link {
   text-decoration: none;
   color: inherit;
