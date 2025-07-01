@@ -18,6 +18,7 @@ import NotFound from "./pages/NotFound";
 import BlogPage1 from "./pages/parts/BlogPage1";
 import BlogPage2 from "./pages/parts/BlogPage2";
 import Roadmap from "./pages/Roadmap";
+import DashboardPage from './pages/UserDashboard';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -142,6 +143,7 @@ function App() {
           <Route path="/signin" element={<Pricing />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
           <Route path="/blog/why-cybersecurity" element={<BlogPage1 />} />
           <Route path="/blog/phishing" element={<BlogPage2 />} />
           <Route path="*" element={<NotFound />} /> 

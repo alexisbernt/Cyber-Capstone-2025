@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "../App.css";
+import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
   const [formData, setFormData] = useState({ email: "", password: "", action: "login" });
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -14,19 +16,15 @@ const LoginPage = () => {
     try {
       const response = await axios.post("http://localhost:3001/typeorm/auth", formData, { withCredentials: true });
 
-      alert(response.data.message); // Display welcome message
+      const { user } = response.data;
+      navigate("/dashboard", { state: { user } });
     } catch (error) {
       console.error("Login error:", error);
-
-      if (error.response) {
-        alert(error.response.data.message);
-      } else {
-        alert("Error logging in. Please check your network and try again!");
-      }
+      alert(error.response?.data?.message || "Login failed. Please check your network and try again!");
     }
   };
 
- return (
+  return (
     <div className="login-page">
       <div className="login-card">
         <h1 className="login-title">Welcome Back</h1>
