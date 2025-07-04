@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 // import { UserIcon } from "@heroicons/react/solid";
 import axios from "axios";
+import { BACKEND_URL } from "../constants"
 
 const DashboardPage = () => {
   const location = useLocation();
@@ -12,7 +13,7 @@ const DashboardPage = () => {
   if (!user) {
     const fetchUser = async () => {
       try {
-        const response = await axios.get("http://localhost:3001/typeorm/me", {
+        const response = await axios.get(`${BACKEND_URL}/typeorm/me`, {
           withCredentials: true,
         });
         setUser(response.data.user);

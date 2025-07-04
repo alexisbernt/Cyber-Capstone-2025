@@ -11,7 +11,7 @@ const { User } = require("./src/entity/User");
 const app = express();
 const port = 3001;
 
-app.use(cors({ origin: ["http://localhost:3000"], credentials: true }));
+app.use(cors({ origin: ["http://localhost:3000", "https://lcc.milkonthefloor.com"], credentials: true }));
 app.use(express.json());
 
 const cookieParser = require("cookie-parser");

@@ -7,7 +7,7 @@ const app = express()
 const port = 3001
 // CORS is enabled for the selected origins
 let corsOptions = {
-    origin: [ 'http://localhost:3000']
+    origin: [ 'http://localhost:3000', 'https://lcc.milkonthefloor.com/']
 };
 app.get('/', cors(corsOptions), (req, res) => {
   res.send(JSON.stringify({name: "hello"}))

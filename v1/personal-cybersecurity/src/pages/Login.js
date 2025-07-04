@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "../App.css";
 import { useNavigate } from "react-router-dom";
+import { BACKEND_URL } from "../constants"
 
 const LoginPage = () => {
   const [formData, setFormData] = useState({ email: "", password: "", action: "login" });
@@ -14,7 +15,7 @@ const LoginPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:3001/typeorm/auth", formData, { withCredentials: true });
+      const response = await axios.post(`${BACKEND_URL}/typeorm/auth`, formData, { withCredentials: true });
 
       const { user } = response.data;
       navigate("/dashboard", { state: { user } });

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { BACKEND_URL } from "../constants"
 
 const SignUpPage = () => {
   const [formData, setFormData] = useState({ name: "", email: "", password: "" });
@@ -11,7 +12,7 @@ const SignUpPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
       try {
-          const response = await axios.post("http://localhost:3001/typeorm/auth", {
+          const response = await axios.post(`${BACKEND_URL}/typeorm/auth`, {
               ...formData, // Spread form data
               action: "signup" // Explicitly specify the action
           });

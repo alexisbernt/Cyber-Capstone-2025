@@ -11,13 +11,14 @@ import SeparatorCard from "../separatorCard";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+import { BACKEND_URL } from "../constants"
 
 
 export default function Home() {
   const [name, setName] = useState('');
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
 
-  fetch("http://localhost:3001/")
+  fetch("BACKEND_URL")
     .then((results) => {
       results.json().then((j) => {
         setName(j.name);
