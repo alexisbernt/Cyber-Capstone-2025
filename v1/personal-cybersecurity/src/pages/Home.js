@@ -18,12 +18,12 @@ export default function Home() {
   const [name, setName] = useState('');
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
 
-  fetch("BACKEND_URL")
-    .then((results) => {
-      results.json().then((j) => {
-        setName(j.name);
-      });
-    });
+  useEffect(() => {
+    // fetch("http://localhost:3001/")
+      fetch(BACKEND_URL)
+      .then((results) => results.json())
+      .then((j) => setName(j.name));
+  }, []);
 
   return (
     <div className="bg-black min-h-screen">
@@ -118,22 +118,12 @@ export default function Home() {
 
       {/* Flex Container for Left Image & Right Text Card */}
       <div className="split-container">
-
-        {/* Left-side Image */}
         <div className="split-left">
-          <img 
-            src="/home-image.png"  
-            alt="Left-side Image"  
-            className="split-image"
-          />
+          <img src="/home-image.png" alt="..." className="split-image" />
         </div>
-
-        {/* Right-side Clickable Half-Card */}
         <div className="split-right-card">
           <Link to="/signin" className="card-link">
-            <h2>
-              What is Cybersecurity and Why is it "Personal"?
-            </h2>
+            <h2>What is Cybersecurity and Why is it "Personal"?</h2>
             <p>
               There are more cyberattacks now than ever. In 2024, the average cost of a data breach rose to $4.88 million—the highest ever recorded.
               That's why we need cybersecurity to protect our digital systems and data from technological threats.
@@ -145,29 +135,19 @@ export default function Home() {
 
       {/* Flex Container for Right Image & Left Text Card */}
       <div className="split-container">
-
-        {/* Left-side Clickable Half-Card */}
         <div className="split-left-card">
           <Link to="/signin" className="card-link">
-            <h2>
-              Find the Best Ways to Protect your Online Information!
-            </h2>
+            <h2>Find the Best Ways to Protect your Online Information!</h2>
             <p>
               The goal of Lexi's Cyber Club is to create a mechanism to share the best practices to keep your digital information safe.
               Creating an account (free!) to be a Cyber Club member will help you build your overall knowledge of technology.
             </p>
           </Link>
         </div>
-
-        {/* Right-side Image */}
-        <div className="split-right">
-          <img 
-            src="/home-image2.png"  
-            alt="Left-side Image"  
-            className="split-image"
-          />
+          <div className="split-right">
+            <img src="/home-image2.png" alt="..." className="split-image" />
+          </div>
         </div>
-      </div>
       <HorizontalShowcase />
 
       <div cardClassName="separator-card2" >
@@ -184,8 +164,8 @@ export default function Home() {
         <Link to="/resources">
           <img 
             src="/bottom-banner.png" 
-            alt="Banner"  
-            style={{ width: "100%", height: "345px", objectFit: "cover", cursor: "pointer" }} 
+            alt="Banner"
+            className="banner"
           />
         </Link>
       </div>

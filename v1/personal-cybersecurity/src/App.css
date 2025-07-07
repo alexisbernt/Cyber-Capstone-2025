@@ -760,3 +760,99 @@ button:hover {
   color: #e0e0e0;
 }
 
+/* Card container with flex wrap */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 20px;
+}
+
+.card-wrapper {
+  flex: 1 1 250px;
+  max-width: 300px;
+}
+
+/* Responsive split container */
+.split-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px 20px;
+}
+
+.split-left,
+.split-right,
+.split-left-card,
+.split-right-card {
+  flex: 1;
+  max-width: 100%;
+}
+
+/* Image Styling */
+.split-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Text Cards */
+.split-left-card,
+.split-right-card {
+  background-color: #2c2c2c;
+  color: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-link h2 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+
+.card-link p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* SeparatorCard Container */
+.separator-card2 {
+  max-width: 960px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+/* Banners */
+.banner {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  cursor: pointer;
+  max-height: 345px;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .split-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .split-left,
+  .split-right {
+    max-width: 50%;
+  }
+
+  .split-left-card,
+  .split-right-card {
+    max-width: 50%;
+  }
+}
