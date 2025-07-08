@@ -9,6 +9,7 @@ import ThinCard from "../../ThinCard";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom"; 
 
 const Banner = () => {
   const navigate = useNavigate();
@@ -74,13 +75,18 @@ export default function Module1() {
         </div>
 
 
-        {/* Right-side Hero Section */}
-        <div className="split-right flex items-center justify-center p-10">
-          <img 
-              src="/text-mod1.png"  
-              alt="Right-side Image"  
-              className="split-image"
-            />
+        {/* Right-side Text Section Card */}
+        <div className="split-right-card">
+          <Link to="/signin" className="card-link">
+            <h2>THE WHY OF THIS SECTION:</h2>
+            <p>
+              Cybersecurity saves us money, time, and an unnecessary headache.
+
+              Learning how to be tech-savvy with personal cybersecurity skills goes a long way.
+
+              Follow along this step-by-step quick module to learn more.
+            </p>
+          </Link>
         </div>
         </div>
 
