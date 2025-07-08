@@ -4,22 +4,42 @@ import Booklet from "../ui/BookletMod1";
 import DragDropGame from "../ui/DragDrop";
 import GridPattern from "../patterns";
 import { Divider } from "../ui/divider-pattern";
-import ColorPattern from "../color-pattern";
-import { useNavigate } from "react-router-dom";
+// import ColorPattern from "../color-pattern";
 import ThinCard from "../../ThinCard";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useNavigate } from "react-router-dom";
 
 const Banner = () => {
   const navigate = useNavigate();
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
-    <div className="w-full">
-      <img 
-        src="/module1-starter.png" 
-        alt="Banner"  
-        style={{ width: "100%", height: "705px", objectFit: "cover", cursor: "pointer" }} 
-        onClick={() => navigate("/blog/why-cybersecurity")}
-      />
-    </div>
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      onClick={() => navigate("/blog/why-cybersecurity")}
+      style={{
+        maxWidth: "850px",
+        margin: "60px auto",
+        padding: "40px 30px",
+        backgroundColor: "#2c2c2c",
+        borderRadius: "16px",
+        color: "#ffffff",
+        boxShadow: "0 8px 24px rgba(0, 0, 0, 0.2)",
+        cursor: "pointer"
+      }}
+    >
+      <h1 style={{ fontSize: "2.5em", fontWeight: "700", marginBottom: "20px", color: "#e0e0e0" }}>
+        Module 1: Fundamentals of Cybersecurity
+      </h1>
+      <p style={{ fontSize: "1.2em", lineHeight: "1.8", color: "#e0e0e0" }}>
+        Discover why cybersecurity is one of the most crucial areas of tech today.
+        Continue if you want to be a Cybersecurity Ninja!
+      </p>
+    </motion.div>
   );
 };
 
@@ -28,28 +48,16 @@ export default function Module1() {
     // The Header Section
     <div className="bg-black min-h-screen">
       <main>
-        {/* Banner Image */}
+        {/* Banner Image
         <div className="w-full">
           <img 
             src="/module1_banner.png" 
             alt="Banner"  
             style={{ width: "100%", height: "405px", objectFit: "cover" }} 
           />
-        </div>
-
-        {/* Divider of Text Section
-        <div className="flex items-center justify-center py-6">
-          <h1 className="text-6xl font-extrabold font-[Poppins] text-center text-white">
-            <br/> <br/>
-            Welcome to Cybersecurity Learning Module #1!
-          </h1>
         </div> */}
 
-        <div style={{ width: '100%' }}>
-          <ThinCard
-            titleText="Welcome to Cybersecurity Learning Module #1! "
-            />
-        </div>
+        <Banner/>
 
         <Divider/>
         {/* <GridPattern/> */}
