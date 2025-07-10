@@ -8,6 +8,40 @@ import RevealCard from "../../reveal";
 import SeparatorCard from "../../separatorCard";
 import ThinCard from "../../ThinCard";
 import { Key } from "lucide-react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+const Banner = () => {
+  const navigate = useNavigate();
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      onClick={() => navigate("/blog/why-cybersecurity")}
+      style={{
+        maxWidth: "850px",
+        margin: "60px auto",
+        padding: "40px 30px",
+        backgroundColor: "#2c2c2c",
+        borderRadius: "16px",
+        color: "#ffffff",
+        boxShadow: "0 8px 24px rgba(0, 0, 0, 0.2)",
+        cursor: "pointer"
+      }}
+    >
+      <h1 style={{ fontSize: "2.5em", fontWeight: "700", marginBottom: "20px", color: "#e0e0e0" }}>
+        Module 3: What is Cryptography and Encryption?
+      </h1>
+      <p style={{ fontSize: "1.2em", lineHeight: "1.8", color: "#e0e0e0" }}>
+        Talk Code-y to me! 😉
+      </p>
+    </motion.div>
+  );
+};
 
 export default function Module3() {
   const cardContainerRef = useRef(null);
@@ -73,10 +107,10 @@ export default function Module3() {
   return (
     <div className="bg-black min-h-screen">
       <main>
-        {/* Banner */}
-        <div className="w-full">
+        <Banner/>
+        {/* <div className="w-full">
           <img src="/module3_banner.png" alt="Banner" style={{ width: "100%", height: "405px", objectFit: "cover" }} />
-        </div>
+        </div> */}
 
         {/* 3 Reveal Cards */}
         <div className="card-row">
