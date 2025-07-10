@@ -90,7 +90,7 @@ export default function Module1() {
         </div>
         </div>
 
-        {/* Upper-side Text Section Card followed by Video*/}
+        {/* Upper-side Text Section Card followed by video*/}
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
           
           {/* Thin Card Centered */}
@@ -157,15 +157,19 @@ export default function Module1() {
 
         {/* --------- Learning Steps Start -----------------------------------------------------------------*/}
        
-        <div style={{ width: '100%' }}>
-          <ThinCard
-            titleText="The 3 Steps! "
-            />
-        </div>
-
         <Divider/>
 
         <GridPattern />
+        {/* Thin Card Centered */}
+        <div style={{ 
+          width: '90%', 
+          maxWidth: '850px', 
+          margin: '0 auto 40px auto' // Top: 0, Bottom: 40px, Auto left/right
+        }}>
+          <ThinCard
+            titleText="THE THREE STEPS: "
+          />
+        </div>
 
         {/* Divider of Text Section */}
         <div className="flex items-center justify-center p-10">
