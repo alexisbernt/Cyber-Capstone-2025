@@ -90,29 +90,69 @@ export default function Module1() {
         </div>
         </div>
 
-        <div style={{ width: '100%' }}>
-          <ThinCard
-            titleText="Watch this video if you want to see nerds dance: "
-            />
-        </div>
-
-        <Divider/> <br/> 
-
-        <div className="split-container">
-          <div className="split-left w-1/2 flex items-center justify-center bg-white">
-            <img 
-              src="/text-mod1ab.png"  
-              alt="Left-side Image"  
-              className="split-image"
+        {/* Upper-side Text Section Card followed by Video*/}
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
+          
+          {/* Thin Card Centered */}
+          <div style={{ width: '90%', maxWidth: '850px', marginBottom: '40px' }}>
+            <ThinCard
+              titleText="Watch this video if you want to see nerds dance: "
             />
           </div>
 
-          <div className="split-right w-1/2 flex items-center justify-center bg-gray-200 p-5">
-            <div className="relative w-full max-w-3xl aspect-video bg-white shadow-lg rounded-lg overflow-hidden flex items-center justify-center booklet-wrapper">
+          {/* Video Section Centered */}
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              maxWidth: '1000px',
+              width: '100%',
+              padding: '20px',
+              boxSizing: 'border-box'
+            }}
+          >
+            {/* Left Text Block */}
+            <div
+              style={{
+                backgroundColor: '#2c2c2c',
+                color: 'white',
+                borderRadius: '16px',
+                padding: '30px',
+                marginBottom: '30px',
+                textAlign: 'center',
+                width: '100%',
+                boxShadow: '0 8px 24px rgba(0,0,0,0.2)'
+              }}
+            >
+              <Link to="/signin" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <h2>WATCH THINGS IN VIDEO FORM</h2>
+                <p>
+                  Pictures and words are cool. Pictures and words combined to be a cinematic masterpiece is cooler. Give watching this video a try.
+                </p>
+              </Link>
+            </div>
+
+            {/* Video Container */}
+            <div
+              style={{
+                width: '100%',
+                maxWidth: '768px',
+                aspectRatio: '16 / 9',
+                backgroundColor: '#ffffff',
+                boxShadow: '0 8px 24px rgba(0,0,0,0.2)',
+                borderRadius: '16px',
+                overflow: 'hidden',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
               <Booklet />
             </div>
           </div>
         </div>
+
 
 
         {/* --------- Learning Steps Start -----------------------------------------------------------------*/}
